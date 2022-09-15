@@ -3,9 +3,7 @@ import CategoryItem from './components/category-item/category-item.component';
 import data from './categoryData.json';
 
 const App = () => {
-
   const categories = data;
-
   return (
     <div className='categories-container'>
       {
