@@ -9,9 +9,7 @@ const App = () => {
   return (
     <div className='categories-container'>
       {
-        categories.map(i => (
-          <CategoryItem title={i.title} imageUrl={i.imageUrl} key={i.id} />
-        ))
+        categories.map(i => (<CategoryItem title={i.title} imageUrl={i.imageUrl} key={i.id} />))
       }
     </div>
   );
