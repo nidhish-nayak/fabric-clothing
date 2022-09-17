@@ -1,15 +1,11 @@
 import './App.css';
-import CategoryItem from './components/category-item/category-item.component';
-import data from './categoryData.json';
+import Data from './Data.json';
+import Directory from './components/directory/directory.component';
 
 const App = () => {
-  const categories = data;
+  console.log('App.js rendered');
   return (
-    <div className='categories-container'>
-      {
-        categories.map(i => (<CategoryItem title={i.title} imageUrl={i.imageUrl} key={i.id} />))
-      }
-    </div>
+    <Directory categories={Data} />
   );
 }
 
