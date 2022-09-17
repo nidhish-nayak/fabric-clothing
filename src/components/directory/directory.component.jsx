@@ -3,9 +3,9 @@ import CategoryItem from '../category-item/category-item.component';
 import './directory.styles.scss';
 
 const Directory = ({ categories }) => {
-    console.log('directory Comp rendered');
+    console.log('directory comp rendered');
     return (
-        <div className='categories-container'>
+        <div className='directory-container'>
             {
                 categories.map(i => (
                     <CategoryItem title={i.title} imageUrl={i.imageUrl} key={i.id} />

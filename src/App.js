@@ -1,4 +1,3 @@
-import './App.css';
 import Data from './Data.json';
 import Directory from './components/directory/directory.component';
 
