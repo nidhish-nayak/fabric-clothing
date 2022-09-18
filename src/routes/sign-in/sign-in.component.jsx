@@ -11,7 +11,7 @@ const SignIn = () => {
     return (
         <div>
             <h1>My Sing In Page: </h1>
-            <button onClick={logGoogleUser}>Sing In</button>
+            <button onClick={logGoogleUser}>Sign In</button>
         </div>
     )
 }
