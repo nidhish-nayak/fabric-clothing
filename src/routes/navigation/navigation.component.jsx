@@ -1,12 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
+//Fragment is used if no parent div element is needed
 import { Outlet } from "react-router-dom";
 
 const Navigation = () => {
     return (
-        <div>
-            <h1>My Navigation bar</h1>
+        <Fragment>
+            <div className="navigation">
+                <h1>My Navigation bar</h1>
+            </div>
             <Outlet />
-        </div>
+        </Fragment>
     )
 }
 
