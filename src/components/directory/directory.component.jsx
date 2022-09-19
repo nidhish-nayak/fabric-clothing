@@ -3,7 +3,6 @@ import CategoryItem from '../category-item/category-item.component';
 import './directory.styles.scss';
 
 const Directory = ({ categories }) => {
-    console.log('directory comp rendered');
     return (
         <div className='directory-container'>
             {

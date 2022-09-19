@@ -6,7 +6,6 @@ import Shop from './routes/shop/shop.component.jsx';
 import SignIn from './routes/sign-in/sign-in.component.jsx';
 
 const App = () => {
-  console.log('App.js rendered');
   return (
     <Routes>
       <Route path='/' element={<Navigation />}>
