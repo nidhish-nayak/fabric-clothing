@@ -1,5 +1,5 @@
 import React from "react";
-import { singInWithGooglePopup, createUserDocFromAuth } from '../../utils/firebase/firebase.utils.js';
+import { createUserDocFromAuth, singInWithGooglePopup } from '../../utils/firebase/firebase.utils.js';
 
 const SignIn = () => {
 

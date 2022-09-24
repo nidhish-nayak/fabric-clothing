@@ -1,5 +1,5 @@
 // import Data from './Data.json';
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './routes/home/home.component.jsx';
 import Navigation from './routes/navigation/navigation.component.jsx';
 import Shop from './routes/shop/shop.component.jsx';
