@@ -1,9 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { doc, getDoc, getFirestore, setDoc } from 'firebase/firestore';
 
-// Your web app's Firebase configuration
+// Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyAE2HqJ9FTxPNzt-CifhFJCkdySoaDlmg4",
     authDomain: "my-clothing-app-db.firebaseapp.com",
@@ -27,8 +27,10 @@ export const singInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 export const db = getFirestore();
 
-// creating new user auth collection with uid from google login
+// Creating new user auth collection with uid from google login
 export const createUserDocFromAuth = async (userAuth) => {
+    if (!userAuth) return;
+
     const userDocRef = doc(db, 'users', userAuth.uid);
     const userSnapshot = await getDoc(userDocRef);
 
@@ -48,4 +50,11 @@ export const createUserDocFromAuth = async (userAuth) => {
         }
     }
     return userDocRef;
+}
+
+// User auth for direct email/password login
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
+    if (!email || !password) return;
+
+    return await createUserWithEmailAndPassword(auth, email, password);
 }
