@@ -1,21 +1,12 @@
 import React from "react";
-import Button from "../../components/button/button.component.jsx";
+import SignInForm from '../../components/sign-in-form/sign-in-form.component';
 import SignUpForm from "../../components/sign-up-form/sign-up-form.component.jsx";
-import { createUserDocFromAuth, singInWithGooglePopup } from '../../utils/firebase/firebase.utils.js';
+import './sign-in.styles.scss';
 
 const SignIn = () => {
-
-    const logGoogleUser = async () => {
-        const response = await singInWithGooglePopup();
-        console.log(response.user);
-        const userDocRef = await createUserDocFromAuth(response.user);
-        console.log(userDocRef);
-    }
-
     return (
-        <div>
-            <h1>My Sing In Page: </h1>
-            <Button buttonType='google' onClick={logGoogleUser}>Sign In with Google</Button>
+        <div className="auth-container">
+            <SignInForm />
             <SignUpForm />
         </div>
     )
