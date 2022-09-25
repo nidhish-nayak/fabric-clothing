@@ -38,9 +38,23 @@ const SingInForm = () => {
     //Form Submit handling
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const response = userSignInWithEmailAndPassword(email, password);
-        console.log(response);
-        resetFormFields();
+        try {
+            const response = await userSignInWithEmailAndPassword(email, password);
+            console.log(response);
+            resetFormFields();
+        }
+        catch (error) {
+            switch (error.code) {
+                case 'auth/user-not-found':
+                    alert('User not found !!!');
+                    break;
+                case 'auth/wrong-password':
+                    alert('Incorrect password !!!');
+                    break;
+                default:
+                    console.log('Error: ' + error.message);
+            }
+        }
     }
 
     return (
