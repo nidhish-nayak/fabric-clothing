@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { createAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
+import {
+    createAuthUserWithEmailAndPassword,
+    createUserDocFromAuth
+} from "../../utils/firebase/firebase.utils";
 import "./sign-up-form.styles.scss";
 
 const defaultFormFields = {
@@ -16,18 +19,38 @@ const SignUpForm = () => {
     //Note: Do not destructure from default Form Fields, get data from the state
     const { displayName, email, password, confirmPassword } = formFields;
 
+    //Reset form once submitted and user auth is successfull
+    const resetFormFields = () => {
+        setFormFields(defaultFormFields);
+    }
+
     //State handling - updating the state as the user types in the value
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormFields({ ...formFields, [name]: value })
     }
 
-    //Form Submir handling
+    //Form Submit handling
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (event.target[2].value !== event.target[3].value) return;
-        const response = await createAuthUserWithEmailAndPassword(event.target[1].value, event.target[2].value);
-        console.log(response);
+        if (password !== confirmPassword) {
+            alert("Passwords do not match !");
+            return;
+        };
+        try {
+            const response = await createAuthUserWithEmailAndPassword(email, password);
+            console.log(response);
+            await createUserDocFromAuth(response.user, { displayName });
+            resetFormFields();
+        }
+        catch (error) {
+            if (error.code === 'auth/email-already-in-use') {
+                alert('Email already in use !');
+            }
+            else {
+                console.log('Error: ' + error);
+            }
+        }
     }
 
     return (
@@ -53,13 +76,15 @@ const SignUpForm = () => {
                     type="password" required
                     onChange={handleChange}
                     name="password"
-                    value={password} />
+                    value={password}
+                    minLength='6' />
 
                 <label>Confirm Password</label>
                 <input type="password" required
                     onChange={handleChange}
                     name="confirmPassword"
-                    value={confirmPassword} />
+                    value={confirmPassword}
+                    minLength='6' />
 
                 <button type="submit">SUBMIT</button>
             </form>

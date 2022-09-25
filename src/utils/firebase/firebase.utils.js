@@ -33,7 +33,7 @@ export const singInWithGooglePopup = () => signInWithPopup(auth, provider);
 export const db = getFirestore();
 
 // Creating new user auth collection with uid from google login
-export const createUserDocFromAuth = async (userAuth) => {
+export const createUserDocFromAuth = async (userAuth, additionalInfo) => {
     if (!userAuth) return;
 
     const userDocRef = doc(db, 'users', userAuth.uid);
@@ -47,7 +47,8 @@ export const createUserDocFromAuth = async (userAuth) => {
             await setDoc(userDocRef, {
                 displayName,
                 email,
-                createdAt
+                createdAt,
+                ...additionalInfo
             });
         }
         catch (error) {
