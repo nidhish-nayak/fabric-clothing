@@ -41,6 +41,7 @@ const SingInForm = () => {
         try {
             const response = await userSignInWithEmailAndPassword(email, password);
             console.log(response);
+
             resetFormFields();
         }
         catch (error) {
