@@ -25,9 +25,11 @@
     &.google-sign-in {
         background-color: #4285f4;
         color: white;
+        min-width: 195px;
+        margin: 0 0 0 0.2em;
 
         &:hover {
-            background-color: #357ae8;
+            background-color: #285bad;
             border: none;
         }
     }
