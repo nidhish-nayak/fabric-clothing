@@ -79,7 +79,8 @@ const SingInForm = () => {
 
                 <div className="sign-in-button-container">
                     <Button type='submit'>Sign In</Button>
-                    <Button buttonType='google' onClick={logGoogleUser}>Sign In with Google</Button>
+                    {/* Here type='button' is used to prevent form submission on google popup click */}
+                    <Button type='button' buttonType='google' onClick={logGoogleUser}>Sign In with Google</Button>
                 </div>
 
             </form>
