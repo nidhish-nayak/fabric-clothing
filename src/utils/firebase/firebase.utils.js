@@ -1,9 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {
-    createUserWithEmailAndPassword,
-    getAuth,
-    GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup
+    createUserWithEmailAndPassword, getAuth,
+    GoogleAuthProvider, signInWithEmailAndPassword,
+    signInWithPopup, signOut
 } from "firebase/auth";
 import { doc, getDoc, getFirestore, setDoc } from 'firebase/firestore';
 
@@ -19,7 +19,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
-console.log("Firebase initialized: " + firebaseApp);
+console.log(firebaseApp);
 
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({
@@ -67,4 +67,10 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
 export const userSignInWithEmailAndPassword = async (email, password) => {
     if (!email || !password) return;
     return await signInWithEmailAndPassword(auth, email, password);
+}
+
+//User signout
+export const signOutUser = async () => {
+    await signOut(auth);
+    console.log('Signed out!!!')
 }
