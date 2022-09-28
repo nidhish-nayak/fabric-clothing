@@ -12,6 +12,7 @@ export const UserProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(null);
     const value = { currentUser, setCurrentUser };
 
+    //This is called when component is mounted & listens to auth
     useEffect(() => {
         const unsubscribe = onAuthStateChangedListener();
         return unsubscribe;
