@@ -76,6 +76,9 @@ export const signOutUser = async () => {
 }
 
 //Auth state change listener
-export const onAuthStateChangedListener = (callback) => {
-    onAuthStateChanged(auth, callback);
+export const onAuthStateChangedListener = () => {
+    onAuthStateChanged(auth, (callback) => {
+        // This callback just returns the same value of getAuth() but the updated one
+        console.log(callback)
+    });
 }
