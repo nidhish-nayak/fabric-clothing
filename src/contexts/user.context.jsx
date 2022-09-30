@@ -16,11 +16,11 @@ export const UserProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChangedListener((user) => {
             // This callback just returns the same value of getAuth() but the updated one
-            console.log(user);
             if (user) {
                 createUserDocFromAuth(user);
             }
             setCurrentUser(user);
+            console.log(user);
         });
         return unsubscribe;
     }, []);
