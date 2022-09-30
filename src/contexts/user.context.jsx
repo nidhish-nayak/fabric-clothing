@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { onAuthStateChangedListener } from '../utils/firebase/firebase.utils';
+import { createUserDocFromAuth, onAuthStateChangedListener } from '../utils/firebase/firebase.utils';
 
 //Context API
 export const UserContext = createContext({
@@ -14,7 +14,14 @@ export const UserProvider = ({ children }) => {
 
     //This is called when component is mounted & listens to auth
     useEffect(() => {
-        const unsubscribe = onAuthStateChangedListener();
+        const unsubscribe = onAuthStateChangedListener((user) => {
+            // This callback just returns the same value of getAuth() but the updated one
+            console.log(user);
+            if (user) {
+                createUserDocFromAuth(user);
+            }
+            setCurrentUser(user);
+        });
         return unsubscribe;
     }, []);
 

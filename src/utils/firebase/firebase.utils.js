@@ -72,13 +72,9 @@ export const userSignInWithEmailAndPassword = async (email, password) => {
 //User signout
 export const signOutUser = async () => {
     await signOut(auth);
-    console.log('Signed out!!!')
 }
 
 //Auth state change listener
-export const onAuthStateChangedListener = () => {
-    onAuthStateChanged(auth, (callback) => {
-        // This callback just returns the same value of getAuth() but the updated one
-        console.log(callback)
-    });
+export const onAuthStateChangedListener = (callback) => {
+    onAuthStateChanged(auth, callback);
 }
