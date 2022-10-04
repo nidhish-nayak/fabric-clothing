@@ -1,10 +1,10 @@
 import React from "react";
-import Data from '../../Data.json';
+import SHOP_DATA from '../../data/SHOP_DATA.json';
 
 const Shop = () => {
     return (
         <div>
-            {Data.map(product => (
+            {SHOP_DATA.map(product => (
                 <div id={product.id}>
                     <h1>
                         {product.title}
