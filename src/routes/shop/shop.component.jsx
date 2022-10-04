@@ -1,9 +1,16 @@
 import React from "react";
+import Data from '../../Data.json';
 
 const Shop = () => {
     return (
         <div>
-            <h2>This is shop component</h2>
+            {Data.map(product => (
+                <div id={product.id}>
+                    <h1>
+                        {product.title}
+                    </h1>
+                </div>
+            ))}
         </div>
     )
 }
