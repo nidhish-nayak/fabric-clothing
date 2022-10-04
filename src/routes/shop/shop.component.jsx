@@ -4,11 +4,9 @@ import SHOP_DATA from '../../data/SHOP_DATA.json';
 const Shop = () => {
     return (
         <div>
-            {SHOP_DATA.map(product => (
-                <div id={product.id}>
-                    <h1>
-                        {product.title}
-                    </h1>
+            {SHOP_DATA.map(({ id, name }) => (
+                <div id={id}>
+                    <h1>{name}</h1>
                 </div>
             ))}
         </div>
