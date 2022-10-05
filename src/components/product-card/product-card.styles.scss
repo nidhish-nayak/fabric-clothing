@@ -1,0 +1,37 @@
+.product-card-container {
+   position: relative;
+   margin: 1em auto;
+   img {
+       width: 18em;
+       height: 20em;
+   }
+    .footer {
+        margin: 0.75em auto;
+        .name {
+            font-family: inherit;
+            text-transform: uppercase;
+        }
+        .price {
+            font-family: cursive;
+            font-size: 12px;
+            font-weight: 300;  
+            float: right;          
+        }
+    }
+    Button {
+        position: absolute;
+        z-index: -1;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.product-card-container:hover {
+    img {
+        opacity: 0.5;
+    }
+    Button {
+        z-index: 1;
+    }
+}
