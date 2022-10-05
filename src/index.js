@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import { ProductsProvider } from './contexts/products.context';
 import { UserProvider } from './contexts/user.context';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
@@ -12,7 +13,7 @@ root.render(
     <BrowserRouter>
       {/* UserProvider is added for using Context API with Firebase Auth */}
       <UserProvider>
-        <App />
+        <ProductsProvider><App /></ProductsProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

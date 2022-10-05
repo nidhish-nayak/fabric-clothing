@@ -1,12 +1,14 @@
-import React from "react";
-import SHOP_DATA from '../../data/SHOP_DATA.json';
-import './shop.styles.scss';
+import React, { useContext } from "react";
+import { ProductsContext } from "../../contexts/products.context";
 
 const Shop = () => {
+
+    const { products } = useContext(ProductsContext);
+
     return (
         <div className="shop-container">
-            {SHOP_DATA.map(({ id, name, imageUrl }) => (
-                <div class="shop-item" id={id} style={{ backgroundImage: `url(${imageUrl})` }}>
+            {products.map(({ id, name }) => (
+                <div className="shop-item" key={id}>
                     <h1>{name}</h1>
                 </div>
             ))}
