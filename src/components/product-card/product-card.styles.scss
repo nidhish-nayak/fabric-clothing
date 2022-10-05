@@ -6,16 +6,14 @@
        height: 20em;
    }
     .footer {
-        margin: 0.75em auto;
+        margin: 0 0 0.75em 0;
+        font-size: 1.1rem;
         .name {
             font-family: inherit;
-            text-transform: uppercase;
         }
         .price {
-            font-family: cursive;
-            font-size: 12px;
-            font-weight: 300;  
-            float: right;          
+            font-family: inherit;
+            float: right;         
         }
     }
     Button {
