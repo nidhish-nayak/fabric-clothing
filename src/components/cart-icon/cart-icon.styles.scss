@@ -1,0 +1,17 @@
+.cart-icon-container {
+    margin: 1em;
+    min-height: 25px;
+    min-width: 25px;
+    position: relative;
+    
+    .shopping-icon {
+        position: absolute;
+    }
+
+    .item-count {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
