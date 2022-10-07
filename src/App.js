@@ -1,4 +1,3 @@
-// import Data from './Data.json';
 import { Route, Routes } from 'react-router-dom';
 import Authentication from './routes/authentication/authentication.component.jsx';
 import Home from './routes/home/home.component.jsx';
