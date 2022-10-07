@@ -10,9 +10,15 @@
     }
 
     .item-count {
+        padding: 1px 0 0 0;
+        font-size: 0.75rem;
         position: absolute;
         top: 60%;
         left: 50%;
         transform: translate(-50%,-50%);
     }
+}
+
+.cart-icon-container:hover {
+    cursor: pointer;    
 }
