@@ -14,11 +14,11 @@ root.render(
     <BrowserRouter>
       {/* UserProvider is added for using Context API with Firebase Auth */}
       <UserProvider>
-        <CartProvider>
-          <ProductsProvider>
+        <ProductsProvider>
+          <CartProvider>
             <App />
-          </ProductsProvider>
-        </CartProvider>
+          </CartProvider>
+        </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

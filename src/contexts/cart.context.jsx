@@ -1,7 +1,8 @@
 import { createContext, useState } from 'react';
 
 export const CartContext = createContext({
-    cartStatus: null
+    cartStatus: false,
+    setCartStatus: () => { },
 })
 
 export const CartProvider = ({ children }) => {
