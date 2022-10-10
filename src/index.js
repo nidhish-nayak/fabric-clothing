@@ -5,6 +5,7 @@ import App from './App';
 import { ProductsProvider } from './contexts/products.context';
 import { UserProvider } from './contexts/user.context';
 import { CartProvider } from './contexts/cart.context';
+import { AddtocartProvider } from './contexts/addtocart.context';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
@@ -15,9 +16,11 @@ root.render(
       {/* UserProvider is added for using Context API with Firebase Auth */}
       <UserProvider>
         <ProductsProvider>
-          <CartProvider>
-            <App />
-          </CartProvider>
+          <AddtocartProvider>
+            <CartProvider>
+              <App />
+            </CartProvider>
+          </AddtocartProvider>
         </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
