@@ -36,7 +36,7 @@ const Navigation = () => {
                     <CartIcon />
                 </div>
                 {
-                    cartStatus ? <CartDropdown /> : console.log("Cart in closed state")
+                    cartStatus && <CartDropdown />
                 }
             </div>
             <Outlet />
