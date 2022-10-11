@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import { AddtocartProvider } from './contexts/addtocart.context';
+import { CartProvider } from './contexts/cart.context';
 import { ProductsProvider } from './contexts/products.context';
 import { UserProvider } from './contexts/user.context';
-import { CartProvider } from './contexts/cart.context';
-import { AddtocartProvider } from './contexts/addtocart.context';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
@@ -18,7 +18,9 @@ root.render(
         <ProductsProvider>
           <AddtocartProvider>
             <CartProvider>
+
               <App />
+
             </CartProvider>
           </AddtocartProvider>
         </ProductsProvider>

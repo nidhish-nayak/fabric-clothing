@@ -1,11 +1,11 @@
 import React, { Fragment, useContext } from "react"; //Fragment is used if no parent div element is needed
 import { Link, Outlet } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
+import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component.jsx';
+import CartIcon from '../../components/cart-icon/cart-icon.component.jsx';
+import { CartContext } from '../../contexts/cart.context';
 import { UserContext } from "../../contexts/user.context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
-import CartIcon from '../../components/cart-icon/cart-icon.component.jsx';
-import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component.jsx';
-import { CartContext } from '../../contexts/cart.context';
 import './navigation.styles.scss';
 
 const Navigation = () => {
@@ -36,7 +36,7 @@ const Navigation = () => {
                     <CartIcon />
                 </div>
                 {
-                    cartStatus ? <CartDropdown /> : console.log("Cart closed state")
+                    cartStatus ? <CartDropdown /> : console.log("Cart in closed state")
                 }
             </div>
             <Outlet />
