@@ -13,12 +13,13 @@ const CartContent = ({ value }) => {
                                 {i.name}
                             </div>
                             <div>
-                                {` x $${i.price}`}
+                                {`${i.count} x $${i.price}`}
                             </div>
                         </div>
                     </div>
                 ))
             }
+            {console.log(value)}
         </div>
     )
 }
