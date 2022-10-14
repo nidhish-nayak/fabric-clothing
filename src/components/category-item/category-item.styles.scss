@@ -30,8 +30,13 @@
     margin-right: 7.5px;
   }
 
+  &:nth-child(4) {
+    height: 340px;
+  }
+
   &:last-child {
     margin-left: 7.5px;
+    height: 340px;
   }
 
   .background-image {
