@@ -34,9 +34,12 @@
     height: 340px;
   }
 
+  &:nth-child(5) {
+    height: 340px;
+  }
+
   &:last-child {
     margin-left: 7.5px;
-    height: 340px;
   }
 
   .background-image {
