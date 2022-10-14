@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import { AddtocartProvider } from './contexts/addtocart.context';
 import { CartProvider } from './contexts/cart.context';
 import { ProductsProvider } from './contexts/products.context';
 import { UserProvider } from './contexts/user.context';
@@ -16,13 +15,9 @@ root.render(
       {/* UserProvider is added for using Context API with Firebase Auth */}
       <UserProvider>
         <ProductsProvider>
-          <AddtocartProvider>
-            <CartProvider>
-
-              <App />
-
-            </CartProvider>
-          </AddtocartProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
         </ProductsProvider>
       </UserProvider>
     </BrowserRouter>

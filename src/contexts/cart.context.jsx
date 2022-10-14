@@ -9,7 +9,7 @@ const addToCartHelper = (cartItems, productToAdd) => {
             i.id === productToAdd.id ? { ...i, count: i.count + 1 } : i
         );
     } else {
-        return [...cartItems, productToAdd];
+        return [...cartItems, { ...productToAdd, count: 1 }];
     }
 };
 
@@ -21,14 +21,14 @@ export const CartContext = createContext({
 });
 
 export const CartProvider = ({ children }) => {
-    const [cartStatus, setCartStatus] = useState();
+    const [cartStatus, setCartStatus] = useState(false);
     const [cartItems, setCartItems] = useState([]);
 
     const addItemToCart = (productToAdd) => {
         setCartItems(addToCartHelper(cartItems, productToAdd));
     };
 
-    const value = { cartStatus, setCartStatus };
+    const value = { cartStatus, setCartStatus, cartItems, addItemToCart };
 
     return (
         <CartContext.Provider value={value}>{children}</CartContext.Provider>
