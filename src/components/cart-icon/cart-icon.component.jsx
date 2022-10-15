@@ -7,11 +7,8 @@ const CartIcon = () => {
     const { cartStatus, setCartStatus, cartItems } = useContext(CartContext);
 
     const addFunc = (value) => {
-        let sum = 0;
-        value.forEach((i) => {
-            sum = sum + i.count;
-        });
-        return sum;
+        const arrayOfCount = value.map((i) => i.count);
+        return arrayOfCount.reduce((acc, cur) => acc + cur, 0);
     };
 
     return (
