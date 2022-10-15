@@ -6,6 +6,14 @@ import "./cart-icon.styles.scss";
 const CartIcon = () => {
     const { cartStatus, setCartStatus, cartItems } = useContext(CartContext);
 
+    const addFunc = (value) => {
+        let sum = 0;
+        value.forEach((i) => {
+            sum = sum + i.count;
+        });
+        return sum;
+    };
+
     return (
         <div
             className="cart-icon-container"
@@ -16,7 +24,7 @@ const CartIcon = () => {
             }}
         >
             <ShopIcon className="shopping-icon" />
-            <span className="item-count">{cartItems.length}</span>
+            <span className="item-count">{addFunc(cartItems)}</span>
         </div>
     );
 };
