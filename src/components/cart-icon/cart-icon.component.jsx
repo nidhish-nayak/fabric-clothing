@@ -8,6 +8,7 @@ const CartIcon = () => {
 
     const addFunc = (value) => {
         const arrayOfCount = value.map((i) => i.count);
+        // Adds the count of all the items together to get the total count of orders
         return arrayOfCount.reduce((acc, cur) => acc + cur, 0);
     };
 
