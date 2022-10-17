@@ -23,7 +23,12 @@
     margin: 50px auto;
   }
 
-  button {
-    margin-top: auto;
+  .checkout-button {
+    margin: 1em 0 0 0;
+    padding: 0;
+
+    button {
+      width: 200px;
+    }
   }
 }
