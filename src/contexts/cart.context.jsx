@@ -19,6 +19,8 @@ const removeCartHelper = (cartItems, productToRemove) => {
         return cartItems.map((i) =>
             i.id === productToRemove.id ? { ...i, count: i.count - 1 } : i
         );
+    } else {
+        console.log("Error");
     }
 };
 
@@ -29,6 +31,7 @@ export const CartContext = createContext({
     addItemToCart: () => {},
     cartCount: 0,
     removeItemFromCart: () => {},
+    removeWholeItem: () => {},
 });
 
 export const CartProvider = ({ children }) => {
@@ -49,10 +52,7 @@ export const CartProvider = ({ children }) => {
     };
 
     const removeItemFromCart = (productToRemove) => {
-        const ifCountOne = cartItems.find(
-            (i) => i.id === productToRemove.id && productToRemove.count === 1
-        );
-        if (ifCountOne) {
+        if (productToRemove.count === 1) {
             cartItems.map(
                 (i) =>
                     i.id === productToRemove.id &&
@@ -65,12 +65,21 @@ export const CartProvider = ({ children }) => {
         }
     };
 
+    const removeWholeItem = (removeItem) => {
+        cartItems.map(
+            (i) =>
+                i.id === removeItem.id &&
+                setCartItems(cartItems.filter((i) => i.id !== removeItem.id))
+        );
+    };
+
     const value = {
         cartStatus,
         setCartStatus,
         cartItems,
         addItemToCart,
         removeItemFromCart,
+        removeWholeItem,
         cartCount,
     };
 
