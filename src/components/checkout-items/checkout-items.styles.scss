@@ -1,61 +1,42 @@
-.checkoutitems-container {
+.checkout-item-container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    margin: 0 0 2em 0;
-    padding: 1em 10em;
+    min-height: 100px;
+    border-bottom: 1px solid darkgrey;
+    padding: 15px 0;
+    font-size: 20px;
+    align-items: center;
 
-    .item-headings {
-        display: grid;
-        grid-template-columns: 2.25fr 1.5fr 1fr 0.75fr 0.75fr;
+    .image-container {
+        width: 23%;
+        padding-right: 15px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
-    .checkoutitems {
-        display: grid;
-        grid-template-columns: 1fr 1fr 0.1fr 0.1fr 0.1fr 0.5fr 0.5fr;
-        align-items: center;
-        grid-gap: 0.25em;
-        margin: 1em auto;
-        font-size: 1rem;
+    .name,
+    .quantity,
+    .price {
+        width: 23%;
+    }
 
-        .item-image {
-            width: 210px;
-            height: 260px;
+    .quantity {
+        display: flex;
+
+        .arrow {
+            cursor: pointer;
         }
 
-        .item-name {
-            margin: 0 3em;
+        .value {
+            margin: 0 10px;
         }
+    }
 
-        .item-arrow {
-            font-size: 1.5rem;
-            margin: 0 auto;
-            border: none;
-            padding: 10px;
-
-            &:hover {
-                cursor: pointer;
-                background-color: rgb(225, 225, 225);
-            }
-        }
-
-        .item-price {
-            margin: 0 auto;
-        }
-
-        .item-count {
-            margin: 0 auto;
-        }
-
-        .item-remove {
-            font-size: 1.5rem;
-            font-family: monospace;
-            margin: 0 auto;
-            padding: 0.5em;
-
-            &:hover {
-                cursor: pointer;
-                background-color: rgb(225, 225, 225);
-            }
-        }
+    .remove-button {
+        padding-left: 12px;
+        cursor: pointer;
     }
 }
