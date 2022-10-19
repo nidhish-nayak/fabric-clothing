@@ -3,6 +3,7 @@ import { CartContext } from "../../contexts/cart.context";
 import "./checkout-items.styles.scss";
 
 const CheckoutItems = () => {
+    // use cart context for checkout page
     const { cartItems, addItemToCart, removeItemFromCart, removeWholeItem } =
         useContext(CartContext);
 
