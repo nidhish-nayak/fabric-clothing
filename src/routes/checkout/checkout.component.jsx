@@ -28,7 +28,7 @@ const Checkout = () => {
                 <CheckoutItems key={i.id} props={i} />
             ))}
             <span className="total">
-                Total:
+                Total:{" "}
                 {cartItems.reduce(
                     (total, cartItems) =>
                         total + cartItems.count * cartItems.price,
