@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import { CartProvider } from './contexts/cart.context';
-import { ProductsProvider } from './contexts/products.context';
+import { CategoriesProvider } from './contexts/categories.context';
 import { UserProvider } from './contexts/user.context';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
@@ -14,11 +14,11 @@ root.render(
     <BrowserRouter>
       {/* UserProvider is added for using Context API with Firebase Auth */}
       <UserProvider>
-        <ProductsProvider>
+        <CategoriesProvider>
           <CartProvider>
             <App />
           </CartProvider>
-        </ProductsProvider>
+        </CategoriesProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

@@ -5,7 +5,7 @@ import {
     GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword,
     signInWithPopup, signOut
 } from "firebase/auth";
-import { collection, doc, getDoc, getFirestore, setDoc, writeBatch } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, getFirestore, query, setDoc, writeBatch } from 'firebase/firestore';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -31,7 +31,7 @@ export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 export const db = getFirestore();
 
-// Collections for SHOP PAGE and Firesbase DB
+// Add Collections in  Firesbase DB for SHOP PAGE
 export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
     const collectionRef = collection(db, collectionKey);
     const batch = writeBatch(db);
@@ -42,7 +42,21 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
     })
 
     await batch.commit();
-    console.log('Done!');
+    console.log('Data Uploading Done!');
+}
+
+// Query collection data from DB to application
+export const getCategoriesAndDocuments = async () => {
+    const collectionRef = collection(db, 'categories');
+    const q = query(collectionRef);
+
+    const querySnapshot = await getDocs(q);
+    const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+        const { title, items } = docSnapshot.data();
+        acc[title.toLowerCase()] = items;
+        return acc;
+    }, {})
+    return categoryMap;
 }
 
 // Creating new user auth collection with uid from google login
