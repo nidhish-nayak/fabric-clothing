@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../contexts/cart.context";
-import Button from "../button/button.component";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import CartItem from "../cart-content/cart-item.component";
 import {
     CartDropDownContainer,
@@ -26,7 +26,13 @@ const CartDropdown = () => {
                     <EmptyMessage>Your cart is empty</EmptyMessage>
                 )}
             </CartItemContainer>
-            <Button onClick={goToCheckoutHandler}> GO TO CHECKOUT </Button>
+            <Button
+                buttonType={BUTTON_TYPE_CLASSES.base}
+                onClick={goToCheckoutHandler}
+            >
+                {" "}
+                GO TO CHECKOUT{" "}
+            </Button>
         </CartDropDownContainer>
     );
 };
