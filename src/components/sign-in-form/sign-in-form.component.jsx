@@ -6,7 +6,11 @@ import {
 } from "../../utils/firebase/firebase.utils.js";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
-import "./sign-in-form.styles.scss";
+import "./sign-in-form.styles.jsx";
+import {
+    SignInButtonContainer,
+    SignInContainer,
+} from "./sign-in-form.styles.jsx";
 
 const defaultFormFields = {
     email: "",
@@ -58,7 +62,7 @@ const SingInForm = () => {
     };
 
     return (
-        <div className="sign-in-container">
+        <SignInContainer>
             <h2>Already have an account ?</h2>
             <span>Sign in with your email and password</span>
             <form
@@ -85,7 +89,7 @@ const SingInForm = () => {
                     minLength="6"
                 />
 
-                <div className="sign-in-button-container">
+                <SignInButtonContainer>
                     <Button type="submit">Sign In</Button>
                     {/* Here type='button' is used to prevent form submission on google popup click */}
                     <Button
@@ -95,9 +99,9 @@ const SingInForm = () => {
                     >
                         Sign In with Google
                     </Button>
-                </div>
+                </SignInButtonContainer>
             </form>
-        </div>
+        </SignInContainer>
     );
 };
 

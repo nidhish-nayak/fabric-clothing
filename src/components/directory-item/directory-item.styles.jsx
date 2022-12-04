@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const BackgroundImage = styled.div`
@@ -5,9 +6,10 @@ export const BackgroundImage = styled.div`
     height: 100%;
     background-size: cover;
     background-position: center;
+    background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 `;
 
-export const DirectoryBodyContainer = styled.div`
+export const DirectoryBodyContainer = styled(Link)`
     height: 90px;
     padding: 0 25px;
     display: flex;

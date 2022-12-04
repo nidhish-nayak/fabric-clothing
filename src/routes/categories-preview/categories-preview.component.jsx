@@ -6,7 +6,7 @@ const CategoriesPreview = () => {
     const { categoriesMap } = useContext(CategoriesContext);
 
     return (
-        <Fragment className="shop-container">
+        <Fragment>
             {Object.keys(categoriesMap).map((title) => {
                 const products = categoriesMap[title];
                 return (

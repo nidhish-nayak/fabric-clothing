@@ -1,18 +1,21 @@
 import React, { useState } from "react";
-import { createAuthUserWithEmailAndPassword, createUserDocFromAuth } from "../../utils/firebase/firebase.utils";
+import {
+    createAuthUserWithEmailAndPassword,
+    createUserDocFromAuth,
+} from "../../utils/firebase/firebase.utils";
 import Button from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
-import "./sign-up-form.styles.scss";
+import "./sign-up-form.styles.jsx";
+import { SignUpContainer } from "./sign-up-form.styles.jsx";
 
 const defaultFormFields = {
-    displayName: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-}
+    displayName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+};
 
 const SignUpForm = () => {
-
     const [formFields, setFormFields] = useState(defaultFormFields);
 
     //Note: Do not destructure from default Form Fields, get data from the state
@@ -21,13 +24,13 @@ const SignUpForm = () => {
     //Reset form once submitted and user auth is successfull
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
-    }
+    };
 
     //State handling - updating the state as the user types in the value
     const handleChange = (event) => {
         const { name, value } = event.target;
-        setFormFields({ ...formFields, [name]: value })
-    }
+        setFormFields({ ...formFields, [name]: value });
+    };
 
     //Form Submit handling
     const handleSubmit = async (event) => {
@@ -35,62 +38,75 @@ const SignUpForm = () => {
         if (password !== confirmPassword) {
             alert("Passwords do not match !");
             return;
-        };
+        }
         try {
-            const { user } = await createAuthUserWithEmailAndPassword(email, password);
+            const { user } = await createAuthUserWithEmailAndPassword(
+                email,
+                password
+            );
             console.log(user);
             await createUserDocFromAuth(user.user, { displayName });
             resetFormFields();
-        }
-        catch (error) {
-            if (error.code === 'auth/email-already-in-use') {
-                alert('Email already in use !');
-            }
-            else {
-                console.log('Error: ' + error);
+        } catch (error) {
+            if (error.code === "auth/email-already-in-use") {
+                alert("Email already in use !");
+            } else {
+                console.log("Error: " + error);
             }
         }
-    }
+    };
 
     return (
-        <div className="sign-up-container">
+        <SignUpContainer>
             <h2>Don't have an account ?</h2>
             <span>Sign up with your email and password</span>
-            <form onSubmit={(event) => { handleSubmit(event) }}>
+            <form
+                onSubmit={(event) => {
+                    handleSubmit(event);
+                }}
+            >
                 <FormInput
                     label="Display Name: "
-                    type="text" required
+                    type="text"
+                    required
                     onChange={handleChange}
                     name="displayName"
-                    value={displayName} />
+                    value={displayName}
+                />
 
                 <FormInput
                     label="Email: "
-                    type="email" required
+                    type="email"
+                    required
                     onChange={handleChange}
                     name="email"
-                    value={email} />
+                    value={email}
+                />
 
                 <FormInput
                     label="Password: "
-                    type="password" required
+                    type="password"
+                    required
                     onChange={handleChange}
                     name="password"
                     value={password}
-                    minLength='6' />
+                    minLength="6"
+                />
 
                 <FormInput
                     label="Confirm Password: "
-                    type="password" required
+                    type="password"
+                    required
                     onChange={handleChange}
                     name="confirmPassword"
                     value={confirmPassword}
-                    minLength='6' />
+                    minLength="6"
+                />
 
-                <Button type='submit'>Sign Up</Button>
+                <Button type="submit">Sign Up</Button>
             </form>
-        </div>
-    )
-}
+        </SignUpContainer>
+    );
+};
 
 export default SignUpForm;
