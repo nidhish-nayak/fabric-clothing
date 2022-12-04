@@ -1,8 +1,7 @@
-import Directory from '../../components/directory/directory.component';
-import Data from '../../data/HOME_DATA.json';
+import Directory from "../../components/directory/directory.component";
 
 const Home = () => {
-    return (<Directory categories={Data} />);
-}
+    return <Directory />;
+};
 
 export default Home;
