@@ -1,5 +1,8 @@
 import { createContext, useEffect, useState } from "react";
-import { createUserDocFromAuth, onAuthStateChangedListener } from '../utils/firebase/firebase.utils';
+import {
+    createUserDocFromAuth,
+    onAuthStateChangedListener,
+} from "../utils/firebase/firebase.utils";
 
 //Context API
 export const UserContext = createContext({
@@ -25,5 +28,17 @@ export const UserProvider = ({ children }) => {
         return unsubscribe;
     }, []);
 
-    return <UserContext.Provider value={value}>{children}</UserContext.Provider>
+    return (
+        <UserContext.Provider value={value}>{children}</UserContext.Provider>
+    );
+};
+
+/* 
+
+const userReducer  = (state, action) => {
+    return {
+        currentUser: null
+    }
 }
+
+*/
