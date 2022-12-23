@@ -21,7 +21,6 @@ export const UserProvider = ({ children }) => {
             // This callback just returns the same value of getAuth() but the updated one
             if (user) {
                 createUserDocFromAuth(user);
-                console.log("User ID: " + user.uid);
             }
             setCurrentUser(user);
         });
