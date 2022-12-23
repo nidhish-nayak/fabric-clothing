@@ -32,13 +32,3 @@ export const UserProvider = ({ children }) => {
         <UserContext.Provider value={value}>{children}</UserContext.Provider>
     );
 };
-
-/* 
-
-const userReducer  = (state, action) => {
-    return {
-        currentUser: null
-    }
-}
-
-*/
