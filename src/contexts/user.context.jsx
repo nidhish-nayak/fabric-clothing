@@ -4,6 +4,8 @@ import {
     onAuthStateChangedListener,
 } from "../utils/firebase/firebase.utils";
 
+//We will be using Redux here post context api
+
 //Context API
 export const UserContext = createContext({
     currentUser: null,
