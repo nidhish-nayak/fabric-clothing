@@ -20,9 +20,7 @@ const defaultFormFields = {
 const SingInForm = () => {
     const logGoogleUser = async () => {
         const response = await signInWithGooglePopup();
-        console.log(response.user);
-        const userDocRef = await createUserDocFromAuth(response.user);
-        console.log(userDocRef);
+        await createUserDocFromAuth(response.user);
     };
 
     const [formFields, setFormFields] = useState(defaultFormFields);
