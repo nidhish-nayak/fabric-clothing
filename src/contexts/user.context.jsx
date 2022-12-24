@@ -4,30 +4,33 @@ import {
     onAuthStateChangedListener,
 } from "../utils/firebase/firebase.utils";
 
-//Context API
+export const USER_ACTION_TYPES = {
+    SET_CURRENT_USER: "SET_CURRENT_USER",
+};
+
+const INITIAL_STATE = {
+    currentUser: null,
+};
+
+// Context API
 export const UserContext = createContext({
     currentUser: null,
     setCurrentUser: () => null,
 });
 
-export const USER_ACTION_TYPES = {
-    SET_CURRENT_USER: "SET_CURRENT_USER",
-};
-
-//We will be using Redux here post context api
+// User Reducer used instead of useState for Redux implementation
 const userReducer = (state, action) => {
     const { type, payload } = action;
 
     switch (type) {
         case USER_ACTION_TYPES.SET_CURRENT_USER:
-            return { ...state, currentUser: payload };
+            return {
+                ...state,
+                currentUser: payload,
+            };
         default:
             throw new Error(`Unhandled type ${type} in the userReducer !`);
     }
-};
-
-const INITIAL_STATE = {
-    currentUser: null,
 };
 
 export const UserProvider = ({ children }) => {
@@ -35,14 +38,12 @@ export const UserProvider = ({ children }) => {
     const setCurrentUser = (user) => {
         dispatch({ type: USER_ACTION_TYPES.SET_CURRENT_USER, payload: user });
     };
-
-    //Add useState here to access setState anywhere in the child component
     const value = { currentUser, setCurrentUser };
 
-    //This is called when component is mounted & listens to auth
+    // This is called when component is rendered & it listens to auth
     useEffect(() => {
         const unsubscribe = onAuthStateChangedListener((user) => {
-            // This callback just returns the same value of getAuth() but the updated one if auth state is changed
+            // If Auth state changed - new user doc is created in DB and the new user is updated
             if (user) {
                 createUserDocFromAuth(user);
             }
@@ -50,7 +51,6 @@ export const UserProvider = ({ children }) => {
         });
         return unsubscribe;
     }, []);
-    console.log(currentUser);
 
     return (
         <UserContext.Provider value={value}>{children}</UserContext.Provider>
