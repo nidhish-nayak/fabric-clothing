@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useReducer } from "react";
 
 const addToCartHelper = (cartItems, productToAdd) => {
     // Find if the product is already present
@@ -34,10 +34,69 @@ export const CartContext = createContext({
     removeWholeItem: () => {},
 });
 
+const cartReducer = (state, action) => {
+    const { type, payload } = action;
+
+    switch (type) {
+        case CART_ACTION_TYPES.SET_CART_STATUS:
+            return {
+                ...state,
+                cartStatus: payload,
+            };
+        case CART_ACTION_TYPES.SET_CART_ITEMS:
+            return {
+                ...state,
+                cartItems: payload,
+            };
+        case CART_ACTION_TYPES.SET_CART_COUNT:
+            return {
+                ...state,
+                cartCount: payload,
+            };
+        default:
+            throw new Error(`Unhandled type ${type} in the userReducer !`);
+    }
+};
+
+export const CART_ACTION_TYPES = {
+    SET_CART_STATUS: "SET_CART_STATUS",
+    SET_CART_ITEMS: "SET_CART_ITEMS",
+    SET_CART_COUNT: "SET_CART_COUNT",
+};
+
+const INITIAL_STATE = {
+    cartStatus: false,
+    cartItems: [],
+    cartCount: 0,
+};
+
 export const CartProvider = ({ children }) => {
-    const [cartStatus, setCartStatus] = useState(false);
-    const [cartItems, setCartItems] = useState([]);
-    const [cartCount, setCartCount] = useState(0);
+    const [{ cartStatus, cartItems, cartCount }, dispatch] = useReducer(
+        cartReducer,
+        INITIAL_STATE
+    );
+
+    // Dispatch method for setCartStatus, setCartItems and setCartCount
+    const setCartCount = (newCartCount) => {
+        dispatch({
+            type: CART_ACTION_TYPES.SET_CART_COUNT,
+            payload: newCartCount,
+        });
+    };
+
+    const setCartItems = (product) => {
+        dispatch({
+            type: CART_ACTION_TYPES.SET_CART_ITEMS,
+            payload: product,
+        });
+    };
+
+    const setCartStatus = (status) => {
+        dispatch({
+            type: CART_ACTION_TYPES.SET_CART_STATUS,
+            payload: status,
+        });
+    };
 
     useEffect(() => {
         const newCartCount = cartItems.reduce(
