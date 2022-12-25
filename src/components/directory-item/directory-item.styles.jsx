@@ -26,7 +26,7 @@ export const DirectoryBodyContainer = styled.div`
         margin: 0 6px 0;
         font-size: 22px;
         color: #4a4a4a;
-        text-transform: capitalize;
+        text-transform: uppercase;
     }
 
     p {
