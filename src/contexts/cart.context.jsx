@@ -89,11 +89,11 @@ export const CartProvider = ({ children }) => {
         });
     };
 
-    const setCartStatus = (status) => {
+    const setCartStatus = (cartStatus) => {
         dispatch({
             type: "SET_CART_STATUS",
             payload: {
-                cartStatus: status,
+                cartStatus: cartStatus,
             },
         });
     };
