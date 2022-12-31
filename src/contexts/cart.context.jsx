@@ -27,7 +27,7 @@ const removeCartHelper = (cartItems, productToRemove) => {
 };
 
 const INITIAL_STATE = {
-    cartStatus: true,
+    cartStatus: false,
     cartItems: [],
     cartCount: 0,
     cartTotal: 0,
@@ -37,6 +37,11 @@ const cartReducer = (state, action) => {
     const { type, payload } = action;
     switch (type) {
         case "SET_CART_ITEMS":
+            return {
+                ...state,
+                ...payload,
+            };
+        case "SET_CART_STATUS":
             return {
                 ...state,
                 ...payload,
@@ -84,48 +89,33 @@ export const CartProvider = ({ children }) => {
         });
     };
 
+    const setCartStatus = (status) => {
+        dispatch({
+            type: "SET_CART_STATUS",
+            payload: {
+                cartStatus: status,
+            },
+        });
+    };
+
     const addItemToCart = (productToAdd) => {
         const newCartItems = addToCartHelper(cartItems, productToAdd);
-        console.log(
-            "Cart Items:",
-            cartItems,
-            "cartTotal: ",
-            cartTotal,
-            "cartCount: ",
-            cartCount
-        );
         updateCartItemsReducer(newCartItems);
     };
 
     const removeItemFromCart = (productToRemove) => {
         const newCartItems = removeCartHelper(cartItems, productToRemove);
-        console.log(
-            "Cart Items:",
-            cartItems,
-            "cartTotal: ",
-            cartTotal,
-            "cartCount: ",
-            cartCount
-        );
         updateCartItemsReducer(newCartItems);
     };
 
     const removeWholeItem = (cartItemToClear) => {
         const newCartItems = clearCartItem(cartItems, cartItemToClear);
-        console.log(
-            "Cart Items:",
-            cartItems,
-            "cartTotal: ",
-            cartTotal,
-            "cartCount: ",
-            cartCount
-        );
         updateCartItemsReducer(newCartItems);
     };
 
     const value = {
         cartStatus,
-        setCartStatus: () => {},
+        setCartStatus,
         cartItems,
         addItemToCart,
         removeItemFromCart,
