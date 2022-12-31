@@ -6,9 +6,8 @@ const addToCartHelper = (cartItems, productToAdd) => {
         return cartItems.map((i) =>
             i.id === productToAdd.id ? { ...i, count: i.count + 1 } : i
         );
-    } else {
-        return [...cartItems, { ...productToAdd, count: 1 }];
     }
+    return [...cartItems, { ...productToAdd, count: 1 }];
 };
 
 const removeCartHelper = (cartItems, productToRemove) => {
@@ -27,20 +26,12 @@ const removeCartHelper = (cartItems, productToRemove) => {
     );
 };
 
-const clearCartItem = (cartItems, cartItemToClear) => {
-    return cartItems.filter((cartItem) => cartItem.id !== cartItemToClear.id);
-};
-
-export const CartContext = createContext({
-    cartStatus: false,
-    setCartStatus: () => {},
+const INITIAL_STATE = {
+    cartStatus: true,
     cartItems: [],
-    addItemToCart: () => {},
     cartCount: 0,
-    removeItemFromCart: () => {},
-    removeWholeItem: () => {},
     cartTotal: 0,
-});
+};
 
 const cartReducer = (state, action) => {
     const { type, payload } = action;
@@ -55,12 +46,20 @@ const cartReducer = (state, action) => {
     }
 };
 
-const INITIAL_STATE = {
-    cartStatus: true,
-    cartItems: [],
-    cartCount: 0,
-    cartTotal: 0,
+const clearCartItem = (cartItems, cartItemToClear) => {
+    return cartItems.filter((cartItem) => cartItem.id !== cartItemToClear.id);
 };
+
+export const CartContext = createContext({
+    cartStatus: false,
+    setCartStatus: () => {},
+    cartItems: [],
+    addItemToCart: () => {},
+    cartCount: 0,
+    removeItemFromCart: () => {},
+    removeWholeItem: () => {},
+    cartTotal: 0,
+});
 
 export const CartProvider = ({ children }) => {
     const [{ cartStatus, cartItems, cartCount, cartTotal }, dispatch] =
