@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import { createAction } from "../utils/reducer/reducer.utils";
 
 const addToCartHelper = (cartItems, productToAdd) => {
     const ifItemExists = cartItems.find((i) => i.id === productToAdd.id);
@@ -26,6 +27,11 @@ const removeCartHelper = (cartItems, productToRemove) => {
     );
 };
 
+export const CART_ACTION_TYPES = {
+    SET_CART_ITEMS: "SET_CART_ITEMS",
+    SET_CART_STATUS: "SET_CART_STATUS",
+};
+
 const INITIAL_STATE = {
     cartStatus: false,
     cartItems: [],
@@ -36,15 +42,15 @@ const INITIAL_STATE = {
 const cartReducer = (state, action) => {
     const { type, payload } = action;
     switch (type) {
-        case "SET_CART_ITEMS":
+        case CART_ACTION_TYPES.SET_CART_ITEMS:
             return {
                 ...state,
                 ...payload,
             };
-        case "SET_CART_STATUS":
+        case CART_ACTION_TYPES.SET_CART_STATUS:
             return {
                 ...state,
-                cartStatus: payload,
+                ...payload,
             };
         default:
             throw new Error(`Unhandled type ${type} in the userReducer !`);
@@ -79,21 +85,21 @@ export const CartProvider = ({ children }) => {
             (total, cartItem) => total + cartItem.count * cartItem.price,
             0
         );
-        dispatch({
-            type: "SET_CART_ITEMS",
-            payload: {
+        dispatch(
+            createAction(CART_ACTION_TYPES.SET_CART_ITEMS, {
                 cartItems,
                 cartTotal: newCartTotal,
                 cartCount: newCartCount,
-            },
-        });
+            })
+        );
     };
 
-    const setCartStatus = (cartStatus) => {
-        dispatch({
-            type: "SET_CART_STATUS",
-            payload: cartStatus,
-        });
+    const setCartStatus = (status) => {
+        dispatch(
+            createAction(CART_ACTION_TYPES.SET_CART_STATUS, {
+                cartStatus: status,
+            })
+        );
     };
 
     const addItemToCart = (productToAdd) => {
