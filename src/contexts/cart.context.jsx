@@ -44,7 +44,7 @@ const cartReducer = (state, action) => {
         case "SET_CART_STATUS":
             return {
                 ...state,
-                ...payload,
+                cartStatus: payload,
             };
         default:
             throw new Error(`Unhandled type ${type} in the userReducer !`);
@@ -92,9 +92,7 @@ export const CartProvider = ({ children }) => {
     const setCartStatus = (cartStatus) => {
         dispatch({
             type: "SET_CART_STATUS",
-            payload: {
-                cartStatus: cartStatus,
-            },
+            payload: cartStatus,
         });
     };
 
