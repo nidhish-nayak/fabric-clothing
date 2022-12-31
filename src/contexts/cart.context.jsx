@@ -65,7 +65,7 @@ export const CartProvider = ({ children }) => {
     const [{ cartStatus, cartItems, cartCount, cartTotal }, dispatch] =
         useReducer(cartReducer, INITIAL_STATE);
 
-    const updateCartItemsReducer = (newCartItems) => {
+    const updateCartItemsReducer = (cartItems) => {
         const newCartCount = cartItems.reduce(
             (total, cartItems) => total + cartItems.count,
             0
@@ -77,7 +77,7 @@ export const CartProvider = ({ children }) => {
         dispatch({
             type: "SET_CART_ITEMS",
             payload: {
-                cartItems: newCartItems,
+                cartItems,
                 cartTotal: newCartTotal,
                 cartCount: newCartCount,
             },
@@ -86,16 +86,40 @@ export const CartProvider = ({ children }) => {
 
     const addItemToCart = (productToAdd) => {
         const newCartItems = addToCartHelper(cartItems, productToAdd);
+        console.log(
+            "Cart Items:",
+            cartItems,
+            "cartTotal: ",
+            cartTotal,
+            "cartCount: ",
+            cartCount
+        );
         updateCartItemsReducer(newCartItems);
     };
 
     const removeItemFromCart = (productToRemove) => {
         const newCartItems = removeCartHelper(cartItems, productToRemove);
+        console.log(
+            "Cart Items:",
+            cartItems,
+            "cartTotal: ",
+            cartTotal,
+            "cartCount: ",
+            cartCount
+        );
         updateCartItemsReducer(newCartItems);
     };
 
     const removeWholeItem = (cartItemToClear) => {
         const newCartItems = clearCartItem(cartItems, cartItemToClear);
+        console.log(
+            "Cart Items:",
+            cartItems,
+            "cartTotal: ",
+            cartTotal,
+            "cartCount: ",
+            cartCount
+        );
         updateCartItemsReducer(newCartItems);
     };
 
