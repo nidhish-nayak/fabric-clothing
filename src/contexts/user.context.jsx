@@ -41,7 +41,7 @@ export const UserProvider = ({ children }) => {
     };
     const value = { currentUser, setCurrentUser };
 
-    // This is called when component is rendered & it listens to auth
+    // This is called when component is rendered & it listens to auth on user sign/out
     useEffect(() => {
         const unsubscribe = onAuthStateChangedListener((user) => {
             // If Auth state changed - new user doc is created in DB and the new user is updated
