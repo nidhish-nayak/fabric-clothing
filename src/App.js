@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
+import { getCategoriesAndDocuments } from "../utils/firebase/firebase.utils";
 import Authentication from './routes/authentication/authentication.component.jsx';
 import Checkout from './routes/checkout/checkout.component.jsx';
 import Home from './routes/home/home.component.jsx';
 import Navigation from './routes/navigation/navigation.component.jsx';
 import Shop from './routes/shop/shop.component.jsx';
+import { setCategoriesMap } from './store/category/category.action.js';
 import { setCurrentUser } from './store/user/user.action.js';
 import {
   createUserDocFromAuth,
@@ -25,8 +27,16 @@ const App = () => {
       dispatch(setCurrentUser(user));
     });
     return unsubscribe;
-  }, [dispatch]);
-  // This dispatch dependency is not needed and can be left blank. We have added it here just to avoid one warning message
+  }, []);
+
+  // CategoriesReducer - Fetches all category items from the DB
+  useEffect(() => {
+    const getCategoriesMap = async () => {
+      const categoryMap = await getCategoriesAndDocuments();
+      dispatch(setCategoriesMap(categoryMap));
+    };
+    getCategoriesMap();
+  }, []);
 
   return (
     <Routes>

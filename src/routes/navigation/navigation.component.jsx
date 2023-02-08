@@ -1,10 +1,11 @@
 import React, { Fragment, useContext } from "react"; //Fragment is used if no parent div element is needed
+import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component.jsx";
 import CartIcon from "../../components/cart-icon/cart-icon.component.jsx";
 import { CartContext } from "../../contexts/cart.context";
-import { UserContext } from "../../contexts/user.context";
+import { userSelector } from "../../store/user/user.selector";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import {
     LogoContainer,
@@ -14,7 +15,8 @@ import {
 } from "./navigation.styles.jsx";
 
 const Navigation = () => {
-    const { currentUser } = useContext(UserContext);
+    const currentUser = useSelector(userSelector);
+    // const { currentUser } = useContext(UserContext);
     const { cartStatus } = useContext(CartContext);
 
     return (
