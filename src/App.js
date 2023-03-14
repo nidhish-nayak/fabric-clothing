@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { getCategoriesAndDocuments } from "../utils/firebase/firebase.utils";
+import { getCategoriesAndDocuments } from "../src/utils/firebase/firebase.utils";
 import Authentication from './routes/authentication/authentication.component.jsx';
 import Checkout from './routes/checkout/checkout.component.jsx';
 import Home from './routes/home/home.component.jsx';
@@ -27,7 +27,7 @@ const App = () => {
       dispatch(setCurrentUser(user));
     });
     return unsubscribe;
-  }, []);
+  }, [dispatch]);
 
   // CategoriesReducer - Fetches all category items from the DB
   useEffect(() => {
@@ -36,7 +36,7 @@ const App = () => {
       dispatch(setCategoriesMap(categoryMap));
     };
     getCategoriesMap();
-  }, []);
+  }, [dispatch]);
 
   return (
     <Routes>
