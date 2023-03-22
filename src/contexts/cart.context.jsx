@@ -63,12 +63,12 @@ const clearCartItem = (cartItems, cartItemToClear) => {
 
 export const CartContext = createContext({
     cartStatus: false,
-    setCartStatus: () => {},
+    setCartStatus: () => { },
     cartItems: [],
-    addItemToCart: () => {},
+    addItemToCart: () => { },
     cartCount: 0,
-    removeItemFromCart: () => {},
-    removeWholeItem: () => {},
+    removeItemFromCart: () => { },
+    removeWholeItem: () => { },
     cartTotal: 0,
 });
 
