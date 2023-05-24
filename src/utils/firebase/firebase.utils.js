@@ -91,12 +91,12 @@ export const userSignInWithEmailAndPassword = async (email, password) => {
     return await signInWithEmailAndPassword(auth, email, password);
 }
 
-//User signout
+// User signout
 export const signOutUser = async () => {
     await signOut(auth);
 }
 
-//Auth state change listener
+// Auth state change listener
 export const onAuthStateChangedListener = (callback) => {
     onAuthStateChanged(auth, callback);
 }
