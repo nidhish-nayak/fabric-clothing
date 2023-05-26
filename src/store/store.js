@@ -19,8 +19,8 @@ const loggerMiddleware = (store) => (next) => (action) => {
 }
 
 // Adding middlewares and combining them using compose method
-// const middleWares = [logger];
-const composeEnhancers = compose(applyMiddleware(...loggerMiddleware));
+const middleWares = [loggerMiddleware];
+const composeEnhancers = compose(applyMiddleware(...middleWares));
 
 // createStore with rootReducer and Middlewares - undefined is just optional syntax
 export const store = createStore(rootReducer, undefined, composeEnhancers);

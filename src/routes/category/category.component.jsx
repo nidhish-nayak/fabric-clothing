@@ -8,12 +8,13 @@ import { CategoryContainer, CategoryTitle } from "./category.styles";
 const Category = () => {
     // useParams - dynamic url routing
     const { category } = useParams();
-
+    console.log('Category component rendered');
     // const categoriesMap = useContext(CategoriesContext);
     const categoriesMap = useSelector(categoriesSelector);
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
+        console.log('useEffect from Category component fired');
         setProducts(categoriesMap[category]);
     }, [category, categoriesMap]);
 
