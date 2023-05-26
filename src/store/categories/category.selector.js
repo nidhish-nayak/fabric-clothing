@@ -1,11 +1,24 @@
-// This logic was migrated here from firebase.utils.js since we will be using selectors to modify data as we want for the components
-export const categoriesSelector = (state) => {
-    console.log("Selector - categories fired")
-    return state.categories.categories
-        .reduce((acc, category) => {
+import { createSelector } from "reselect";
+
+const selectCategoryReducer = (state) => {
+    return state.categories;
+}
+
+export const selectCategories = createSelector(
+    [selectCategoryReducer],
+    (categoriesSlice) => {
+        return categoriesSlice.categories
+    }
+)
+
+// use selectors to modify data as we want for the components instead of firebase.util.js
+export const selectCategoriesMap = createSelector(
+    [selectCategories],
+    (categories) =>
+        categories.reduce((acc, category) => {
             const { title, items } = category;
             acc[title.toLowerCase()] = items;
             console.log(acc);
             return acc;
-        }, {});
-}
+        }, {})
+)
