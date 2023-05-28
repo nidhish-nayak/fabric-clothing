@@ -9,9 +9,9 @@ import { userSelector } from "../../store/user/user.selector";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import {
     LogoContainer,
-    NavigationContainer,
     NavLink,
     NavLinks,
+    NavigationContainer,
 } from "./navigation.styles.jsx";
 
 const Navigation = () => {
