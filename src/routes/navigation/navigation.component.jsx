@@ -1,17 +1,17 @@
 import React, { Fragment, useContext } from "react"; //Fragment is used if no parent div element is needed
 import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
-import { ReactComponent as Logo } from "../../assets/crown.svg";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component.jsx";
 import CartIcon from "../../components/cart-icon/cart-icon.component.jsx";
 import { CartContext } from "../../contexts/cart.context";
 import { userSelector } from "../../store/user/user.selector";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import {
+    Logo,
     LogoContainer,
     NavLink,
     NavLinks,
-    NavigationContainer,
+    NavigationContainer
 } from "./navigation.styles.jsx";
 
 const Navigation = () => {
@@ -23,7 +23,8 @@ const Navigation = () => {
         <Fragment>
             <NavigationContainer>
                 <LogoContainer to="/">
-                    <Logo className="logo" />
+                    <Logo />
+                    <p>Pyramid Clothing</p>
                 </LogoContainer>
                 <NavLinks>
                     <NavLink to="/shop">SHOP</NavLink>

@@ -1,7 +1,15 @@
 import React from "react";
+import ShoppingPage from '../../assets/shopping-page.png';
 import DirectoryItem from "../directory-item/directory-item.component";
 import "./directory.styles.jsx";
-import { DirectoryContainer } from "./directory.styles.jsx";
+import {
+    DirectoryContainer,
+    HeroContainer,
+    HeroImage,
+    HeroSlider,
+    HeroTitle,
+    SliderImage
+} from "./directory.styles.jsx";
 
 const categories = [
     {
@@ -39,6 +47,15 @@ const categories = [
 const Directory = () => {
     return (
         <DirectoryContainer>
+            <HeroContainer>
+                <div>
+                    <HeroTitle>Pick your style</HeroTitle>
+                    <HeroSlider>
+                        {categories.map(i => <SliderImage key={i.id} imageUrl={i.imageUrl} />)}
+                    </HeroSlider>
+                </div>
+                <HeroImage src={ShoppingPage} alt="Shopping Page" />
+            </HeroContainer>
             {categories.map((i) => (
                 <DirectoryItem category={i} key={i.id} />
             ))}

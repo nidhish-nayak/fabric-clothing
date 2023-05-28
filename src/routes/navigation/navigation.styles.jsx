@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { ReactComponent as LogoSvg } from "../../assets/pyramid.svg";
 
 export const NavigationContainer = styled.div`
     height: 70px;
@@ -10,9 +11,16 @@ export const NavigationContainer = styled.div`
 `;
 
 export const LogoContainer = styled(Link)`
-    height: 100%;
-    width: 70px;
-    padding: 10px 25px 25px 25px;
+    display: flex;
+    align-items: center;
+    font-weight: semi-bold;
+    font-family: poppins;
+`;
+
+export const Logo = styled(LogoSvg)`
+    height: 100px;
+    width: 100px;
+    padding: 25px 25px 25px 25px;
 `;
 
 export const NavLinks = styled.div`
