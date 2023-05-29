@@ -17,8 +17,6 @@ export const LogoContainer = styled(Link)`
 
 export const Logo = styled.img`
     width: 60%;
-    padding: 10px;
-    background: url(../../../assets/dotted-lines.webp) repeat;
 `;
 
 export const NavLinks = styled.div`

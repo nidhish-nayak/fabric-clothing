@@ -1,8 +1,9 @@
 import React from "react";
 import DirectoryItem from "../directory-item/directory-item.component";
+import Trending from "../trending/trending.component";
 import "./directory.styles.jsx";
 import {
-    DirectoryContainer
+    DirectoryContainer, DirectoryPrimary, DirectorySecondary, SecondaryTitle
 } from "./directory.styles.jsx";
 
 const categories = [
@@ -27,13 +28,13 @@ const categories = [
     {
         id: 4,
         title: "womens",
-        imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+        imageUrl: "https://source.unsplash.com/cED8oFhEeNc",
         route: "shop/womens",
     },
     {
         id: 5,
         title: "mens",
-        imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+        imageUrl: "https://source.unsplash.com/Jg7UTkxTruQ",
         route: "shop/mens",
     },
 ];
@@ -41,9 +42,22 @@ const categories = [
 const Directory = () => {
     return (
         <DirectoryContainer>
-            {categories.map((i) => (
-                <DirectoryItem category={i} key={i.id} />
-            ))}
+            <DirectoryPrimary>
+                {categories
+                    .filter(category => category.id <= 3)
+                    .map((i) => (
+                        <DirectoryItem category={i} key={i.id} />
+                    ))}
+            </DirectoryPrimary>
+            <SecondaryTitle>Shop the looks</SecondaryTitle>
+            <DirectorySecondary>
+                {categories
+                    .filter(category => category.id > 3)
+                    .map((i) =>
+                        <DirectoryItem category={i} key={i.id} />
+                    )}
+            </DirectorySecondary>
+            <Trending />
         </DirectoryContainer>
     );
 };
