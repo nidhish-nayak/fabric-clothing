@@ -14,7 +14,7 @@ export const LogoContainer = styled(Link)`
     display: flex;
     align-items: center;
     font-weight: semi-bold;
-    font-family: poppins;
+    font-family: 'Switzer',sans-serif;
 `;
 
 export const Logo = styled(LogoSvg)`

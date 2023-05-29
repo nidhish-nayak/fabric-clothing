@@ -24,30 +24,21 @@ export const HeroContainer = styled.div`
     }
 `;
 
-export const HeroTitle = styled.p`
+export const HeroTitle = styled.div`
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 2rem;
+    font-family: "Switzer", sans-serif;
 
     @media (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 1rem;
         text-align: center;
     }
 `;
-
-export const HeroSlider = styled.div`
-
-`
-
-export const SliderImage = styled.div`
-    width: 100%;
-    background-image:${({ imageUrl }) => `url(${imageUrl})`};
-    height: 100%;
-`
 
 export const HeroImage = styled.img`
     width: 50%;
 
     @media (max-width: 768px) {
-        width: 100%;
+        display: none;
     }
 `;

@@ -24,7 +24,7 @@ const Navigation = () => {
             <NavigationContainer>
                 <LogoContainer to="/">
                     <Logo />
-                    <p>Pyramid Clothing</p>
+                    <p>Pyro Clothing</p>
                 </LogoContainer>
                 <NavLinks>
                     <NavLink to="/shop">SHOP</NavLink>

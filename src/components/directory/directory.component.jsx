@@ -6,9 +6,7 @@ import {
     DirectoryContainer,
     HeroContainer,
     HeroImage,
-    HeroSlider,
-    HeroTitle,
-    SliderImage
+    HeroTitle
 } from "./directory.styles.jsx";
 
 const categories = [
@@ -48,12 +46,10 @@ const Directory = () => {
     return (
         <DirectoryContainer>
             <HeroContainer>
-                <div>
-                    <HeroTitle>Pick your style</HeroTitle>
-                    <HeroSlider>
-                        {categories.map(i => <SliderImage key={i.id} imageUrl={i.imageUrl} />)}
-                    </HeroSlider>
-                </div>
+                <HeroTitle>
+                    <p>Pick your style</p>
+                    <div>My Images</div>
+                </HeroTitle>
                 <HeroImage src={ShoppingPage} alt="Shopping Page" />
             </HeroContainer>
             {categories.map((i) => (
