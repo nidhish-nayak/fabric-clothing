@@ -18,8 +18,8 @@ export const LogoContainer = styled(Link)`
 `;
 
 export const Logo = styled(LogoSvg)`
-    height: 100px;
-    width: 100px;
+    height: fit-content;
+    width: 150px;
     padding: 25px 25px 25px 25px;
 `;
 
@@ -34,4 +34,5 @@ export const NavLinks = styled.div`
 export const NavLink = styled(Link)`
     padding: 10px 15px;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 `;
