@@ -1,12 +1,8 @@
 import React from "react";
-import ShoppingPage from '../../assets/shopping-page.png';
 import DirectoryItem from "../directory-item/directory-item.component";
 import "./directory.styles.jsx";
 import {
-    DirectoryContainer,
-    HeroContainer,
-    HeroImage,
-    HeroTitle
+    DirectoryContainer
 } from "./directory.styles.jsx";
 
 const categories = [
@@ -19,13 +15,13 @@ const categories = [
     {
         id: 2,
         title: "jackets",
-        imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
+        imageUrl: "https://source.unsplash.com/ua9ReZlzcIE",
         route: "shop/jackets",
     },
     {
         id: 3,
         title: "sneakers",
-        imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+        imageUrl: "https://source.unsplash.com/aDZ5YIuedQg",
         route: "shop/sneakers",
     },
     {
@@ -45,13 +41,6 @@ const categories = [
 const Directory = () => {
     return (
         <DirectoryContainer>
-            <HeroContainer>
-                <HeroTitle>
-                    <p>Pick your style</p>
-                    <div>My Images</div>
-                </HeroTitle>
-                <HeroImage src={ShoppingPage} alt="Shopping Page" />
-            </HeroContainer>
             {categories.map((i) => (
                 <DirectoryItem category={i} key={i.id} />
             ))}

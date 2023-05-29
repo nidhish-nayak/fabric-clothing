@@ -11,32 +11,3 @@ export const DirectoryContainer = styled.div`
         justify-content: center;
     }
 `;
-
-export const HeroContainer = styled.div`
-    display: flex;
-    padding: 4em;
-    justify-content: space-between;
-
-    @media (max-width: 768px) {
-        display: none;
-    }
-`;
-
-export const HeroTitle = styled.div`
-    font-weight: 900;
-    font-size: 2rem;
-    font-family: "Switzer", sans-serif;
-
-    @media (max-width: 768px) {
-        font-size: 1rem;
-        text-align: center;
-    }
-`;
-
-export const HeroImage = styled.img`
-    width: 50%;
-
-    @media (max-width: 768px) {
-        display: none;
-    }
-`;

@@ -41,13 +41,11 @@ export const DirectoryBodyContainer = styled.div`
 
 export const DirectoryItemContainer = styled.div`
     min-width: 30%;
-    height: 240px;
+    height: 100vh;
     flex: 1 1 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    margin: 0 7.5px 15px;
     overflow: hidden;
 
     &:hover {
@@ -63,23 +61,4 @@ export const DirectoryItemContainer = styled.div`
         }
     }
 
-    &.large {
-        height: 380px;
-    }
-
-    &:first-child {
-        margin-right: 7.5px;
-    }
-
-    &:nth-child(4) {
-        height: 340px;
-    }
-
-    &:nth-child(5) {
-        height: 340px;
-    }
-
-    &:last-child {
-        margin-left: 7.5px;
-    }
 `;
