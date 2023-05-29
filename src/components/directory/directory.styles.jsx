@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const DirectoryContainer = styled.div`
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     text-transform: uppercase;
 
     @media (max-width: 768px) {

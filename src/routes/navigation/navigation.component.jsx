@@ -1,6 +1,7 @@
 import React, { Fragment, useContext } from "react"; //Fragment is used if no parent div element is needed
 import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
+import logo from '../../assets/fabric.svg';
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component.jsx";
 import CartIcon from "../../components/cart-icon/cart-icon.component.jsx";
 import { CartContext } from "../../contexts/cart.context";
@@ -23,7 +24,7 @@ const Navigation = () => {
         <Fragment>
             <NavigationContainer>
                 <LogoContainer to="/">
-                    <Logo />
+                    <Logo src={logo} alt='Logo' />
                 </LogoContainer>
                 <NavLinks>
                     <NavLink to="/shop">SHOP</NavLink>

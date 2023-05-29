@@ -9,7 +9,7 @@ const categories = [
     {
         id: 1,
         title: "hats",
-        imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
+        imageUrl: "https://source.unsplash.com/KYKnR-pfURc",
         route: "shop/hats",
     },
     {
