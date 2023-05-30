@@ -20,7 +20,18 @@ export const LogoContainer = styled(Link)`
 `;
 
 export const Logo = styled.img`
-    width: 65%;
+    width: 180px;
+    padding: 0 0.25em;
+
+    @media (max-width: 768px) {
+        width: 140px;
+        padding: 0 0.1em;
+    }
+
+    @media (max-width: 400px) {
+        width: 120px;
+        padding: 0 0.1em;
+    }
 `;
 
 export const NavLinks = styled.div`
@@ -47,6 +58,6 @@ export const NavLink = styled(Link)`
     cursor: pointer;
 
     @media (max-width: 768px) {
-        padding: 10px 5px;
+        padding: 10px 10px;
     }
 `;

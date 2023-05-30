@@ -1,9 +1,10 @@
 import React, { Fragment, useContext } from "react"; //Fragment is used if no parent div element is needed
 import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
-import logo from '../../assets/fabric.svg';
+import logo from '../../assets/Logo.png';
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component.jsx";
 import CartIcon from "../../components/cart-icon/cart-icon.component.jsx";
+import { Footer } from "../../components/product-card/product-card.styles";
 import { CartContext } from "../../contexts/cart.context";
 import { userSelector } from "../../store/user/user.selector";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
@@ -40,6 +41,7 @@ const Navigation = () => {
                 {cartStatus && <CartDropdown />}
             </NavigationContainer>
             <Outlet />
+            <Footer />
         </Fragment>
     );
 };

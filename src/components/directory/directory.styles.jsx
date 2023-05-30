@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const DirectoryContainer = styled.div`
-    margin-bottom: 1em;
+    
 `;
 
-export const PrimaryContainer = styled.div`
+export const PrimaryContainer = styled.section`
     width: 100%;
     display: flex;
     /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
@@ -17,7 +17,7 @@ export const PrimaryContainer = styled.div`
     }
 `;
 
-export const SecondaryContainer = styled.div`
+export const SecondaryContainer = styled.section`
     margin: 6em 0 0 0;
 `;
 

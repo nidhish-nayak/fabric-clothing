@@ -1,5 +1,6 @@
 import React from "react";
 import DirectoryItem from "../directory-item/directory-item.component";
+import Footer from "../footer/footer.component";
 import Trending from "../trending/trending.component";
 import "./directory.styles.jsx";
 import {
@@ -52,7 +53,7 @@ const Directory = () => {
                     ))}
             </PrimaryContainer>
             <SecondaryContainer>
-                <SecondaryTitle>Shop the looks</SecondaryTitle>
+                <SecondaryTitle>Shop by category</SecondaryTitle>
                 <SecondaryBody>
                     {categories
                         .filter(category => category.id > 3)
@@ -62,6 +63,7 @@ const Directory = () => {
                 </SecondaryBody>
             </SecondaryContainer>
             <Trending />
+            <Footer />
         </DirectoryContainer>
     );
 };
