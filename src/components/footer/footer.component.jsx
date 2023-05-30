@@ -3,7 +3,7 @@ import { FooterContainer } from "./footer.styles";
 const Footer = () => {
     return (
         <FooterContainer>
-            My Footer Container
+            My Footer
         </FooterContainer>
     )
 }

@@ -1,11 +1,19 @@
+import ProductCard from '../product-card/product-card.component.jsx';
 import {
-    TrendingContainer, TrendingTitle
+    TrendingContainer,
+    TrendingItems,
+    TrendingTitle
 } from './trending.styles.jsx';
 
-const Trending = () => {
+const Trending = ({ trendingItems }) => {
     return (
         <TrendingContainer>
             <TrendingTitle>Trending Now</TrendingTitle>
+            <TrendingItems>
+                {trendingItems.map(i =>
+                    <ProductCard key={i.id} product={i} />
+                )}
+            </TrendingItems>
         </TrendingContainer>
     )
 }

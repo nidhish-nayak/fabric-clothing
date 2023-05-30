@@ -14,3 +14,25 @@ export const TrendingTitle = styled.h2`
     text-align: center;
     text-transform: uppercase;
 `;
+
+export const TrendingItems = styled.div`
+    margin: 4em 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2em;
+
+    @media (max-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    @media (max-width: 500px) {
+        display: grid;
+        grid-template-columns: 1fr; 
+    }
+`;
