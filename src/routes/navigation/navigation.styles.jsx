@@ -47,7 +47,7 @@ export const Logo = styled.img`
 export const NavLinks = styled.div`
     width: 50%;
     height: 100%;
-    font-size: 0.9rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -64,8 +64,13 @@ export const NavLinks = styled.div`
 `;
 
 export const NavLink = styled(Link)`
-    padding: 10px 15px;
+    padding: 10px 18px;
     cursor: pointer;
+    border-radius: 2px;
+
+    &:hover {
+        background-color: #efefef;
+    }
 
     @media (max-width: 768px) {
         padding: 10px 10px;

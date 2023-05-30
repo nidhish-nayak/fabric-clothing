@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
 export const AuthContainer = styled.div`
-    margin: -1.75em auto 1em;
-    width: 900px;
+    margin: 6em 4em 1em;
     display: flex;
-    justify-content: space-between;
-`;
+    justify-content: space-around;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 6em auto 1em;
+    }
+`;  

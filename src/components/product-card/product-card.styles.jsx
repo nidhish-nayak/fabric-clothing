@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProductCardContainer = styled.div`
     width: 90%;
-    margin: 0 auto;
+    margin: 1em auto;
     display: flex;
     flex-direction: column;
     height: 350px;

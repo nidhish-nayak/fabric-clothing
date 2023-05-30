@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import CategoryPreview from "../../components/category-preview/category-preview.component";
 import Footer from "../../components/footer/footer.component";
 import { selectCategoriesMap } from "../../store/categories/category.selector";
+import { CategoriesPreviewContainer } from "./categories-preview.styles";
 
 const CategoriesPreview = () => {
     // const { categoriesMap } = useContext(CategoriesContext);
@@ -10,7 +11,7 @@ const CategoriesPreview = () => {
 
     return (
         <Fragment>
-            <Fragment>
+            <CategoriesPreviewContainer>
                 {Object.keys(categoriesMap).map((title) => {
                     const products = categoriesMap[title];
                     return (
@@ -21,7 +22,7 @@ const CategoriesPreview = () => {
                         />
                     );
                 })}
-            </Fragment>
+            </CategoriesPreviewContainer>
             <Footer />
         </Fragment>
     );
