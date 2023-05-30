@@ -5,7 +5,7 @@ export const DirectoryContainer = styled.div`
 `;
 
 export const PrimaryContainer = styled.div`
-    width: 100vw;
+    width: 100%;
     display: flex;
     /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
     text-transform: uppercase;
@@ -35,11 +35,16 @@ export const SecondaryBody = styled.div`
     justify-content: space-around;
     align-items: center;
     text-transform: uppercase;
+    padding: 0 10em;
+
+    @media (max-width: 1340px) {
+        padding: 0 2em;
+    }
 
     @media (max-width: 768px) {
         display: flex;
         flex: 1 1 auto;
-        padding: 1em;
+        padding: 2em;
         margin: 1em auto;
         justify-content: center;
         align-items: center;
