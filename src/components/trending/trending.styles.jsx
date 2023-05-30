@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const TrendingContainer = styled.section`
     margin: 6em 0 0 0;
+
+    @media (max-width: 400px) {
+        margin: 4em 0 0 0;
+    }
 `;
 
 export const TrendingTitle = styled.h2`

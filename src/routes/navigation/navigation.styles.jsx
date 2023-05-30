@@ -32,6 +32,11 @@ export const Logo = styled.img`
         width: 120px;
         padding: 0 0.1em;
     }
+
+    @media (max-width: 330px) {
+        width: 100px;
+        padding: 0 0.05em;
+    }
 `;
 
 export const NavLinks = styled.div`

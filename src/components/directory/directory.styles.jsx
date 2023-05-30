@@ -7,13 +7,22 @@ export const DirectoryContainer = styled.div`
 export const PrimaryContainer = styled.section`
     width: 100%;
     display: flex;
-    /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
     text-transform: uppercase;
 
     @media (max-width: 768px) {
         justify-content: center;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: 1fr 1fr;
+        
+        div:nth-of-type(3) {
+            grid-column: 1/3;
+        }
+        /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+    }
+
+    @media (max-width: 350px) {
+        display: flex;
+        flex-direction: column;
     }
 `;
 
@@ -27,6 +36,10 @@ export const SecondaryTitle = styled.h2`
     text-align: center;
     text-transform: uppercase;
     margin: 0 0 2em 0;
+
+    @media (max-width: 400px) {
+        margin: 0 0 0.5em 0;
+    }
 `;
 
 export const SecondaryBody = styled.div`

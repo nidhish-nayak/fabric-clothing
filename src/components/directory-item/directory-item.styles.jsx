@@ -81,13 +81,21 @@ export const PrimaryDirectoryContainer = styled.div`
 
         ${BackgroundImage} {
             transform: scale(1.1);
-            filter: brightness(90%);
+            filter: brightness(80%);
             transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
         }
 
         ${PrimaryBodyContainer} {
             opacity: 0.9;
         }
+    }
+
+    @media (max-width: 768px) {
+        height: 400px;
+    }
+
+    @media (max-width: 400px) {
+        height: 300px;
     }
 `;
 
