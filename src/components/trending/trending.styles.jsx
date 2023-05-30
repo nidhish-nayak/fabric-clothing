@@ -7,5 +7,5 @@ export const TrendingTitle = styled.h2`
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    margin: 0em auto 3em;
+    margin: 4em 0 0 0;
 `;

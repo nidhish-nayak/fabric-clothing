@@ -3,7 +3,9 @@ import DirectoryItem from "../directory-item/directory-item.component";
 import Trending from "../trending/trending.component";
 import "./directory.styles.jsx";
 import {
-    DirectoryContainer, DirectoryPrimary, DirectorySecondary, SecondaryTitle
+    DirectoryContainer, PrimaryContainer,
+    SecondaryBody,
+    SecondaryContainer, SecondaryTitle
 } from "./directory.styles.jsx";
 
 const categories = [
@@ -42,21 +44,23 @@ const categories = [
 const Directory = () => {
     return (
         <DirectoryContainer>
-            <DirectoryPrimary>
+            <PrimaryContainer>
                 {categories
                     .filter(category => category.id <= 3)
                     .map((i) => (
                         <DirectoryItem category={i} key={i.id} />
                     ))}
-            </DirectoryPrimary>
-            <SecondaryTitle>Shop the looks</SecondaryTitle>
-            <DirectorySecondary>
-                {categories
-                    .filter(category => category.id > 3)
-                    .map((i) =>
-                        <DirectoryItem category={i} key={i.id} />
-                    )}
-            </DirectorySecondary>
+            </PrimaryContainer>
+            <SecondaryContainer>
+                <SecondaryTitle>Shop the looks</SecondaryTitle>
+                <SecondaryBody>
+                    {categories
+                        .filter(category => category.id > 3)
+                        .map((i) =>
+                            <DirectoryItem category={i} key={i.id} />
+                        )}
+                </SecondaryBody>
+            </SecondaryContainer>
             <Trending />
         </DirectoryContainer>
     );
