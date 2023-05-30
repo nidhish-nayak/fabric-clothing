@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import React, { Fragment, useContext } from "react";
 import CheckoutItems from "../../components/checkout-items/checkout-items.component";
+import Footer from "../../components/footer/footer.component";
 import { CartContext } from "../../contexts/cart.context";
 import {
     CheckoutContainer,
@@ -11,29 +12,32 @@ import {
 const Checkout = () => {
     const { cartItems, cartTotal } = useContext(CartContext);
     return (
-        <CheckoutContainer>
-            <CheckoutHeader>
-                <HeaderBlock>
-                    <span>Product</span>
-                </HeaderBlock>
-                <HeaderBlock>
-                    <span>Description</span>
-                </HeaderBlock>
-                <HeaderBlock>
-                    <span>Quantity</span>
-                </HeaderBlock>
-                <HeaderBlock>
-                    <span>Price</span>
-                </HeaderBlock>
-                <HeaderBlock>
-                    <span>Remove</span>
-                </HeaderBlock>
-            </CheckoutHeader>
-            {cartItems.map((i) => (
-                <CheckoutItems key={i.id} props={i} />
-            ))}
-            <Total>Total: ${cartTotal}</Total>
-        </CheckoutContainer>
+        <Fragment>
+            <CheckoutContainer>
+                <CheckoutHeader>
+                    <HeaderBlock>
+                        <span>Product</span>
+                    </HeaderBlock>
+                    <HeaderBlock>
+                        <span>Description</span>
+                    </HeaderBlock>
+                    <HeaderBlock>
+                        <span>Quantity</span>
+                    </HeaderBlock>
+                    <HeaderBlock>
+                        <span>Price</span>
+                    </HeaderBlock>
+                    <HeaderBlock>
+                        <span>Remove</span>
+                    </HeaderBlock>
+                </CheckoutHeader>
+                {cartItems.map((i) => (
+                    <CheckoutItems key={i.id} props={i} />
+                ))}
+                <Total>Total: ${cartTotal}</Total>
+            </CheckoutContainer>
+            <Footer />
+        </Fragment>
     );
 };
 

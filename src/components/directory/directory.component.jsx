@@ -1,6 +1,5 @@
 import React from "react";
 import DirectoryItem from "../directory-item/directory-item.component";
-import Footer from "../footer/footer.component";
 import Trending from "../trending/trending.component";
 import "./directory.styles.jsx";
 import {
@@ -88,7 +87,6 @@ const Directory = () => {
                 </SecondaryBody>
             </SecondaryContainer>
             <Trending trendingItems={trendingItems} />
-            <Footer />
         </DirectoryContainer>
     );
 };

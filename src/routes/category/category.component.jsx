@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import Footer from "../../components/footer/footer.component";
 import ProductCard from "../../components/product-card/product-card.component";
 import { selectCategoriesMap } from '../../store/categories/category.selector';
 import { CategoryContainer, CategoryTitle } from "./category.styles";
@@ -26,6 +27,7 @@ const Category = () => {
                 {products &&
                     products.map((i) => <ProductCard key={i.id} product={i} />)}
             </CategoryContainer>
+            <Footer />
         </Fragment>
     );
 };
