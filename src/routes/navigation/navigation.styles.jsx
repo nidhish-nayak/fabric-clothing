@@ -14,6 +14,8 @@ export const NavigationContainer = styled.div`
     padding: 0 40px;
     position: fixed;
     border-bottom: 1px rgb(200, 200, 200) solid;
+    // To avoid annoying selections on clicks
+    user-select: none;
 
     @media (max-width: 768px) {
         padding: 0 10px;   

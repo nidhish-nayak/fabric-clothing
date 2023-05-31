@@ -8,6 +8,7 @@ export const CartIconContainer = styled.div`
     position: relative;
     &:hover {
         cursor: pointer;
+        font-weight: 900;
     }
 `;
 export const ShoppingIcon = styled(ShopIcon)`
