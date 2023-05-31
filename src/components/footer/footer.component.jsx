@@ -1,8 +1,14 @@
+import { useEffect } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import logo from '../../assets/Logo.png';
 import { Divider, FooterWrapper, IconContainer, IconWrapper, List, Logo } from "./footer.styles";
 
 const Footer = () => {
+    // Mobile view - The scroll stays at same position on routes hence scroll to top on render
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <FooterWrapper>
             <Logo src={logo} alt="Logo" />
