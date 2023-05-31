@@ -4,7 +4,8 @@ import styled from "styled-components";
 export const NavigationContainer = styled.div`
     height: 70px;
     top: 0;
-    z-index: 1;
+    // z-index of secondaryBodyContainer is z-1
+    z-index: 2;
     background-color: #FFFFFF; 
     opacity: 0.90; 
     width: 100%;
