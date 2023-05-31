@@ -37,6 +37,10 @@ export const SecondaryTitle = styled.h2`
     text-transform: uppercase;
     margin: 0 0 2em 0;
 
+    @media (max-width: 768px) {
+        margin: 0 0 -2em 0;
+    }
+
     @media (max-width: 400px) {
         margin: 0 0 0.5em 0;
     }
@@ -57,8 +61,8 @@ export const SecondaryBody = styled.div`
     @media (max-width: 768px) {
         display: flex;
         flex: 1 1 auto;
-        padding: 2em;
-        margin: 1em auto;
+        padding: 0 2em;
+        margin: 0em auto;
         justify-content: center;
         align-items: center;
     }
