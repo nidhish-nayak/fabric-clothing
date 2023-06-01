@@ -24,6 +24,8 @@ const App = () => {
       dispatch(setCurrentUser(user));
     });
     return unsubscribe;
+
+    // This dispatch is to avoid warnings and not re-rendered on dispatch change. (Rendered on first mount)
   }, [dispatch]);
 
   return (
