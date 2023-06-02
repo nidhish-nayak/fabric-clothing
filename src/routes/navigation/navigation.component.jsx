@@ -16,8 +16,9 @@ import {
 } from "./navigation.styles.jsx";
 
 const Navigation = () => {
-    const currentUser = useSelector(userSelector);
+
     // const { currentUser } = useContext(UserContext);
+    const currentUser = useSelector(userSelector);
     const { cartStatus } = useContext(CartContext);
 
     return (
