@@ -8,14 +8,14 @@ const loggerMiddleware = (store) => (next) => (action) => {
     if (!action.type) {
         return next(action);
     }
-    console.log('type: ', action.type);
-    console.log('payload: ', action.payload);
-    console.log('currentState', store.getState());
+    console.log('Logger - type: ', action.type);
+    console.log('Logger - payload: ', action.payload);
+    console.log('Logger - currentState: ', store.getState());
 
     next(action);
 
     // Next state will be only available post running the reducer. Hence, printing the state after next
-    console.log('next state: ', store.getState());
+    console.log('Logger - next state: ', store.getState());
 }
 
 // Adding middlewares and combining them using compose method

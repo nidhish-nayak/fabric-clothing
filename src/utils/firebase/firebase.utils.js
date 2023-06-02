@@ -30,7 +30,7 @@ export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 export const db = getFirestore();
 
-// Add Collections in  Firesbase DB for SHOP PAGE
+// Add Collections in  Firesbase DB for SHOP PAGE - Use this only to upload new categories to DB directly
 export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
     const collectionRef = collection(db, collectionKey);
     const batch = writeBatch(db);
