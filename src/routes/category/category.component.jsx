@@ -7,20 +7,17 @@ import { selectCategoriesMap } from '../../store/categories/category.selector';
 import { CategoryContainer, CategorySection, CategoryTitle } from "./category.styles";
 
 const Category = () => {
-    // useParams - dynamic url routing
+
+    // useParams - Dynamic url routing
     const { category } = useParams();
-    console.log('Category component rendered');
-    // const categoriesMap = useContext(CategoriesContext);
     const categoriesMap = useSelector(selectCategoriesMap);
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState();
 
     useEffect(() => {
-        console.log('useEffect from Category component fired');
         setProducts(categoriesMap[category]);
     }, [category, categoriesMap]);
 
     return (
-        // If products are fethced from db only then render this component
         <CategorySection>
             <CategoryTitle>{category.toUpperCase()}</CategoryTitle>
             <CategoryContainer>

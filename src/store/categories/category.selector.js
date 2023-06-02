@@ -16,7 +16,7 @@ export const selectCategories = createSelector(
     }
 )
 
-// use selectors to modify data as we want for the components instead of firebase.util.js
+// using selectors to modify data as we want for the components instead of firebase.util.js
 export const selectCategoriesMap = createSelector(
     [selectCategories],
     (categories) =>

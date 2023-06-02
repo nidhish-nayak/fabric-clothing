@@ -10,7 +10,9 @@ import {
 } from "./checkout.styles";
 
 const Checkout = () => {
+
     const { cartItems, cartTotal } = useContext(CartContext);
+
     return (
         <Fragment>
             <CheckoutContainer>

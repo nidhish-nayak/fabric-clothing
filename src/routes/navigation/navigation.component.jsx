@@ -17,7 +17,6 @@ import {
 
 const Navigation = () => {
 
-    // const { currentUser } = useContext(UserContext);
     const currentUser = useSelector(userSelector);
     const { cartStatus } = useContext(CartContext);
 

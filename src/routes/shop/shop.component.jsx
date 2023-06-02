@@ -7,6 +7,7 @@ import CategoriesPreview from "../categories-preview/categories-preview.componen
 import Category from "../category/category.component";
 
 const Shop = () => {
+
     const dispatch = useDispatch();
 
     // CategoriesReducer - Fetches all category items from the DB on Shop route
@@ -17,6 +18,8 @@ const Shop = () => {
         };
         getCategoriesMap();
     }, [dispatch]);
+    // Here dispatch is added as dependent is wrong and is added just to avoid warnings. 
+    // Real meaning = Render on first component mount
 
     return (
         <Routes>
