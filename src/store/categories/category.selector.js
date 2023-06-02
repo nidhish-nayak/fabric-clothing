@@ -1,5 +1,6 @@
 import { createSelector } from "reselect";
 
+// These 3 sets of code is used to memoize the data from state instead of re-render
 const selectCategoryReducer = (state) => {
     return state.categories;
 }
