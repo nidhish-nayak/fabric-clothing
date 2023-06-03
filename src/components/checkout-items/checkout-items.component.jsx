@@ -12,10 +12,14 @@ import {
     Value,
 } from "./checkout-items.styles.jsx";
 
-const CheckoutItems = ({ props }) => {
-    const { name, imageUrl, price, count } = props;
-    const { addItemToCart, removeItemFromCart, removeWholeItem } =
-        useContext(CartContext);
+const CheckoutItems = ({ cartItem }) => {
+    const { name, imageUrl, price, quantity } = cartItem;
+
+    const { clearItemFromCart, addItemToCart, removeItemToCart } = useContext(CartContext);
+
+    const clearItemHandler = () => clearItemFromCart(cartItem);
+    const addItemHandler = () => addItemToCart(cartItem);
+    const removeItemHandler = () => removeItemToCart(cartItem);
 
     return (
         <CheckoutItemContainer>
@@ -24,14 +28,14 @@ const CheckoutItems = ({ props }) => {
             </ImageContainer>
             <Name>{name}</Name>
             <Quantity>
-                <Arrow onClick={() => removeItemFromCart(props)}>
+                <Arrow onClick={removeItemHandler}>
                     &#10094;
                 </Arrow>
-                <Value>{count}</Value>
-                <Arrow onClick={() => addItemToCart(props)}>&#10095;</Arrow>
+                <Value>{quantity}</Value>
+                <Arrow onClick={addItemHandler}>&#10095;</Arrow>
             </Quantity>
             <Price>{price}</Price>
-            <RemoveButton onClick={() => removeWholeItem(props)}>
+            <RemoveButton onClick={clearItemHandler}>
                 &#10005;
             </RemoveButton>
         </CheckoutItemContainer>

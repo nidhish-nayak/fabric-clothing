@@ -7,14 +7,14 @@ import {
     Name,
 } from "./cart-item.styles";
 
-const CartItem = ({ value }) => {
-    const { id, imageUrl, name, price, count } = value;
+const CartItem = ({ cartItem }) => {
+    const { imageUrl, name, price, quantity } = cartItem;
     return (
-        <CartItemContainer key={id}>
+        <CartItemContainer>
             <ItemImage src={imageUrl} alt="alternative" />
             <ItemDetails>
                 <Name>{name}</Name>
-                <span>{`${count} x $${price}`}</span>
+                <span>{`${quantity} x $${price}`}</span>
             </ItemDetails>
         </CartItemContainer>
     );

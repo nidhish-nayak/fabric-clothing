@@ -8,7 +8,7 @@ import { CartContext } from "../../contexts/cart.context";
 import { userSelector } from "../../store/user/user.selector";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import {
-    Logo,
+    FabricLogo,
     LogoContainer,
     NavLink,
     NavLinks,
@@ -18,13 +18,13 @@ import {
 const Navigation = () => {
 
     const currentUser = useSelector(userSelector);
-    const { cartStatus } = useContext(CartContext);
+    const { isCartOpen } = useContext(CartContext);
 
     return (
         <Fragment>
             <NavigationContainer>
                 <LogoContainer to="/">
-                    <Logo src={logo} alt='Logo' />
+                    <FabricLogo src={logo} alt='Logo' />
                 </LogoContainer>
                 <NavLinks>
                     <NavLink to="/shop">SHOP</NavLink>
@@ -37,7 +37,7 @@ const Navigation = () => {
                     )}
                     <CartIcon />
                 </NavLinks>
-                {cartStatus && <CartDropdown />}
+                {isCartOpen && <CartDropdown />}
             </NavigationContainer>
             <Outlet />
         </Fragment>

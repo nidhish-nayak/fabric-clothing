@@ -3,16 +3,12 @@ import { CartContext } from "../../contexts/cart.context";
 import { CartIconContainer, ItemCount, ShoppingIcon } from "./cart-icon.styles";
 
 const CartIcon = () => {
-    const { cartStatus, setCartStatus, cartCount } = useContext(CartContext);
+    const { isCartOpen, setIsCartOpen, cartCount } = useContext(CartContext);
+
+    const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen);
 
     return (
-        <CartIconContainer
-            onClick={() => {
-                if (cartStatus) {
-                    setCartStatus(false);
-                } else setCartStatus(true);
-            }}
-        >
+        <CartIconContainer onClick={toggleIsCartOpen}>
             <ShoppingIcon />
             <ItemCount>{cartCount}</ItemCount>
         </CartIconContainer>

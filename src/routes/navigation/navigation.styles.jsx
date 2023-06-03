@@ -27,7 +27,7 @@ export const LogoContainer = styled(Link)`
     align-items: center;
 `;
 
-export const Logo = styled.img`
+export const FabricLogo = styled.img`
     width: 180px;
     padding: 0 0.25em;
 
