@@ -17,7 +17,6 @@ export const PrimaryContainer = styled.section`
         div:nth-of-type(3) {
             grid-column: 1/3;
         }
-        /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
     }
 
     @media (max-width: 350px) {
