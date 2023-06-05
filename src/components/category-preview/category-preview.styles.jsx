@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const CategoryPreviewContainer = styled.div`
+    margin-bottom: 2em;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2em;
+    justify-content: center;
 `;
 
 export const Title = styled(Link)`
