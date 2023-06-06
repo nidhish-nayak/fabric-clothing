@@ -12,6 +12,7 @@ import {
 import "./cart-dropdown.styles.jsx";
 
 const CartDropdown = () => {
+
     const cartItems = useSelector(selectCartItems);
     const navigate = useNavigate();
 
