@@ -1,6 +1,10 @@
-import { applyMiddleware, compose, legacy_createStore as createStore } from 'redux';
+import {
+    applyMiddleware,
+    compose,
+    legacy_createStore as createStore,
+} from "redux";
 // import logger from 'redux-logger';
-import { rootReducer } from './root-reducer';
+import { rootReducer } from "./root-reducer";
 
 // Creating our own middleware [logger]
 const loggerMiddleware = (store) => (next) => (action) => {
@@ -8,15 +12,17 @@ const loggerMiddleware = (store) => (next) => (action) => {
     if (!action.type) {
         return next(action);
     }
-    console.log('Logger - type: ', action.type);
-    console.log('Logger - payload: ', action.payload);
-    console.log('Logger - currentState: ', store.getState());
+    console.group("Logger Output: ");
+    console.log("Type: ", action.type);
+    console.log("Payload: ", action.payload);
+    console.log("Current State: ", store.getState());
 
     next(action);
 
     // Next state will be only available post running the reducer. Hence, printing the state after next
-    console.log('Logger - next state: ', store.getState());
-}
+    console.table("Next State: ", store.getState());
+    console.groupEnd();
+};
 
 // Adding middlewares and combining them using compose method
 const middleWares = [loggerMiddleware];
