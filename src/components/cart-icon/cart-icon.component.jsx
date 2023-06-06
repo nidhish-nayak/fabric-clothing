@@ -4,8 +4,8 @@ import { selectCartCount, selectIsCartOpen } from "../../store/cart/cart.selecto
 import { CartIconContainer, ItemCount, ShoppingIcon } from "./cart-icon.styles";
 
 const CartIcon = () => {
-
     const dispatch = useDispatch();
+
     const cartCount = useSelector(selectCartCount);
     const isCartOpen = useSelector(selectIsCartOpen);
 
