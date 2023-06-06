@@ -1,7 +1,8 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment } from "react";
+import { useSelector } from "react-redux";
 import CheckoutItems from "../../components/checkout-items/checkout-items.component";
 import Footer from "../../components/footer/footer.component";
-import { CartContext } from "../../contexts/cart.context";
+import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
 import {
     CheckoutContainer,
     CheckoutHeader,
@@ -11,7 +12,8 @@ import {
 
 const Checkout = () => {
 
-    const { cartItems, cartTotal } = useContext(CartContext);
+    const cartItems = useSelector(selectCartItems);
+    const cartTotal = useSelector(selectCartTotal);
 
     return (
         <Fragment>

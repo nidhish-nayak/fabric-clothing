@@ -1,6 +1,4 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { selectCartItems } from "../../store/cart/cart.selector";
 import "./cart-item.styles";
 import {
     CartItemContainer,
@@ -9,9 +7,8 @@ import {
     Name,
 } from "./cart-item.styles";
 
-const CartItem = () => {
+const CartItem = ({ cartItem }) => {
 
-    const cartItem = useSelector(selectCartItems);
     const { imageUrl, name, price, quantity } = cartItem;
 
     return (
