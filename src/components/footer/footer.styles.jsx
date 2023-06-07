@@ -65,9 +65,14 @@ export const SubscribeContainer = styled.div`
     justify-content: center;
     align-items: flex-start;
     margin-left: 40px;
+    margin-top: 2em;
 
     p {
         margin: 0 0 0.5em 0;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 0;
     }
 `;
 
