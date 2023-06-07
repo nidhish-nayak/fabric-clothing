@@ -41,14 +41,14 @@ export const ReviewPlane = styled(PlaneIcon)`
 `;
 
 export const ReviewRefresh = styled(RefreshIcon)`
-    width: 30px;
+    width: 45px;
 
     @media (max-width: 768px) {
-        width: 25px
+        width: 30px
     }
 
     @media (max-width: 400px) {
-        width: 20px
+        width: 25px
     }
 `;
 

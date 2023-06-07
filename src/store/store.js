@@ -6,6 +6,7 @@ import {
 import logger from "redux-logger";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import thunk from "redux-thunk";
 import { rootReducer } from "./root-reducer";
 
 // Blacklisting user since auth state listener holds the user since it may face issues on persist
@@ -18,9 +19,10 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 // Log middleware only in DEV instance - filter will send "logger" string to const middleware
-const middleWares = [process.env.NODE_ENV !== "production" && logger].filter(
-    Boolean
-);
+const middleWares = [
+    process.env.NODE_ENV !== "production" && logger,
+    thunk,
+].filter(Boolean);
 
 const composeEnhancer =
     (process.env.NODE_ENV !== "production" &&
