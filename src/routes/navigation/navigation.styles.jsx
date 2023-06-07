@@ -13,7 +13,7 @@ export const NavigationContainer = styled.div`
     justify-content: space-between;
     padding: 0 40px;
     position: fixed;
-    border-bottom: 1px rgb(200, 200, 200) solid;
+    border-bottom: 1px rgb(100, 100, 100) solid;
     // To avoid annoying selections on clicks
     user-select: none;
 

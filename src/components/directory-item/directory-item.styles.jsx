@@ -69,7 +69,7 @@ export const SecondaryBodyContainer = styled.div`
 
 export const PrimaryDirectoryContainer = styled.div`
     min-width: 30%;
-    height: 600px;
+    height: calc(100vh - 70px);
     display: flex;
     flex: 1 1 auto;
     align-items: center;
@@ -107,6 +107,7 @@ export const SecondaryDirectoryContainer = styled.div`
     justify-content: center;
     overflow: hidden;
     position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
 
     span {
         position: absolute;

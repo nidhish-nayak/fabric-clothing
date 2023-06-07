@@ -1,7 +1,11 @@
 import { useEffect } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import logo from '../../assets/Logo.png';
-import { Divider, FooterWrapper, IconContainer, IconWrapper, List, Logo } from "./footer.styles";
+import SubscribeForm from '../subscribe-form/subscribe-form.component';
+import {
+    Divider, FooterWrapper, IconContainer, IconWrapper,
+    List, Logo, SubscribeContainer, SubscribeTitle
+} from "./footer.styles";
 
 const Footer = () => {
     // Mobile view - The scroll stays at same position on routes hence scroll to top on render
@@ -38,6 +42,11 @@ const Footer = () => {
                     <FaLinkedin />
                 </IconWrapper>
             </IconContainer>
+            <SubscribeContainer>
+                <SubscribeTitle>Sign up for newsletter</SubscribeTitle>
+                <p>Stay updated on new releases and features, guides, and case studies.</p>
+                <SubscribeForm />
+            </SubscribeContainer>
         </FooterWrapper>
     )
 }

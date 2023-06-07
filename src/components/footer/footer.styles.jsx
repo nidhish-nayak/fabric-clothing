@@ -42,8 +42,9 @@ export const List = styled.ul`
 export const IconContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    padding: 1em;
 `;
 
 export const IconWrapper = styled.div`
@@ -57,3 +58,19 @@ export const Divider = styled.span`
     font-family: 'synonym', sans-serif;
     margin: 0 1em;
 `
+
+export const SubscribeContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 40px;
+
+    p {
+        margin: 0 0 0.5em 0;
+    }
+`;
+
+export const SubscribeTitle = styled.h4`
+    margin: 2em 0 1em 0;
+`;

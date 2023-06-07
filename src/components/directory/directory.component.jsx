@@ -1,5 +1,6 @@
 import React from "react";
 import DirectoryItem from "../directory-item/directory-item.component";
+import Review from "../review/review.component";
 import Trending from "../trending/trending.component";
 import "./directory.styles.jsx";
 import {
@@ -86,6 +87,7 @@ const Directory = () => {
                         )}
                 </SecondaryBody>
             </SecondaryContainer>
+            <Review />
             <Trending trendingItems={trendingItems} />
         </DirectoryContainer>
     );
