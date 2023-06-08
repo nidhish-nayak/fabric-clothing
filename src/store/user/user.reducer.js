@@ -4,7 +4,6 @@ const INITIAL_STATE = {
     currentUser: null,
 };
 
-// Initial state is pre-defined since we do not use useReducer hook here
 export const userReducer = (state = INITIAL_STATE, action) => {
     const { type, payload } = action;
 
