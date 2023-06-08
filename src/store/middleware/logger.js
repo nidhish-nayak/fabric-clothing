@@ -1,5 +1,3 @@
-// Creating your own logger middleware, not using it in Store since we already have a logger middleware from redux
-
 export const loggerMiddleware = (store) => (next) => (action) => {
     // In case actions received with no types (Redux Thunk)
     if (!action.type) {
@@ -12,7 +10,6 @@ export const loggerMiddleware = (store) => (next) => (action) => {
 
     next(action);
 
-    // Next state will be only available post running the reducer. Hence, printing the state after next
     console.table("Next State: ", store.getState());
     console.groupEnd();
 };
