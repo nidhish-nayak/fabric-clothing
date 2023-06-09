@@ -3,7 +3,7 @@ import { CATEGORIES_ACTION_TYPES } from "./category.types";
 // Initializing redux-thunk: Migrating async fetch from shop component to reducer
 export const CATEGORIES_INITIAL_STATE = {
     categories: [],
-    isLoading: false,
+    isLoading: true,
     error: null,
 };
 
