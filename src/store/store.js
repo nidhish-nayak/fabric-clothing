@@ -19,7 +19,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const middleWares = [
     process.env.NODE_ENV !== "production" && logger,
-    thunk,
+    thunk, // Added Redux Thunk as middleware
 ].filter(Boolean);
 
 const composeEnhancer =

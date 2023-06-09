@@ -69,7 +69,7 @@ export const SecondaryBodyContainer = styled.div`
 
 export const PrimaryDirectoryContainer = styled.div`
     min-width: 30%;
-    height: calc(100vh - 70px);
+    height: calc(100svh - 70px);
     display: flex;
     flex: 1 1 auto;
     align-items: center;
