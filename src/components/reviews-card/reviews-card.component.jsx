@@ -2,9 +2,9 @@ import {
     ReviewContainer,
     ReviewItems, ReviewPlane,
     ReviewRefresh, ReviewShield, ReviewStar, ReviewTitle
-} from './review.styles';
+} from './reviews-card.styles';
 
-const Review = () => {
+const ReviewsCard = () => {
     return (
         <ReviewContainer>
             <ReviewItems>
@@ -35,4 +35,4 @@ const Review = () => {
     )
 }
 
-export default Review;
+export default ReviewsCard;
