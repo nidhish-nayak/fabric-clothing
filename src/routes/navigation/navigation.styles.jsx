@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const NavigationContainer = styled.div`
     height: 70px;
     top: 0;
-    // z-index of secondaryBodyContainer is z-1
     z-index: 2;
     background-color: #FFFFFF; 
     opacity: 0.90; 
@@ -13,8 +12,6 @@ export const NavigationContainer = styled.div`
     justify-content: space-between;
     padding: 0 40px;
     position: fixed;
-    border-bottom: 1px rgb(100, 100, 100) solid;
-    // To avoid annoying selections on clicks
     user-select: none;
 
     @media (max-width: 768px) {

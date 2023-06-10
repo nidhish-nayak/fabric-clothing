@@ -19,10 +19,11 @@ export const PrimaryBodyContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    // border: 1px solid black;
     background-color: white;
     text-transform: uppercase;
-    opacity: 0.7;
+    opacity: 0.8;
+    border-radius: 0.5em;
     position: absolute;
 
     h2 {
@@ -107,7 +108,6 @@ export const SecondaryDirectoryContainer = styled.div`
     justify-content: center;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
 
     span {
         position: absolute;
@@ -120,6 +120,7 @@ export const SecondaryDirectoryContainer = styled.div`
         z-index: 1;
         padding: 0.5em;
         background-color: white;
+        border: 0.5px #cecece solid;
     }
 
     &:hover {
