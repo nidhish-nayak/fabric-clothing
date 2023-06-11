@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CategorySection = styled.section`
-    margin-top: 7em;
+    margin-top: 1em;
 `;
 
 export const CategoryContainer = styled.div`

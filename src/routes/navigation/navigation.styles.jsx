@@ -6,12 +6,11 @@ export const NavigationContainer = styled.div`
     top: 0;
     z-index: 2;
     background-color: #FFFFFF; 
-    opacity: 0.90; 
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
-    position: fixed;
+    position: sticky;
     user-select: none;
 
     @media (max-width: 768px) {

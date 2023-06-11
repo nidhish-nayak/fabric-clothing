@@ -19,7 +19,6 @@ export const PrimaryBodyContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // border: 1px solid black;
     background-color: white;
     text-transform: uppercase;
     opacity: 0.8;
@@ -120,7 +119,6 @@ export const SecondaryDirectoryContainer = styled.div`
         z-index: 1;
         padding: 0.5em;
         background-color: white;
-        border: 0.5px #cecece solid;
     }
 
     &:hover {

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 `;
 
 export const FormInputContainer = styled.div`
