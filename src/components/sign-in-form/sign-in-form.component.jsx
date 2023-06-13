@@ -24,22 +24,17 @@ const SingInForm = () => {
     };
 
     const [formFields, setFormFields] = useState(defaultFormFields);
-
-    //Note: Do not destructure from default Form Fields, get data from the state
     const { email, password } = formFields;
 
-    //Reset form once submitted and user auth is successfull
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
     };
 
-    //State handling - updating the state as the user types in the value
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormFields({ ...formFields, [name]: value });
     };
 
-    //Form Submit handling
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
