@@ -14,8 +14,6 @@ import {
 
 const App = () => {
     const dispatch = useDispatch();
-
-    // onAuthStateChangedListener has a callback which triggers on user state change
     useEffect(() => {
         const unsubscribe = onAuthStateChangedListener((user) => {
             if (user) {
@@ -24,8 +22,6 @@ const App = () => {
             dispatch(setCurrentUser(user));
         });
         return unsubscribe;
-
-        // This dispatch is to avoid warnings and not re-rendered on dispatch change
     }, [dispatch]);
 
     return (
