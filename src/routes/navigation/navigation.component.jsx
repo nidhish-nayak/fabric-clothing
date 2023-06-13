@@ -33,7 +33,7 @@ const Navigation = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []); // Empty dependency array to run the effect only once during mounting
+    }, []);
 
     return (
         <Fragment>
