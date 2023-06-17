@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react"; //Fragment is used if no parent div element is needed
+import React, { Fragment, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import logo from '../../assets/Logo.png';
