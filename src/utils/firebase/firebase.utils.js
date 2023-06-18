@@ -69,7 +69,7 @@ export const getCategoriesAndDocuments = async () => {
   return querySnapshot.docs.map((docSnapshot) => docSnapshot.data());
 };
 
-// Creating new user auth collection with uid from google login
+// Extracts auth data from firebase in form of a document
 export const createUserDocFromAuth = async (userAuth, additionalInfo) => {
   if (!userAuth) return;
 
@@ -114,4 +114,17 @@ export const signOutUser = async () => {
 // Auth state change listener
 export const onAuthStateChangedListener = (callback) => {
   onAuthStateChanged(auth, callback);
+};
+
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      (userAuth) => {
+        unsubscribe();
+        resolve(userAuth);
+      },
+      reject
+    );
+  });
 };
