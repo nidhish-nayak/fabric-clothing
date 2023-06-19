@@ -9,7 +9,6 @@ import { getCurrentUser } from "./utils/firebase/firebase.utils.js";
 
 const App = () => {
   useEffect(() => {
-    // Basically unsubscribe stores user state = {null or userID} and returns it to
     getCurrentUser().then((user) => console.log(user));
   }, []);
 
