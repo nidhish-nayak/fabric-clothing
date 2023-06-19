@@ -91,7 +91,7 @@ export const createUserDocFromAuth = async (userAuth, additionalInfo) => {
       console.log("Error: " + error.message);
     }
   }
-  return userDocRef;
+  return userSnapshot;
 };
 
 // User auth for direct email/password login
