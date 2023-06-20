@@ -19,7 +19,7 @@ export const SignInContainer = styled.div`
         width: 200px;
     }
 `;
-export const SignInButtonContainer = styled.div`
+export const ButtonsContainer = styled.div`
     display: flex;
     justify-content: space-between;
 
