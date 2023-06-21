@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Fabric Clothing App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```bash
+⚠️ Warning: This app is a work in progress. I'm building this in public. ⚠️
+```
 
-## Available Scripts
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Nidhish-D-Nayak/my-clothing-app/tree/Redux-Saga)
 
-In the project directory, you can run:
+Welcome to Fabric Clothing App! This application is built using React, Redux, Thunk, Saga, Firebase and Styled Components. It aims to provide users with an intuitive and seamless shopping experience for clothing items made from premium fabrics.
 
-### `npm start`
+## Features ✨
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **User Authentication**: Users can create accounts, log in, and securely access their personalized profiles.
+- **Product Catalog**: Browse through a wide range of clothing items, organized into categories for easy navigation.
+- **Product Details**: View detailed information about each product, including images and descriptions.
+- **Shopping Cart**: Add desired items to the cart, adjust quantities, and proceed to checkout.
+- **Checkout Menu**: Users can review and manage their orders and make any changes in checkout menu.
+- **Responsive Design**: Enjoy a consistent and visually appealing experience across various devices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation 💻
 
-### `npm test`
+To run the Fabric Clothing App locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/Nidhish-D-Nayak/my-clothing-app.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project directory:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   cd my-clothing-app
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install the dependencies:
 
-### `npm run eject`
+   ```bash
+   yarn install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Set up Firebase:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   - Create a Firebase project and obtain the necessary configuration credentials.
+   - Copy the Firebase configuration object into the `src/utils/firebase/firebase.utils.js` file.
+   - Enable the desired Firebase authentication methods (e.g., Email/Password, Google, etc.).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Start the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   yarn start
+   ```
 
-## Learn More
+6. Open your browser and visit `http://localhost:3000` to access the Fabric Clothing App.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used 🔧
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React: JavaScript library for building user interfaces.
+- Redux: State management tool for predictable state updates.
+- Thunk & Saga: Middleware libraries for managing asynchronous actions in Redux.
+- Styled Components: CSS-in-JS library for styling React components.
+- Firebase: Backend-as-a-Service (BaaS) platform for authentication, database, and storage.
 
-### Code Splitting
+## Folder Structure 📂
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Here's an overview of the project's folder structure:
 
-### Analyzing the Bundle Size
+```
+├── public/             # Public assets and HTML template
+├── src/
+│   ├── assets/         # Assets used in the application
+│   ├── components/     # Reusable React components
+│   ├── routes/         # Top-level application pages
+│   ├── store/          # Redux store - redux actions, reducers, and store
+│   └── utils/          # Utility functions and constants - Firebase & Reducer
+└── ...
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing 🤝
 
-### Making a Progressive Web App
+We welcome contributions to the Fabric Clothing App project! If you would like to contribute, please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Fork the repository.
+2. Create a new branch for your feature/fix: `git checkout -b feature-name`.
+3. Make your changes and commit them: `git commit -m 'Add some feature'`.
+4. Push the changes to your forked repository: `git push origin feature-name`.
+5. Open a pull request to the main repository's `main` branch.
 
-### Advanced Configuration
+## License 📝
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license.
 
-### Deployment
+## Contact 💬
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you have any questions, suggestions, or feedback, please don't hesitate to reach out. You can contact the project maintainer at [nidhibelthangady@gmail.com](mailto:nidhibelthangady@gmail.com).
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy shopping with the Fabric Clothing App! 🛍️

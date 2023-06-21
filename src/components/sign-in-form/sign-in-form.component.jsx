@@ -8,7 +8,7 @@ import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
 import "./sign-in-form.styles.jsx";
 import {
-    SignInButtonContainer,
+    ButtonsContainer,
     SignInContainer,
 } from "./sign-in-form.styles.jsx";
 
@@ -24,22 +24,17 @@ const SingInForm = () => {
     };
 
     const [formFields, setFormFields] = useState(defaultFormFields);
-
-    //Note: Do not destructure from default Form Fields, get data from the state
     const { email, password } = formFields;
 
-    //Reset form once submitted and user auth is successfull
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
     };
 
-    //State handling - updating the state as the user types in the value
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormFields({ ...formFields, [name]: value });
     };
 
-    //Form Submit handling
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
@@ -87,7 +82,7 @@ const SingInForm = () => {
                     minLength="6"
                 />
 
-                <SignInButtonContainer>
+                <ButtonsContainer>
                     <Button type="submit">Sign In</Button>
                     {/* Here type='button' is used to prevent form submission on google popup click */}
                     <Button
@@ -97,7 +92,7 @@ const SingInForm = () => {
                     >
                         Sign In with Google
                     </Button>
-                </SignInButtonContainer>
+                </ButtonsContainer>
             </form>
         </SignInContainer>
     );

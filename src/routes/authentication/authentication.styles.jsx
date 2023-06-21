@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AuthContainer = styled.div`
-    margin: 6em 4em 1em;
+    margin: 1em 4em 1em;
     display: flex;
     justify-content: space-around;
 

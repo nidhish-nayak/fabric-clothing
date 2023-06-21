@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"; //Fragment is used if no parent div element is needed
+import React, { Fragment, useEffect, useState } from "react"; //Fragment is used if no parent div element is needed
 import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import logo from '../../assets/Logo.png';
@@ -20,9 +20,24 @@ const Navigation = () => {
     const currentUser = useSelector(userSelector);
     const isCartOpen = useSelector(selectIsCartOpen);
 
+    // Transparent navbar on scroll
+    const [isTransparent, setIsTransparent] = useState(true);
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const shouldTransparent = scrollPosition >= 70;
+            setIsTransparent(shouldTransparent);
+        };
+        window.addEventListener('scroll', handleScroll);
+        // Cleanup the scroll event listener when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <Fragment>
-            <NavigationContainer>
+            <NavigationContainer transparent={isTransparent}>
                 <LogoContainer to="/">
                     <FabricLogo src={logo} alt='Logo' />
                 </LogoContainer>
