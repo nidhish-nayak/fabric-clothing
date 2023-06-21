@@ -6,7 +6,7 @@
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Nidhish-D-Nayak/my-clothing-app/tree/Redux-Saga)
 
-Welcome to Fabric Clothing App! This application is built using React, Redux, Thunk, Saga, Firebase and Styled Components. It aims to provide users with an intuitive and seamless shopping experience for clothing items made from premium fabrics.
+Welcome to Fabric Clothing App! This application is built using React, Redux, Thunk, Redux-Toolkit, Firebase and Styled Components. It aims to provide users with an intuitive and seamless shopping experience for clothing items made from premium fabrics.
 
 ## Features ✨
 
@@ -57,7 +57,8 @@ To run the Fabric Clothing App locally, follow these steps:
 
 - React: JavaScript library for building user interfaces.
 - Redux: State management tool for predictable state updates.
-- Thunk & Saga: Middleware libraries for managing asynchronous actions in Redux.
+- Thunks: Middleware libraries for managing asynchronous actions in Redux.
+- Redux Toolkit: A more opinionated state management tool for better developer experience.
 - Styled Components: CSS-in-JS library for styling React components.
 - Firebase: Backend-as-a-Service (BaaS) platform for authentication, database, and storage.
 
