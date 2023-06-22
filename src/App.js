@@ -6,7 +6,7 @@ import Checkout from "./routes/checkout/checkout.component.jsx";
 import Home from "./routes/home/home.component.jsx";
 import Navigation from "./routes/navigation/navigation.component.jsx";
 import Shop from "./routes/shop/shop.component.jsx";
-import { setCurrentUser } from "./store/user/user.action.js";
+import { setCurrentUser } from "./store/user/userSlice.js";
 import {
   createUserDocFromAuth,
   onAuthStateChangedListener,
@@ -19,7 +19,15 @@ const App = () => {
       if (user) {
         createUserDocFromAuth(user);
       }
-      dispatch(setCurrentUser(user));
+      const { uid, email, displayName, emailVerified, photoURL } = user;
+      const serializedUser = {
+        uid,
+        email,
+        displayName,
+        emailVerified,
+        photoURL,
+      };
+      dispatch(setCurrentUser(serializedUser));
     });
     return unsubscribe;
   }, [dispatch]);
