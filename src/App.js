@@ -6,7 +6,7 @@ import Checkout from "./routes/checkout/checkout.component.jsx";
 import Home from "./routes/home/home.component.jsx";
 import Navigation from "./routes/navigation/navigation.component.jsx";
 import Shop from "./routes/shop/shop.component.jsx";
-import { setCurrentUser } from "./store/user/userSlice.js";
+import { setCurrentUser } from "./store/user/user.reducer.js";
 import {
   createUserDocFromAuth,
   onAuthStateChangedListener,
@@ -19,14 +19,25 @@ const App = () => {
       if (user) {
         createUserDocFromAuth(user);
       }
-      const { uid, email, displayName, emailVerified, photoURL } = user;
-      const serializedUser = {
-        uid,
-        email,
-        displayName,
-        emailVerified,
-        photoURL,
-      };
+      // immediately invoked function expression (IIFE) => to get serialized user data
+      const serializedUser =
+        user &&
+        (({
+          uid,
+          accessToken,
+          email,
+          displayName,
+          emailVerified,
+          photoURL,
+        }) => ({
+          uid,
+          accessToken,
+          email,
+          displayName,
+          emailVerified,
+          photoURL,
+        }))(user);
+
       dispatch(setCurrentUser(serializedUser));
     });
     return unsubscribe;
