@@ -4,9 +4,10 @@ import { Outlet } from "react-router-dom";
 import logo from '../../assets/Logo.png';
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component.jsx";
 import CartIcon from "../../components/cart-icon/cart-icon.component.jsx";
+import ProfileDropDown from "../../components/profile-dropdown/profile-dropdown.component";
+import Profile from "../../components/profile/profile.component";
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
-import { userSelector } from "../../store/user/user.selector";
-import { signOutUser } from "../../utils/firebase/firebase.utils";
+import { selectIsUserProfileOpen, userSelector } from "../../store/user/user.selector";
 import {
     FabricLogo,
     LogoContainer,
@@ -19,6 +20,7 @@ const Navigation = () => {
 
     const currentUser = useSelector(userSelector);
     const isCartOpen = useSelector(selectIsCartOpen);
+    const isUserProfileOpen = useSelector(selectIsUserProfileOpen);
 
     // Transparent navbar on scroll
     const [isTransparent, setIsTransparent] = useState(true);
@@ -44,14 +46,18 @@ const Navigation = () => {
                 <NavLinks>
                     <NavLink to="/shop">SHOP</NavLink>
                     {currentUser ? (
-                        <NavLink as="span" onClick={signOutUser}>
-                            SIGN OUT
-                        </NavLink>
+                        <Fragment>
+                            <CartIcon />
+                            <Profile />
+                        </Fragment>
                     ) : (
-                        <NavLink to="/auth">SIGN IN</NavLink>
+                        <Fragment>
+                            <NavLink to="/auth">SIGN IN</NavLink>
+                            <CartIcon />
+                        </Fragment>
                     )}
-                    <CartIcon />
                 </NavLinks>
+                {isUserProfileOpen && <ProfileDropDown />}
                 {isCartOpen && <CartDropdown />}
             </NavigationContainer>
             <Outlet />

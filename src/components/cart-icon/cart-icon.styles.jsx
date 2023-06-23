@@ -15,6 +15,7 @@ export const ShoppingIcon = styled(ShopIcon)`
     position: absolute;
     margin: 0.01em;
 `;
+
 export const ItemCount = styled.span`
     padding: 1px 0 0 0;
     font-size: 0.75rem;

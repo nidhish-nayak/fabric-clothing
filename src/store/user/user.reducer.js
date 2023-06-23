@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const INITIAL_STATE = {
   currentUser: null,
+  isUserProfileOpen: false,
 };
 
 export const userSlice = createSlice({
@@ -11,10 +12,13 @@ export const userSlice = createSlice({
     setCurrentUser: (state, action) => {
       state.currentUser = action.payload;
     },
+    setIsProfileOpen: (state, action) => {
+      state.isUserProfileOpen = action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setCurrentUser } = userSlice.actions;
+export const { setCurrentUser, setIsProfileOpen } = userSlice.actions;
 
 export default userSlice.reducer;
