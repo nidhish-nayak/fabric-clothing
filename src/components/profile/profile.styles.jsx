@@ -12,9 +12,5 @@ export const ProfileContainer = styled.div`
         border-radius: 50%;
         width: 3em;
         cursor: pointer;
-
-        &:hover {
-            background: #cecece;
-        }
     }
 `
