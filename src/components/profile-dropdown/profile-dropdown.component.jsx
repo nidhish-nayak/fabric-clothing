@@ -1,26 +1,44 @@
+import { Fragment } from "react";
 import { useSelector } from "react-redux";
-import { userSelector } from "../../store/user/user.selector";
+import {
+    selectProfileUserEmail,
+    selectProfileUserName,
+    selectUserProfileImage,
+    userSelector
+} from "../../store/user/user.selector";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import { ProfileDetails, ProfileDropDownContainer, ProfileEmail, ProfileName } from "./profile-dropdown.styles";
 
-const ProfileDropDown = () => {
-    const userDetails = useSelector(userSelector);
-    console.log(userDetails);
-    const { photoURL, displayName, email } = userDetails;
+const ProfileDetailsComponent = () => {
+    const imageURL = useSelector(selectUserProfileImage);
+    const userName = useSelector(selectProfileUserName);
+    const userEmail = useSelector(selectProfileUserEmail);
 
     return (
-        <ProfileDropDownContainer>
-            <ProfileDetails>
-                <img src={photoURL} alt="Profile_Image" />
-                <ProfileName>{displayName}</ProfileName>
-                <ProfileEmail>Email: {email}</ProfileEmail>
-            </ProfileDetails>
-            <Button buttonType={BUTTON_TYPE_CLASSES.base} onClick={signOutUser}>
-                SIGN OUT
-            </Button>
-        </ProfileDropDownContainer>
-    )
-}
+        <ProfileDetails>
+            <img src={imageURL} alt="Profile_Image" />
+            <ProfileName>{userName}</ProfileName>
+            <ProfileEmail>Email: {userEmail}</ProfileEmail>
+        </ProfileDetails>
+    );
+};
+
+const ProfileDropDown = () => {
+    const userDetails = useSelector(userSelector);
+
+    return (
+        <Fragment>
+            {userDetails &&
+                <ProfileDropDownContainer>
+                    <ProfileDetailsComponent />
+                    <Button buttonType={BUTTON_TYPE_CLASSES.base} onClick={signOutUser}>
+                        SIGN OUT
+                    </Button>
+                </ProfileDropDownContainer>
+            }
+        </Fragment>
+    );
+};
 
 export default ProfileDropDown;
