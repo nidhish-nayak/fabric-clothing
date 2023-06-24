@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+
 import {
     createUserDocFromAuth,
     signInWithGooglePopup,
     userSignInWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils.js";
+
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
+
 import "./sign-in-form.styles.jsx";
 import {
     ButtonsContainer,
@@ -18,6 +21,7 @@ const defaultFormFields = {
 };
 
 const SingInForm = () => {
+
     const logGoogleUser = async () => {
         const response = await signInWithGooglePopup();
         await createUserDocFromAuth(response.user);

@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
+
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import logo from '../../assets/Logo.png';
+
 import SubscribeForm from '../subscribe-form/subscribe-form.component';
 import {
     Divider, FooterWrapper, IconContainer, IconWrapper,

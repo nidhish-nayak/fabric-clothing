@@ -1,13 +1,17 @@
 import React, { Fragment, useEffect, useState } from "react"; //Fragment is used if no parent div element is needed
 import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
-import logo from '../../assets/Logo.png';
+
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component.jsx";
 import CartIcon from "../../components/cart-icon/cart-icon.component.jsx";
 import ProfileDropDown from "../../components/profile-dropdown/profile-dropdown.component";
 import Profile from "../../components/profile/profile.component";
+
+import logo from '../../assets/Logo.png';
+
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
 import { selectIsUserProfileOpen, userSelector } from "../../store/user/user.selector";
+
 import {
     FabricLogo,
     LogoContainer,

@@ -1,8 +1,11 @@
 import React, { Fragment } from "react";
 import { useSelector } from "react-redux";
+
 import CheckoutItems from "../../components/checkout-items/checkout-items.component";
 import Footer from "../../components/footer/footer.component";
+
 import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
+
 import {
     CheckoutContainer,
     CheckoutHeader,

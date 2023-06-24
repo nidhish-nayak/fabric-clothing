@@ -1,10 +1,10 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+
 import { addItemToCart } from "../../store/cart/cart.reducer";
-import {
-    default as BUTTON_TYPE_CLASSES,
-    default as Button,
-} from "../button/button.component";
+
+import { default as BUTTON_TYPE_CLASSES, default as Button } from "../button/button.component";
+
 import "./product-card.styles.jsx";
 import {
     Footer,

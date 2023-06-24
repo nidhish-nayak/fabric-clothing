@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+
 import { Form, FormButton, FormInput, FormInputContainer } from './subscribe-form.styles';
 
 const SubscribeForm = () => {
+
     const [email, setEmail] = useState("")
 
     const handleSubmit = async (e) => {

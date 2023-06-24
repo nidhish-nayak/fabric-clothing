@@ -1,7 +1,9 @@
 import React from "react";
+
 import DirectoryItem from "../directory-item/directory-item.component";
 import ReviewsCard from "../reviews-card/reviews-card.component";
 import Trending from "../trending/trending.component";
+
 import "./directory.styles.jsx";
 import {
     DirectoryContainer, PrimaryContainer,
