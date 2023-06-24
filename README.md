@@ -1,6 +1,6 @@
 # Fabric Clothing
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d826ede8-3c45-4b63-af46-a2d2b83520b7/deploy-status)](https://app.netlify.com/sites/fabric-clothing/deploys)
+![Site Preview](https://screenshot-proxy.netlify.app/f_jpg,w_336/https://d33wubrfki0l68.cloudfront.net/6496a67a991e3f3b2ae56d1b/screenshot_2023-06-24-08-17-53-0000.png)
 
 ```bash
 ⚠️ Warning: This app is a work in progress. I'm building this in public. ⚠️
