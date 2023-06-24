@@ -1,12 +1,12 @@
-# Fabric Clothing App
+# Fabric Clothing
 
 ```bash
 ⚠️ Warning: This app is a work in progress. I'm building this in public. ⚠️
 ```
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Nidhish-D-Nayak/my-clothing-app/tree/Redux-Saga)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Nidhish-D-Nayak/fabric-clothing/tree/main)
 
-Welcome to Fabric Clothing App! This application is built using React, Redux, Thunk, Redux-Toolkit, Firebase and Styled Components. It aims to provide users with an intuitive and seamless shopping experience for clothing items made from premium fabrics.
+Welcome to Fabric Clothing! This application is built using React, Redux, Redux-Thunk, Redux-Toolkit, Firebase and Styled Components. It aims to provide users with an intuitive and seamless shopping experience for clothing items made from premium fabrics.
 
 ## Features ✨
 
@@ -24,13 +24,13 @@ To run the Fabric Clothing App locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Nidhish-D-Nayak/my-clothing-app.git
+   git clone https://github.com/Nidhish-D-Nayak/fabric-clothing.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd my-clothing-app
+   cd fabric-clothing
    ```
 
 3. Install the dependencies:
