@@ -27,7 +27,7 @@ const Navigation = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            const shouldTransparent = scrollPosition >= 70;
+            const shouldTransparent = scrollPosition >= 90;
             setIsTransparent(shouldTransparent);
         };
         window.addEventListener('scroll', handleScroll);

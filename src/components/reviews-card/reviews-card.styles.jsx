@@ -4,12 +4,19 @@ import { ReactComponent as RefreshIcon } from '../../assets/review-assets/refres
 import { ReactComponent as ShieldIcon } from '../../assets/review-assets/shield.svg';
 import { ReactComponent as StarIcon } from '../../assets/review-assets/star.svg';
 
+export const ReviewCardTitle = styled.h2`
+    font-family: "synonym", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 6em 0 2em 0;
+`
+
 export const ReviewContainer = styled.ul`
     position: relative;
     list-style: none;
     background-color: #ececec;
-    padding: 0;
-    margin-top: 6em;
+    padding: 1em 0 1em 0;
     text-align: center;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
     display: grid;

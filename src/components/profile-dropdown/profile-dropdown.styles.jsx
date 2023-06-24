@@ -35,7 +35,6 @@ export const ProfileDetails = styled.div`
     img {
         width: 5em;
         border-radius: 50%;
-        border: 1px solid black;
     }
 `
 

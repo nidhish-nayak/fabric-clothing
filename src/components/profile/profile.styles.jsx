@@ -6,11 +6,10 @@ export const ProfileContainer = styled.div`
     margin-top: 0.4em;
 
     img {
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-        padding: 0.25em;
+        margin: 0px 0px 0px 1em;
         border-radius: 50%;
-        width: 3em;
+        width: 32px;
+        height: 32px;
         cursor: pointer;
     }
 `
