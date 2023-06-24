@@ -5,11 +5,11 @@ import { ReactComponent as ShieldIcon } from '../../assets/review-assets/shield.
 import { ReactComponent as StarIcon } from '../../assets/review-assets/star.svg';
 
 export const ReviewCardTitle = styled.h2`
-    font-family: "synonym", sans-serif;
     font-weight: 700;
+    font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
-    margin: 6em 0 2em 0;
+    margin: 4em 0 2em 0;
 `
 
 export const ReviewContainer = styled.ul`

@@ -9,8 +9,8 @@ export const TrendingContainer = styled.section`
 `;
 
 export const TrendingTitle = styled.h2`
-    font-family: "synonym", sans-serif;
     font-weight: 700;
+    font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
 `;
