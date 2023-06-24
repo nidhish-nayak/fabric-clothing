@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# stripe env ignored
+.env
+
 # testing
 /coverage
 
