@@ -16,6 +16,16 @@ const PaymentForm = () => {
       return;
     }
 
+    const response = await fetch('/.netlify/functions/create-payment-intent', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ amount: 10000 })
+    }).then(res => res.json());
+
+    console.log(response)
+
   }
 
   return (
