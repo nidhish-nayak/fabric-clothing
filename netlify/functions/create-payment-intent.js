@@ -1,4 +1,3 @@
-// Import .env library and configz() will attach all the secret variables to .env file
 require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
@@ -17,7 +16,7 @@ exports.handler = async (event) => {
 			body: JSON.stringify({ paymentIntent }),
 		};
 	} catch (error) {
-		console.log(error);
+		console.log({ error });
 
 		return {
 			statusCode: 400,
