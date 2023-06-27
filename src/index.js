@@ -4,14 +4,18 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
-import { Elements } from "@stripe/react-stripe-js";
-import { stripePromise } from "./utils/stripe/stripe.utils";
-
 import { PersistGate } from "redux-persist/integration/react";
 import { persistor, store } from "./store/store";
 
 import App from "./App";
 import "./index.scss";
+
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe(
+	toString(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY)
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
