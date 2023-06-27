@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# stripe env ignored
+.env
+
 # testing
 /coverage
 
@@ -22,5 +25,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# environment variables
-.env
+# Local Netlify folder
+.netlify

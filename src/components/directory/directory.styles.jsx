@@ -30,9 +30,9 @@ export const SecondaryContainer = styled.section`
 `;
 
 export const SecondaryTitle = styled.h2`
-    font-family: "synonym", sans-serif;
     font-weight: 700;
     text-align: center;
+    font-size: 2rem;
     text-transform: uppercase;
     margin: 0 0 2em 0;
 

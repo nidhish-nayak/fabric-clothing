@@ -1,16 +1,21 @@
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
+
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
+
+import { signOutUser } from "../../utils/firebase/firebase.utils";
+
 import {
     selectProfileUserEmail,
     selectProfileUserName,
     selectUserProfileImage,
     userSelector
 } from "../../store/user/user.selector";
-import { signOutUser } from "../../utils/firebase/firebase.utils";
-import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
+
 import { ProfileDetails, ProfileDropDownContainer, ProfileEmail, ProfileName } from "./profile-dropdown.styles";
 
 const ProfileDetailsComponent = () => {
+
     const imageURL = useSelector(selectUserProfileImage);
     const userName = useSelector(selectProfileUserName);
     const userEmail = useSelector(selectProfileUserEmail);
@@ -25,6 +30,7 @@ const ProfileDetailsComponent = () => {
 };
 
 const ProfileDropDown = () => {
+
     const userDetails = useSelector(userSelector);
 
     return (

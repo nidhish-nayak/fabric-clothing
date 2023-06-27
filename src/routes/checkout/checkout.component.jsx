@@ -1,8 +1,12 @@
 import React, { Fragment } from "react";
 import { useSelector } from "react-redux";
+
 import CheckoutItems from "../../components/checkout-items/checkout-items.component";
 import Footer from "../../components/footer/footer.component";
+import PaymentForm from "../../components/payment-form/payment-form.component";
+
 import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
+
 import {
     CheckoutContainer,
     CheckoutHeader,
@@ -39,6 +43,7 @@ const Checkout = () => {
                     <CheckoutItems key={cartItem.id} cartItem={cartItem} />
                 ))}
                 <Total>Total: ${cartTotal}</Total>
+                <PaymentForm />
             </CheckoutContainer>
             <Footer />
         </Fragment>

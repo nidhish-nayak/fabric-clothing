@@ -1,10 +1,13 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setIsCartOpen } from "../../store/cart/cart.reducer";
-import { selectCartItems } from "../../store/cart/cart.selector";
+
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import CartItem from "../cart-item/cart-item.component";
+
+import { setIsCartOpen } from "../../store/cart/cart.reducer";
+import { selectCartItems } from "../../store/cart/cart.selector";
+
 import {
     CartDropDownContainer,
     CartItemContainer,

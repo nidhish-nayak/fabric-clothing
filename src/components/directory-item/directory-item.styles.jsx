@@ -112,10 +112,8 @@ export const SecondaryDirectoryContainer = styled.div`
         position: absolute;
         top: 1em;
         left: 1em;
-        font-family: 'Amulya', sans-serif;
         font-weight: 700;
         font-size: 1rem;
-        color: black;
         z-index: 1;
         padding: 0.5em;
         background-color: white;
