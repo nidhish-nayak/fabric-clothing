@@ -11,7 +11,7 @@ const PaymentForm = () => {
     <PaymentFormContainer>
       <FormContainer>
         <h2>Credit Card Payment:</h2>
-        <p>(This functionality is in progress !)</p>
+        <p>This functionality is in progress !</p>
         <CardElement />
         <PaymentButton
           buttonType={BUTTON_TYPE_CLASSES.inverted}
