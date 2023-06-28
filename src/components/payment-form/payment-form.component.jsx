@@ -19,6 +19,7 @@ const PaymentForm = () => {
     const response = await fetch('/.netlify/functions/create-payment-intent', {
       method: 'post',
       headers: {
+        "Access-Control-Allow-Origin": "*",
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ amount: 10000 })
