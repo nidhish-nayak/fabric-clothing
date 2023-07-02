@@ -53,7 +53,7 @@ export const Total = styled.span`
     margin-top: 30px;
     font-size: 36px;
 
-    @media (max-width: 400px) {
+    @media (max-width: 480px) {
         font-size: 1.5rem;
     }
 `;
@@ -61,9 +61,15 @@ export const Total = styled.span`
 export const PaymentContainer = styled.span`
     display: flex;
     justify-content: flex-end;
-    
+    align-items: center;
+
     button {
         margin-left: 30px;
         margin-top: 30px;
+    }
+
+    @media (max-width: 480px) {
+        display: flex;
+        justify-content: space-between;
     }
 `
