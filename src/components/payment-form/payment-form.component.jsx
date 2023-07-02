@@ -24,6 +24,8 @@ const PaymentForm = () => {
     console.log("Response 12: ", response)
     const { data } = response;
 
+    console.log(response);
+
     const options = {
       key: process.env.RAZOR_PAY_KEY_ID,
       name: "Fabric Clothing",

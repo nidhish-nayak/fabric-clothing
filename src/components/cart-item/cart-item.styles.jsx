@@ -12,6 +12,13 @@ export const ItemDetails = styled.div`
     align-items: flex-start;
     justify-content: center;
     padding: 10px 20px;
+
+    span {
+        span {
+            font-family: "Courier New";
+            opacity: 0.7;
+        }
+    }
 `;
 
 export const Name = styled.span`

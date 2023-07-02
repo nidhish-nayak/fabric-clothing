@@ -17,7 +17,7 @@ const CartItem = ({ cartItem }) => {
             <ItemImage src={imageUrl} alt="alternative" />
             <ItemDetails>
                 <Name>{name}</Name>
-                <span>{`${quantity} x $${price}`}</span>
+                <span>{`${quantity} x `}<span>₹</span>{`${price}`}</span>
             </ItemDetails>
         </CartItemContainer>
     );

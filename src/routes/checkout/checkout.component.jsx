@@ -44,7 +44,7 @@ const Checkout = () => {
                     <CheckoutItems key={cartItem.id} cartItem={cartItem} />
                 ))}
                 <PaymentContainer>
-                    <Total>Total: ₹ {cartTotal}</Total>
+                    <Total>Total: <span>₹</span> {cartTotal}</Total>
                     <PaymentForm />
                 </PaymentContainer>
             </CheckoutContainer>
