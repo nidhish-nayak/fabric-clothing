@@ -42,6 +42,11 @@ export const Quantity = styled.span`
 export const Price = styled.span`
     width: 23%;
 
+    span {
+        font-family: "Courier New";
+        opacity: 0.7;
+    }
+
     @media (max-width: 400px) {
         margin-right: -20px;
     }

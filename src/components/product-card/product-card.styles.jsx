@@ -51,4 +51,9 @@ export const Name = styled.span`
 
 export const Price = styled.span`
     width: 10%;
+
+    span {
+        font-family: "Courier New";
+        opacity: 0.7;
+    }
 `;

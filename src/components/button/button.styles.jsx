@@ -48,6 +48,14 @@ export const InvertedButton = styled(BaseButton)`
         color: white;
         border: none;
     }
+
+    @media (max-width: 480px) {
+      min-width: 100px;
+    }
+
+    @media (max-width: 320px) {
+      min-width: 80px;
+    }
 `;
 
 export const SpinnerContainer = styled.div`

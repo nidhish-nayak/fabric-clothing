@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const CheckoutContainer = styled.div`
     width: 65%;
-    min-height: 90vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 2em auto 0;
+    // align-items: center;
+    margin: 2em auto 4em;
 
     @media (max-width: 768px) {
         width: 90%;
@@ -51,10 +50,35 @@ export const HeaderBlock = styled.div`
 `;
 export const Total = styled.span`
     margin-top: 30px;
-    margin-left: auto;
     font-size: 36px;
 
-    @media (max-width: 400px) {
+    span {
+        font-family: 'Courier New';
+        opacity: 0.7;
+    }
+
+    @media (max-width: 480px) {
         font-size: 1.5rem;
     }
 `;
+
+export const PaymentContainer = styled.span`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    button {
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 480px) {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            margin-left: 10px;
+            margin-top: 30px;
+        }    
+    }
+`

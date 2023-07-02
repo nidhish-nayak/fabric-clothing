@@ -27,7 +27,7 @@ const Navigation = () => {
     const isUserProfileOpen = useSelector(selectIsUserProfileOpen);
 
     // Transparent navbar on scroll
-    const [isTransparent, setIsTransparent] = useState(true);
+    const [isTransparent, setIsTransparent] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;

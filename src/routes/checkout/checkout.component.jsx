@@ -7,10 +7,12 @@ import PaymentForm from "../../components/payment-form/payment-form.component";
 
 import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
 
+import OrdersPreview from "../../components/orders-preview/orders-preview.component";
 import {
     CheckoutContainer,
     CheckoutHeader,
     HeaderBlock,
+    PaymentContainer,
     Total,
 } from "./checkout.styles";
 
@@ -42,8 +44,11 @@ const Checkout = () => {
                 {cartItems.map((cartItem) => (
                     <CheckoutItems key={cartItem.id} cartItem={cartItem} />
                 ))}
-                <Total>Total: ${cartTotal}</Total>
-                <PaymentForm />
+                <PaymentContainer>
+                    <Total>Total: <span>₹</span> {cartTotal}</Total>
+                    <PaymentForm />
+                </PaymentContainer>
+                <OrdersPreview />
             </CheckoutContainer>
             <Footer />
         </Fragment>
