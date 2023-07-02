@@ -1,8 +1,8 @@
 # Fabric Clothing
 
-```bash
+`bash
 ⚠️ Warning: This app is a work in progress. I'm building this in public. ⚠️
-```
+`
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Nidhish-D-Nayak/fabric-clothing/tree/main)
 
