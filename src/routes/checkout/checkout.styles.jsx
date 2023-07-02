@@ -5,7 +5,7 @@ export const CheckoutContainer = styled.div`
     min-height: 90vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     margin: 2em auto 0;
 
     @media (max-width: 768px) {
@@ -51,10 +51,19 @@ export const HeaderBlock = styled.div`
 `;
 export const Total = styled.span`
     margin-top: 30px;
-    margin-left: auto;
     font-size: 36px;
 
     @media (max-width: 400px) {
         font-size: 1.5rem;
     }
 `;
+
+export const PaymentContainer = styled.span`
+    display: flex;
+    justify-content: flex-end;
+    
+    button {
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+`

@@ -1,75 +1,55 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import axios from 'axios';
 
-import { selectCartTotal } from '../../store/cart/cart.selector';
+import { useSelector } from 'react-redux';
 import { userSelector } from '../../store/user/user.selector';
 
-import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-
+import { useState } from 'react';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
-
-import { FormContainer, PaymentFormContainer } from "./payment-form.styles";
 
 const PaymentForm = () => {
 
-  const stripe = useStripe();
-  const elements = useElements();
-  const amount = useSelector(selectCartTotal);
-  const currentUser = useSelector(userSelector)
-
-  const [isProcessingPayment, setIsProcessingPayment] = useState(false);
+  const [paymentInProgress, setPaymentInProgress] = useState(false);
+  const currentUser = useSelector(userSelector);
 
   const paymentHandler = async (e) => {
+
     e.preventDefault();
+    setPaymentInProgress(true);
 
-    if (!stripe || !elements) {
-      return;
-    }
+    const API_URL = 'http://localhost:4000/';
 
-    setIsProcessingPayment(true);
+    const orderUrl = `${API_URL}order`;
+    const response = await axios.get(orderUrl);
 
-    const response = await fetch('/.netlify/functions/create-payment-intent', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    console.log("Response 12: ", response)
+    const { data } = response;
+
+    const options = {
+      key: process.env.RAZOR_PAY_KEY_ID,
+      name: "Fabric Clothing",
+      description: "Best quality clothing apparel",
+      image: currentUser.photoURL,
+      order_id: data.id,
+      prefill: {
+        name: currentUser.displayName,
+        email: currentUser.email,
       },
-      body: JSON.stringify({ amount: amount * 100 })
-    }).then((res) => res.json())
+      callback_url: "https://eneqd3r9zrjok.x.pipedream.net/",
+      theme: {
+        color: "#000000",
+      },
+    };
+    const rzp1 = new window.Razorpay(options);
+    rzp1.open();
 
-    const { paymentIntent: { client_secret } } = response;
+    setPaymentInProgress(false);
 
-    console.log(client_secret);
-
-    const paymentResult = await stripe.confirmCardPayment(client_secret, {
-      payment_method: {
-        card: elements.getElement(CardElement),
-        billing_details: {
-          name: currentUser ? currentUser.displayName : "Guest"
-        }
-      }
-    })
-
-    setIsProcessingPayment(false);
-
-    if (paymentResult.error) {
-      alert('payment error: ', paymentResult.error)
-    }
-    else {
-      console.log(paymentResult.paymentIntent);
-      alert('payment success')
-    }
-  }
+  };
 
   return (
-    <PaymentFormContainer>
-      <FormContainer onSubmit={paymentHandler}>
-        <h2>Credit Card Payment:</h2>
-        <CardElement />
-        <Button isLoading={isProcessingPayment} buttonType={BUTTON_TYPE_CLASSES.inverted}>
-          PAY NOW
-        </Button>
-      </FormContainer>
-    </PaymentFormContainer>
+    <Button onClick={paymentHandler} isLoading={paymentInProgress} buttonType={BUTTON_TYPE_CLASSES.inverted}>
+      PAY NOW
+    </Button>
   )
 }
 
