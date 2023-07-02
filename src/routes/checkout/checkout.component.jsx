@@ -7,6 +7,7 @@ import PaymentForm from "../../components/payment-form/payment-form.component";
 
 import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
 
+import OrdersPreview from "../../components/orders-preview/orders-preview.component";
 import {
     CheckoutContainer,
     CheckoutHeader,
@@ -47,6 +48,7 @@ const Checkout = () => {
                     <Total>Total: <span>₹</span> {cartTotal}</Total>
                     <PaymentForm />
                 </PaymentContainer>
+                <OrdersPreview />
             </CheckoutContainer>
             <Footer />
         </Fragment>

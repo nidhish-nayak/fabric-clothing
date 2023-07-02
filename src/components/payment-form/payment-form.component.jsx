@@ -1,55 +1,89 @@
 import axios from 'axios';
 import { useState } from 'react';
 
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
 import { userSelector } from '../../store/user/user.selector';
 
+import { setOrder } from '../../store/orders/orders.reducer';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
 const PaymentForm = () => {
 
+  const dispatch = useDispatch()
+
   const [paymentInProgress, setPaymentInProgress] = useState(false);
+
+  const cartTotal = useSelector(selectCartTotal);
   const currentUser = useSelector(userSelector);
+  const cartItems = useSelector(selectCartItems);
+
+  const setUserOrder = () => dispatch(setOrder(cartItems));
 
   const paymentHandler = async (e) => {
 
     e.preventDefault();
     setPaymentInProgress(true);
-
     const API_URL = 'http://localhost:4000/';
+    const orderUrl = `${API_URL}orders`;
 
-    const orderUrl = `${API_URL}order`;
-    const response = await axios.get(orderUrl);
-
-    console.log("Response 12: ", response)
-    const { data } = response;
+    const response = await axios.get(orderUrl, {
+      params: {
+        price: cartTotal
+      }
+    });
 
     console.log(response);
+    const { data } = response;
+
+    const paymentUrl = `${API_URL}orders/${data.id}/payments`
 
     const options = {
       key: process.env.RAZOR_PAY_KEY_ID,
+      amount: cartTotal,
+      currency: "INR",
       name: "Fabric Clothing",
-      description: "Best quality clothing apparel",
+      description: "Finest quality clothing apparel",
       image: currentUser.photoURL,
       order_id: data.id,
+
+      // Handles the payment status
+      handler: async function (response) {
+        // alert(response.razorpay_payment_id);
+        // alert(response.razorpay_order_id);
+        // alert(response.razorpay_signature)
+        const payment = await axios.get(paymentUrl, {
+          params: {
+            orderId: data.id
+          }
+        })
+
+        // Fetching only one order data - [0] index
+        const myPaymentStatus = payment.data.items[0].status;
+        myPaymentStatus ? setUserOrder() : console.log("PAYMENT FAILED")
+      },
+
       prefill: {
         name: currentUser.displayName,
         email: currentUser.email,
       },
-      callback_url: "https://eneqd3r9zrjok.x.pipedream.net/",
       theme: {
         color: "#000000",
       },
     };
+
     const rzp1 = new window.Razorpay(options);
     rzp1.open();
 
     setPaymentInProgress(false);
-
   };
 
   return (
-    <Button onClick={paymentHandler} isLoading={paymentInProgress} buttonType={BUTTON_TYPE_CLASSES.inverted}>
+    <Button
+      onClick={paymentHandler}
+      isLoading={paymentInProgress}
+      buttonType={BUTTON_TYPE_CLASSES.inverted}
+    >
       PAY NOW
     </Button>
   )

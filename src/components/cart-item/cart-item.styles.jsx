@@ -24,6 +24,7 @@ export const ItemDetails = styled.div`
 export const Name = styled.span`
     font-size: 16px;
 `;
+
 export const ItemImage = styled.img`
-    width: 30%;
+    width: 4em;
 `;

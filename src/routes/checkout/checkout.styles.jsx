@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const CheckoutContainer = styled.div`
     width: 65%;
-    min-height: 90vh;
     display: flex;
     flex-direction: column;
     // align-items: center;
-    margin: 2em auto 0;
+    margin: 2em auto 4em;
 
     @media (max-width: 768px) {
         width: 90%;
@@ -76,5 +75,10 @@ export const PaymentContainer = styled.span`
     @media (max-width: 480px) {
         display: flex;
         justify-content: space-between;
+
+        button {
+            margin-left: 10px;
+            margin-top: 30px;
+        }    
     }
 `
