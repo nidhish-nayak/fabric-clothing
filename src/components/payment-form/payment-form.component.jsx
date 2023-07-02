@@ -1,9 +1,9 @@
 import axios from 'axios';
+import { useState } from 'react';
 
 import { useSelector } from 'react-redux';
 import { userSelector } from '../../store/user/user.selector';
 
-import { useState } from 'react';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
 const PaymentForm = () => {
