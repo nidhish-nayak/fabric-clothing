@@ -89,7 +89,7 @@ const PaymentForm = () => {
       isLoading={paymentInProgress}
       buttonType={BUTTON_TYPE_CLASSES.inverted}
     >
-      PAY NOW
+      PAY NOW (TEST)
     </Button>
   )
 }
