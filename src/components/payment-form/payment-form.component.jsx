@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
 import { userSelector } from '../../store/user/user.selector';
 
-import { setOrder } from '../../store/orders/orders.reducer';
+import { setOrder, setPaymentDetails } from '../../store/orders/orders.reducer';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
 const PaymentForm = () => {
@@ -19,12 +19,16 @@ const PaymentForm = () => {
   const cartItems = useSelector(selectCartItems);
 
   const setUserOrder = () => dispatch(setOrder(cartItems));
+  const setPayment = (method, status) => {
+    dispatch(setPaymentDetails([method, status]));
+  };
 
   const paymentHandler = async (e) => {
 
     e.preventDefault();
     setPaymentInProgress(true);
-    const API_URL = 'http://localhost:4000/';
+
+    const API_URL = 'https://healthy-crab-uniform.cyclic.app/';
     const orderUrl = `${API_URL}orders`;
 
     const response = await axios.get(orderUrl, {
@@ -33,9 +37,8 @@ const PaymentForm = () => {
       }
     });
 
-    console.log(response);
+    console.log(response)
     const { data } = response;
-
     const paymentUrl = `${API_URL}orders/${data.id}/payments`
 
     const options = {
@@ -44,14 +47,11 @@ const PaymentForm = () => {
       currency: "INR",
       name: "Fabric Clothing",
       description: "Finest quality clothing apparel",
-      image: currentUser.photoURL,
+      image: currentUser ? currentUser.photoURL : null,
       order_id: data.id,
 
       // Handles the payment status
       handler: async function (response) {
-        // alert(response.razorpay_payment_id);
-        // alert(response.razorpay_order_id);
-        // alert(response.razorpay_signature)
         const payment = await axios.get(paymentUrl, {
           params: {
             orderId: data.id
@@ -61,11 +61,16 @@ const PaymentForm = () => {
         // Fetching only one order data - [0] index
         const myPaymentStatus = payment.data.items[0].status;
         myPaymentStatus ? setUserOrder() : console.log("PAYMENT FAILED")
+        console.log(payment)
+
+        const { method, status } = payment.data.items[0];
+        setPayment(method, status === "captured" ? "successful" : "failed");
+
       },
 
       prefill: {
-        name: currentUser.displayName,
-        email: currentUser.email,
+        name: currentUser ? currentUser.displayName : null,
+        email: currentUser ? currentUser.email : null,
       },
       theme: {
         color: "#000000",

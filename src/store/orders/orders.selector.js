@@ -6,3 +6,8 @@ export const selectOrderList = createSelector(
 	[selectOrders],
 	(orders) => orders.order
 );
+
+export const selectPaymentDetails = createSelector(
+	[selectOrders],
+	(orders) => orders.paymentDetails
+);

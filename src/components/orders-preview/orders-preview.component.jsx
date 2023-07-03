@@ -1,47 +1,42 @@
 import { useSelector } from "react-redux";
-import { selectOrderList } from "../../store/orders/orders.selector";
-import { OrdersPreviewContainer, OrderTable } from "./orders-preview.styles";
+import { selectOrderList, selectPaymentDetails } from "../../store/orders/orders.selector";
+import OrderRow from "../orders-row/orders-row.component";
+import { OrderTable, OrdersPreviewContainer } from "./orders-preview.styles";
 
 const OrdersPreview = () => {
   const orderList = useSelector(selectOrderList);
-
-  const calculateTotalPrice = (order) => {
-    const totalPrice = order.reduce((accumulator, item) => accumulator + item.price, 0);
-    return totalPrice;
-  };
+  const paymentDetails = useSelector(selectPaymentDetails);
 
   return (
     <OrdersPreviewContainer>
-      <h2>My Previous Order History:</h2>
+      <h2>RECENT ORDERS:</h2>
       <OrderTable>
         <thead>
           <tr>
+            <th>Order No.</th>
             <th>Orders (Quantity)</th>
-            <th>Total Price</th>
+            <th>Total</th>
             <th>Payment Type</th>
-            <th>Payment Status</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
-          {orderList.map((order, index) => (
-            <tr key={index}>
-              <td>
-                {order.map(item => (
-                  <span key={item.id}>
-                    {item.name} ({item.quantity})
-                    <br />
-                  </span>
-                ))}
-              </td>
-              <td>₹ {calculateTotalPrice(order)}</td>
-              <td>{/* Payment Type */}</td>
-              <td>{/* Payment Status */}</td>
-            </tr>
-          ))}
+          {orderList.map((order, index) => {
+            const [method, status] = paymentDetails[index] || ['N/A', 'N/A'];
+            return (
+              <OrderRow
+                key={index}
+                order={order}
+                index={index}
+                method={method}
+                status={status}
+              />
+            );
+          })}
         </tbody>
       </OrderTable>
     </OrdersPreviewContainer>
-  )
-}
+  );
+};
 
 export default OrdersPreview;
