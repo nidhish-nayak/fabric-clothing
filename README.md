@@ -84,9 +84,9 @@ We welcome contributions to the Fabric Clothing App project! If you would like t
 
 1. Fork the repository.
 2. Create a new branch for your feature/fix: `git checkout -b feature-name`.
-3. Make your
-
-changes and commit them: `git commit -m 'Add some feature'`. 4. Push the changes to your forked repository: `git push origin feature-name`. 5. Open a pull request to the main repository's `main` branch.
+3. Make your changes and commit them: `git commit -m 'Add some feature'`.
+4. Push the changes to your forked repository: `git push origin feature-name`.
+5. Open a pull request to the main repository's `main` branch.
 
 ## License 📝
 
