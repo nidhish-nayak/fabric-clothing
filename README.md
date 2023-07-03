@@ -12,7 +12,9 @@ Welcome to Fabric Clothing! This application is built using React, Redux, Redux-
 - **Product Catalog**: Browse through a wide range of clothing items, organized into categories for easy navigation.
 - **Product Details**: View detailed information about each product, including images and descriptions.
 - **Shopping Cart**: Add desired items to the cart, adjust quantities, and proceed to checkout.
-- **Checkout Menu**: Users can review and manage their orders and make any changes in checkout menu.
+- **Checkout Menu**: Users can review and manage their orders and make any changes in the checkout menu.
+- **Order History**: Users can view their order history to track previous purchases.
+- **Razorpay Payment Gateway Integration**: Seamlessly integrate Razorpay as the payment gateway for secure and convenient transactions.
 - **Responsive Design**: Enjoy a consistent and visually appealing experience across various devices.
 
 ## Installation 💻
@@ -59,6 +61,7 @@ To run the Fabric Clothing App locally, follow these steps:
 - Redux Toolkit: A more opinionated state management tool for better developer experience.
 - Styled Components: CSS-in-JS library for styling React components.
 - Firebase: Backend-as-a-Service (BaaS) platform for authentication, database, and storage.
+- Axios: Promise-based HTTP client for making API requests.
 
 ## Folder Structure 📂
 
@@ -81,9 +84,9 @@ We welcome contributions to the Fabric Clothing App project! If you would like t
 
 1. Fork the repository.
 2. Create a new branch for your feature/fix: `git checkout -b feature-name`.
-3. Make your changes and commit them: `git commit -m 'Add some feature'`.
-4. Push the changes to your forked repository: `git push origin feature-name`.
-5. Open a pull request to the main repository's `main` branch.
+3. Make your
+
+changes and commit them: `git commit -m 'Add some feature'`. 4. Push the changes to your forked repository: `git push origin feature-name`. 5. Open a pull request to the main repository's `main` branch.
 
 ## License 📝
 
