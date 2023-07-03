@@ -55,6 +55,7 @@ export const InvertedButton = styled(BaseButton)`
 
     @media (max-width: 320px) {
       min-width: 80px;
+      padding: 0 20px;
     }
 `;
 
