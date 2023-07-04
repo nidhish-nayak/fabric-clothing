@@ -15,31 +15,31 @@ const categories = [
     {
         id: 1,
         title: "hats",
-        imageUrl: "",
+        imageUrl: "https://i.imgur.com/MXdmoE5.jpg",
         route: "shop/hats",
     },
     {
         id: 2,
         title: "jackets",
-        imageUrl: "",
+        imageUrl: "https://i.imgur.com/lUp9ut0.png",
         route: "shop/jackets",
     },
     {
         id: 3,
         title: "sneakers",
-        imageUrl: "",
+        imageUrl: "https://i.imgur.com/1ZaMDbi.jpg",
         route: "shop/sneakers",
     },
     {
         id: 4,
         title: "womens",
-        imageUrl: "",
+        imageUrl: "https://i.imgur.com/srohIpc.jpg",
         route: "shop/womens",
     },
     {
         id: 5,
         title: "mens",
-        imageUrl: "",
+        imageUrl: "https://i.imgur.com/Mz9cewV.jpg",
         route: "shop/mens",
     },
 ];
