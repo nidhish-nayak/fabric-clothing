@@ -32,9 +32,12 @@ export const List = styled.ul`
     align-self: start;
     justify-self: start;
     margin-top: 2em;
+    font-size: 0.9rem;
+    line-height: 1.25rem;
 
     li:nth-child(1) {
-        font-family: "Amulya", sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
         margin-bottom: 0.5em;
     }
 `
@@ -68,6 +71,8 @@ export const SubscribeContainer = styled.div`
     margin-top: 2em;
 
     p {
+        font-size: 0.9rem;
+        line-height: 1.25rem;
         margin: 0 0 0.5em 0;
     }
 

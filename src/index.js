@@ -7,8 +7,6 @@ import reportWebVitals from "./reportWebVitals";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistor, store } from "./store/store";
 
-import ProgressBar from "./routes/progress-bar/progress-bar.component";
-
 import App from "./App";
 import "./index.scss";
 
@@ -19,7 +17,6 @@ root.render(
 			{/* loading={null} = loads nothing until persisted data is loaded */}
 			<PersistGate loading={null} persistor={persistor}>
 				<BrowserRouter>
-					<ProgressBar />
 					<App />
 				</BrowserRouter>
 			</PersistGate>

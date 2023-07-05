@@ -8,11 +8,20 @@ export const ProgressBarContainer = styled.div`
   font-size: 6rem;
   font-weight: bold;
   letter-spacing: 0.15em;
-  font-family: 'Bebas Neue', sans-serif;
   position: fixed;
   background-color: #ececec;
   height: 100%;
   width: 100%;
+  animation: slideUp 3.25s cubic-bezier(0.42, 0, 0.58, 1) 3.25s forwards;
+
+  @keyframes slideUp {
+    0% {
+      height: 100%;
+    }
+    100% {
+      height: 0%;
+    }
+  }
 `
 
 export const Loader = styled.div`
@@ -25,7 +34,7 @@ export const Loader = styled.div`
 
   &::after {
     content: attr(data-text);
-    color: white;
+    color: #ececec;
     position: absolute;
     top: 50%;
     right: 0;
