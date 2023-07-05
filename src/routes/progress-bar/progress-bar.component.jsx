@@ -17,6 +17,7 @@ const ProgressBar = () => {
     return () => {
       clearInterval(interval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   progress >= 100 ? document.body.style.overflow = 'auto' : document.body.style.overflow = 'hidden';
