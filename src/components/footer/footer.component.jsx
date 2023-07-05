@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import logo from '../../assets/fabric.svg';
 
+import Logo from "../logo/logo.component";
 import SubscribeForm from '../subscribe-form/subscribe-form.component';
 import {
     Divider, FooterWrapper, IconContainer, IconWrapper,
-    List, Logo, SubscribeContainer, SubscribeTitle
+    List,
+    LogoWrapper,
+    SubscribeContainer, SubscribeTitle
 } from "./footer.styles";
 
 const Footer = () => {
@@ -17,7 +19,9 @@ const Footer = () => {
 
     return (
         <FooterWrapper>
-            <Logo src={logo} alt="Logo" />
+            <LogoWrapper>
+                <Logo />
+            </LogoWrapper>
             <List>
                 <li>Resources</li>
                 <li>Docs</li>

@@ -18,31 +18,6 @@ export const NavigationContainer = styled.div`
     }
 `;
 
-export const LogoContainer = styled(Link)`
-    display: flex;
-    align-items: center;
-`;
-
-export const FabricLogo = styled.img`
-    width: 180px;
-    padding: 0 0.25em;
-
-    @media (max-width: 768px) {
-        width: 140px;
-        padding: 0 0.1em;
-    }
-
-    @media (max-width: 400px) {
-        width: 120px;
-        padding: 0 0.1em;
-    }
-
-    @media (max-width: 330px) {
-        width: 100px;
-        padding: 0 0.05em;
-    }
-`;
-
 export const NavLinks = styled.div`
     width: 50%;
     height: 100%;

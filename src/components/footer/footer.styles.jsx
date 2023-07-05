@@ -13,20 +13,18 @@ export const FooterWrapper = styled.footer`
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
-
-        img {
-            width: 50%;
-            margin: 4em 0 2em 0;
-        }
     }
 `;
 
-export const Logo = styled.img`
-    width: 60%;
-    border-radius: 1px;
+export const LogoWrapper = styled.div`
     align-self: center;
     justify-self: center;
+
+    @media (max-width: 768px) {
+        margin-top: 2em;
+    }
 `
+
 export const List = styled.ul`
     list-style: none;
     align-self: start;
