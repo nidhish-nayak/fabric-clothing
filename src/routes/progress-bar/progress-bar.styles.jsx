@@ -12,15 +12,23 @@ export const ProgressBarContainer = styled.div`
   background-color: #ececec;
   height: 100%;
   width: 100%;
-  animation: slideUp 3.25s cubic-bezier(0.42, 0, 0.58, 1) 3.25s forwards;
+  // animation: slideUp 3.25s cubic-bezier(0.42, 0, 0.58, 1) 3.25s forwards;
 
-  @keyframes slideUp {
-    0% {
-      height: 100%;
-    }
-    100% {
-      height: 0%;
-    }
+  // @keyframes slideUp {
+  //   0% {
+  //     height: 100%;
+  //   }
+  //   100% {
+  //     height: 0%;
+  //   }
+  // }
+
+  @media (max-width: 768px) {
+    font-size: 4rem;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 3rem;
   }
 `
 
