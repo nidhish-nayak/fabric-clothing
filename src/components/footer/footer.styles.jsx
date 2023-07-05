@@ -6,8 +6,8 @@ export const FooterWrapper = styled.footer`
     padding-bottom: 4em; 
     background-color: #ececec;
     border-top: 1px black solid;
-    font-family: "synonym", sans-serif;
     display: grid;
+    font-family: sans-serif;
     grid-template-columns: repeat(4, 1fr);
 
     @media (max-width: 768px) {
@@ -24,7 +24,7 @@ export const FooterWrapper = styled.footer`
 export const Logo = styled.img`
     width: 60%;
     border-radius: 1px;
-    align-self:center;
+    align-self: center;
     justify-self: center;
 `
 export const List = styled.ul`
@@ -58,7 +58,6 @@ export const IconWrapper = styled.div`
 `;
 
 export const Divider = styled.span`
-    font-family: 'synonym', sans-serif;
     margin: 0 1em;
 `
 
