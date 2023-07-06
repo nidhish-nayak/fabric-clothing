@@ -1,6 +1,15 @@
 import React from "react";
-
-import "./directory.styles.jsx";
+import { useNavigate } from "react-router-dom";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
+import {
+    ButtonContainer,
+    DirectoryContainer,
+    SectionContainer,
+    SectionDesc,
+    SectionItem,
+    SectionTitle,
+    TitleContainer
+} from "./directory.styles";
 
 // const trendingItems = [{
 //     id: 1,
@@ -28,8 +37,32 @@ import "./directory.styles.jsx";
 // }];
 
 const Directory = () => {
+
+    const navigate = useNavigate()
+    const onShopHandler = () => {
+        navigate("/shop")
+    }
+    const onAuthHandler = () => {
+        navigate("/auth")
+    }
+
     return (
-        <div></div>
+        <DirectoryContainer>
+            <SectionContainer>
+                <TitleContainer>
+                    <SectionTitle>Unleash your style with Fabric Clothing</SectionTitle>
+                    <SectionDesc>
+                        Get ready to ignite your style and redefine what it means to dress with confidence.
+                        Step into a world where fashion knows no boundaries with our exceptional clothing collection.
+                    </SectionDesc>
+                    <ButtonContainer>
+                        <Button onClick={onShopHandler}>SHOP NOW</Button>
+                        <Button onClick={onAuthHandler} buttonType={BUTTON_TYPE_CLASSES.inverted}>SIGN UP</Button>
+                    </ButtonContainer>
+                </TitleContainer>
+                <SectionItem src="https://i.imgur.com/LssQ1lH.png" />
+            </SectionContainer>
+        </DirectoryContainer>
     );
 };
 

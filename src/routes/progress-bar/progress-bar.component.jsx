@@ -14,20 +14,21 @@ const ProgressBar = () => {
         clearInterval(interval);
       }
     }, 30);
+
     return () => {
       clearInterval(interval);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  progress >= 100 ? document.body.style.overflow = 'auto' : document.body.style.overflow = 'hidden';
-  const text = `${progress}%`;
+  progress <= 150 ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
+  const text = progress <= 100 ? `${progress}%` : '100%';
 
   return (
     <>
-      {progress <= 100 ? (
+      {progress <= 200 ? (
         <ProgressBarContainer>
-          <Loader data-text={text} progress={progress} />
+          <Loader data-text={text} />
         </ProgressBarContainer>
       ) : (
         <></>

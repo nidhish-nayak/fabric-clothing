@@ -5,7 +5,7 @@ export const NavigationContainer = styled.div`
     height: 70px;
     top: 0;
     z-index: 2;
-    background-color: #FFFFFF; 
+    background-color: white; 
     width: 100%;
     display: flex;
     justify-content: space-between;

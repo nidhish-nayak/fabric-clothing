@@ -9,19 +9,19 @@ export const ProgressBarContainer = styled.div`
   font-weight: bold;
   letter-spacing: 0.15em;
   position: fixed;
-  background-color: #ececec;
+  background-color: black;
   height: 100%;
   width: 100%;
-  // animation: slideUp 3.25s cubic-bezier(0.42, 0, 0.58, 1) 3.25s forwards;
+  animation: slideUp 450ms cubic-bezier(0.42, 0, 0.58, 1) 3.5s forwards;
 
-  // @keyframes slideUp {
-  //   0% {
-  //     height: 100%;
-  //   }
-  //   100% {
-  //     height: 0%;
-  //   }
-  // }
+  @keyframes slideUp {
+    0% {
+      height: 100%;
+    }
+    100% {
+      height: 0%;
+    }
+  }
 
   @media (max-width: 768px) {
     font-size: 4rem;
@@ -36,13 +36,13 @@ export const Loader = styled.div`
   z-index: 10;
   height: 200px;
   width: 0;
-  background-color: black;
+  background-color: white;
   position: relative;
-  animation: expandWidth 3.25s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+  animation: expandWidth 3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
 
   &::after {
     content: attr(data-text);
-    color: #ececec;
+    color: black;
     position: absolute;
     top: 50%;
     right: 0;
