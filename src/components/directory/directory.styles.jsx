@@ -55,3 +55,8 @@ export const ButtonContainer = styled.div`
     margin-right: 1em;
   }
 `
+
+export const GridContainer = styled.div`
+  margin-top: 4em;
+  display: grid;
+`
