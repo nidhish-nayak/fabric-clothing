@@ -4,34 +4,35 @@ import { Balancer } from "react-wrap-balancer";
 
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import {
-    ButtonContainer, DirectoryContainer, GridContainer, SectionContainer,
+    ButtonContainer, DirectoryContainer,
+    SectionContainer,
     SectionDesc, SectionItem, SectionTitle, TitleContainer
 } from "./directory.styles";
 
-const trendingItems = [{
-    id: 1,
-    imageUrl: "https://i.ibb.co/0s3pdnc/adidas-nmd.png",
-    name: "Adidas NMD",
-    price: 220
-},
-{
-    id: 2,
-    imageUrl: "https://i.ibb.co/M6hHc3F/brown-trench.png",
-    name: "Tan Trench",
-    price: 185
-},
-{
-    id: 3,
-    imageUrl: "https://i.ibb.co/mh3VM1f/polka-dot-shirt.png",
-    name: "Burgundy T-shirt",
-    price: 40,
-},
-{
-    id: 4,
-    imageUrl: "https://i.ibb.co/rKBDvJX/palm-tree-cap.png",
-    name: "Palm Tree Cap",
-    price: 14,
-}];
+// const trendingItems = [{
+//     id: 1,
+//     imageUrl: "https://i.ibb.co/0s3pdnc/adidas-nmd.png",
+//     name: "Adidas NMD",
+//     price: 220
+// },
+// {
+//     id: 2,
+//     imageUrl: "https://i.ibb.co/M6hHc3F/brown-trench.png",
+//     name: "Tan Trench",
+//     price: 185
+// },
+// {
+//     id: 3,
+//     imageUrl: "https://i.ibb.co/mh3VM1f/polka-dot-shirt.png",
+//     name: "Burgundy T-shirt",
+//     price: 40,
+// },
+// {
+//     id: 4,
+//     imageUrl: "https://i.ibb.co/rKBDvJX/palm-tree-cap.png",
+//     name: "Palm Tree Cap",
+//     price: 14,
+// }];
 
 const Directory = () => {
 
@@ -60,9 +61,6 @@ const Directory = () => {
                     </TitleContainer>
                     <SectionItem src="https://i.imgur.com/LssQ1lH.png" />
                 </SectionContainer>
-                <GridContainer>
-                    {trendingItems.map(i => <img key={i.id} src={i.imageUrl} alt="alt" />)}
-                </GridContainer>
             </DirectoryContainer>
         </Balancer>
     );
