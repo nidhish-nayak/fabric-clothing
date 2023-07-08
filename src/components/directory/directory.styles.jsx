@@ -11,7 +11,7 @@ export const SectionContainer = styled.section`
   align-items: flex-start;
 `
 
-export const TitleContainer = styled.div`
+export const SectionTitleContainer = styled.div`
   width: 70%;
   margin-right: 40px;
 `
@@ -54,4 +54,16 @@ export const ButtonContainer = styled.div`
   button {
     margin-right: 1em;
   }
+`
+
+export const GridContainer = styled.div`
+  margin-top: 8em;
+`
+
+export const GridTitle = styled.h1`
+  font-size: 4rem;
+`
+
+export const GridItems = styled.div`
+
 `
