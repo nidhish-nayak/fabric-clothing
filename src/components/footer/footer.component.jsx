@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Balancer } from 'react-wrap-balancer';
 
 import Logo from "../logo/logo.component";
 import SubscribeForm from '../subscribe-form/subscribe-form.component';
@@ -50,7 +51,9 @@ const Footer = () => {
             </IconContainer>
             <SubscribeContainer>
                 <SubscribeTitle>Sign up for newsletter</SubscribeTitle>
-                <p>Stay updated on new releases and features, guides, and case studies.</p>
+                <Balancer>
+                    <p>Stay updated on new releases and features, guides, and case studies.</p>
+                </Balancer>
                 <SubscribeForm />
             </SubscribeContainer>
         </FooterWrapper>

@@ -46,6 +46,11 @@ export const IconContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 1em;
+
+    p {
+        // font-size: 0.5rem;
+        text-align: center;
+    }
 `;
 
 export const IconWrapper = styled.div`

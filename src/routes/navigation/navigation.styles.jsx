@@ -13,7 +13,7 @@ export const NavigationContainer = styled.div`
     position: sticky;
     user-select: none;
     opacity: ${props => (props.transparent ? '0.9' : '1')};
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
         padding: 0 10px;   
     }
 `;

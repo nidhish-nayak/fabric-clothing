@@ -1,66 +1,48 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Balancer } from "react-wrap-balancer";
+import DirectoryItem from "../directory-item/directory-item.component";
 
-import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
-import DirectoryGridItems from "../directory-grid-items/directory-grid-items.component";
 import {
     ButtonContainer, DirectoryContainer,
-    GridContainer, GridItems, GridTitle,
+    GridContainer, HeroButtonOne, HeroButtonTwo,
+    PrimaryGrid, SecondaryGrid,
     SectionContainer, SectionDesc, SectionItem, SectionTitle,
     SectionTitleContainer
 } from "./directory.styles";
 
-// const trendingItems = [{
-//     id: 1,
-//     imageUrl: "https://i.ibb.co/0s3pdnc/adidas-nmd.png",
-//     name: "Adidas NMD",
-//     price: 220
-// },
-// {
-//     id: 2,
-//     imageUrl: "https://i.ibb.co/M6hHc3F/brown-trench.png",
-//     name: "Tan Trench",
-//     price: 185
-// },
-// {
-//     id: 3,
-//     imageUrl: "https://i.ibb.co/mh3VM1f/polka-dot-shirt.png",
-//     name: "Burgundy T-shirt",
-//     price: 40,
-// },
-// {
-//     id: 4,
-//     imageUrl: "https://i.ibb.co/rKBDvJX/palm-tree-cap.png",
-//     name: "Palm Tree Cap",
-//     price: 14,
-// }];
-
-const gridItems = [{
-    id: 1,
-    imageUrl: "https://i.imgur.com/Xhwn6B9.jpg",
-    name: "womens",
-},
-{
-    id: 2,
-    imageUrl: "https://i.imgur.com/G3uti66.png",
-    name: "mens",
-},
-{
-    id: 3,
-    imageUrl: "https://i.imgur.com/DjRwg8f.jpg",
-    name: "hats",
-},
-{
-    id: 4,
-    imageUrl: "https://i.imgur.com/bOs7PIE.jpg",
-    name: "jackets",
-},
-{
-    id: 5,
-    imageUrl: "https://i.imgur.com/kz70mmZ.jpg",
-    name: "shoes",
-}];
+const categories = [
+    {
+        id: 1,
+        title: "hats",
+        imageUrl: "https://i.imgur.com/DjRwg8f.jpg",
+        route: "shop/hats",
+    },
+    {
+        id: 2,
+        title: "jackets",
+        imageUrl: "https://i.imgur.com/bOs7PIE.jpg",
+        route: "shop/jackets",
+    },
+    {
+        id: 3,
+        title: "sneakers",
+        imageUrl: "https://i.imgur.com/b2HnocH.jpg",
+        route: "shop/sneakers",
+    },
+    {
+        id: 4,
+        title: "womens",
+        imageUrl: "https://i.imgur.com/atYy6yP.jpg",
+        route: "shop/womens",
+    },
+    {
+        id: 5,
+        title: "mens",
+        imageUrl: "https://i.imgur.com/DsMhPk5.jpg",
+        route: "shop/mens",
+    },
+];
 
 const Directory = () => {
 
@@ -73,34 +55,42 @@ const Directory = () => {
     }
 
     return (
-        <Balancer>
-            <DirectoryContainer>
-                <SectionContainer>
-                    <SectionTitleContainer>
-                        <SectionTitle>Unleash your style with Fabric Clothing</SectionTitle>
+        <DirectoryContainer>
+            <SectionContainer>
+                <SectionTitleContainer>
+                    <Balancer>
+                        <SectionTitle>Unleash your style with fabric clothing</SectionTitle>
+                    </Balancer>
+                    <Balancer>
                         <SectionDesc>
-                            Get ready to ignite your style and redefine what it means to dress with confidence.
-                            Step into a world where fashion knows no boundaries with our exceptional clothing collection.
+                            Embrace the power of experimentation, unleash your creativity, and watch as your fashion transformations unfold.
                         </SectionDesc>
-                        <ButtonContainer>
-                            <Button onClick={onShopHandler}>SHOP NOW</Button>
-                            <Button onClick={onAuthHandler} buttonType={BUTTON_TYPE_CLASSES.inverted}>SIGN UP</Button>
-                        </ButtonContainer>
-                    </SectionTitleContainer>
-                    <SectionItem src="https://i.imgur.com/LssQ1lH.png" />
-                </SectionContainer>
-                <GridContainer>
-                    <GridTitle>
-                        Choose by category
-                    </GridTitle>
-                    <GridItems>
-                        {
-                            gridItems.map(gridItem => <DirectoryGridItems key={gridItem.id} gridItem={gridItem} />)
-                        }
-                    </GridItems>
-                </GridContainer>
-            </DirectoryContainer>
-        </Balancer>
+                    </Balancer>
+                    <ButtonContainer>
+                        <HeroButtonOne onClick={onShopHandler}>SHOP NOW</HeroButtonOne>
+                        <HeroButtonTwo onClick={onAuthHandler}>SIGN UP</HeroButtonTwo>
+                    </ButtonContainer>
+                </SectionTitleContainer>
+                <SectionItem src="https://i.imgur.com/sI6jufD.jpg" />
+            </SectionContainer>
+            <GridContainer>
+                <h2>SHOP BY CATEGORIES</h2>
+                <PrimaryGrid>
+                    {categories
+                        .filter(category => category.id > 3)
+                        .map((i) =>
+                            <DirectoryItem category={i} key={i.id} />
+                        )}
+                </PrimaryGrid>
+                <SecondaryGrid>
+                    {categories
+                        .filter(category => category.id <= 3)
+                        .map((i) => (
+                            <DirectoryItem category={i} key={i.id} />
+                        ))}
+                </SecondaryGrid>
+            </GridContainer>
+        </DirectoryContainer>
     );
 };
 
