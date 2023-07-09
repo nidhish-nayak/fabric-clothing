@@ -40,6 +40,7 @@ export const TitleContainer = styled.div`
 
 export const PrimaryContainer = styled.div`
     height: 400px;
+    padding: 0.5px;
     display: flex;
     flex: 1 1 auto;
     align-items: center;
@@ -79,6 +80,7 @@ export const PrimaryContainer = styled.div`
 
 export const SecondaryContainer = styled.div`
     width: 100%;
+    padding: 0.5px;
     height: 400px;
     display: flex;
     align-items: center;

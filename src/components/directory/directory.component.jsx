@@ -59,7 +59,7 @@ const Directory = () => {
             <SectionContainer>
                 <SectionTitleContainer>
                     <Balancer>
-                        <SectionTitle>Unleash your style with fabric clothing</SectionTitle>
+                        <SectionTitle>Unleash your style.</SectionTitle>
                     </Balancer>
                     <Balancer>
                         <SectionDesc>

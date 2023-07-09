@@ -12,8 +12,8 @@ export const DirectoryContainer = styled.div`
 export const SectionContainer = styled.section`
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;\
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 1200px) {
     height: 600px;
@@ -109,7 +109,7 @@ export const HeroButtonTwo = styled.button`
 
 export const GridContainer = styled.section`
     margin: 10em 0 0 0;
-    padding: 0 25em;
+    padding: 0em;
 
     h2 {
       margin-bottom: 2em;
@@ -118,19 +118,23 @@ export const GridContainer = styled.section`
       font-family: "Montserrat", sans-serif;
     }
 
+    @media (max-width: 1980px) {
+      padding: 0 15em;
+    }
+
+    @media (max-width: 1366px) {
+      padding: 0 10em;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 0em;
+    }
+
     @media (max-width: 768px) {
       h2 {
         text-align: center;
         font-size: 1rem;
       }
-    }
-
-    @media (max-width: 1980px) {
-      padding: 0 15em;
-    }
-
-    @media (max-width: 1024px) {
-      padding: 0em;
     }
 `;
 
