@@ -80,7 +80,7 @@ export const PrimaryContainer = styled.div`
 
 export const SecondaryContainer = styled.div`
     width: 100%;
-    padding: 0.5px;
+    margin: 0.5px;
     height: 400px;
     display: flex;
     align-items: center;

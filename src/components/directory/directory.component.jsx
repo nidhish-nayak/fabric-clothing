@@ -1,17 +1,16 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { Balancer } from "react-wrap-balancer";
-import DirectoryItem from "../directory-item/directory-item.component";
 
+import { FaFingerprint } from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
+import DirectoryItem from "../directory-item/directory-item.component";
 import {
-    ButtonContainer, DirectoryContainer,
-    GridContainer, HeroButtonOne, HeroButtonTwo,
-    PrimaryGrid, SecondaryGrid,
-    SectionContainer, SectionDesc, SectionItem, SectionTitle,
-    SectionTitleContainer
+    DeliveredClothes, DeliveredImages, DeliveredText,
+    DirectoryContainer, GridContainer, Hero, HeroButtonLeft, HeroButtonRight, HeroDescription,
+    HeroImage, HeroImageContainer, HeroTextBox, HeroTitle,
+    PrimaryGrid, SecondaryGrid, SectionContainer,
 } from "./directory.styles";
 
-const categories = [
+const gridCategories = [
     {
         id: 1,
         title: "hats",
@@ -45,45 +44,65 @@ const categories = [
 ];
 
 const Directory = () => {
-
-    const navigate = useNavigate()
-    const onShopHandler = () => {
+    const navigate = useNavigate();
+    const handleShopNow = () => {
         navigate("/shop")
     }
-    const onAuthHandler = () => {
+    const handleSignUp = () => {
         navigate("/auth")
     }
 
     return (
         <DirectoryContainer>
-            <SectionContainer>
-                <SectionTitleContainer>
-                    <Balancer>
-                        <SectionTitle>Unleash your style.</SectionTitle>
-                    </Balancer>
-                    <Balancer>
-                        <SectionDesc>
-                            Embrace the power of experimentation, unleash your creativity, and watch as your fashion transformations unfold.
-                        </SectionDesc>
-                    </Balancer>
-                    <ButtonContainer>
-                        <HeroButtonOne onClick={onShopHandler}>SHOP NOW</HeroButtonOne>
-                        <HeroButtonTwo onClick={onAuthHandler}>SIGN UP</HeroButtonTwo>
-                    </ButtonContainer>
-                </SectionTitleContainer>
-                <SectionItem src="https://i.imgur.com/sI6jufD.jpg" />
+            <SectionContainer class="section-hero">
+                <Hero class="hero">
+                    <HeroTextBox class="hero-text-box">
+                        <HeroTitle>
+                            Unleash your style with fabric clothing
+                        </HeroTitle>
+                        <HeroDescription class="hero-description">
+                            We enable you to effortlessly purchase clothes online, tailored to your style and preferences.
+                        </HeroDescription>
+                        <HeroButtonLeft onClick={handleShopNow}>
+                            SHOP NOW
+                        </HeroButtonLeft>
+                        <HeroButtonRight onClick={handleSignUp}>
+                            SIGN UP <span><FaFingerprint /></span>
+                        </HeroButtonRight>
+                    </HeroTextBox>
+                    <HeroImageContainer class="hero-img-box">
+                        <HeroImage
+                            src="https://i.imgur.com/pIJMpHe.jpg"
+                            alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+                            class="hero-img"
+                        />
+                    </HeroImageContainer>
+                    <DeliveredClothes class="delivered-meals">
+                        <DeliveredImages class="delivered-imgs">
+                            <img src="https://i.imgur.com/7SOUkTO.jpg" alt="Customerphoto" />
+                            <img src="https://i.imgur.com/IIbYLLl.jpg" alt="Customerphoto" />
+                            <img src="https://i.imgur.com/FKLmz70.jpg" alt="Customerphoto" />
+                            <img src="https://i.imgur.com/8fZnitm.jpg" alt="Customerphoto" />
+                            <img src="https://i.imgur.com/920vVhD.jpg" alt="Customerphoto" />
+                            <img src="https://i.imgur.com/ZDXaBGO.jpg" alt="Customerphoto" />
+                        </DeliveredImages>
+                        <DeliveredText class="delivered-text">
+                            <span>250,000+</span> clothes delivered last year!
+                        </DeliveredText>
+                    </DeliveredClothes>
+                </Hero>
             </SectionContainer>
             <GridContainer>
                 <h2>SHOP BY CATEGORIES</h2>
                 <PrimaryGrid>
-                    {categories
+                    {gridCategories
                         .filter(category => category.id > 3)
                         .map((i) =>
                             <DirectoryItem category={i} key={i.id} />
                         )}
                 </PrimaryGrid>
                 <SecondaryGrid>
-                    {categories
+                    {gridCategories
                         .filter(category => category.id <= 3)
                         .map((i) => (
                             <DirectoryItem category={i} key={i.id} />
