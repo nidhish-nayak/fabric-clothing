@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ReactComponent as ShopIcon } from "../../assets/shopping-bag.svg";
 
 export const CartIconContainer = styled.div`
-    margin: 1em;
+    margin: ${({ isUserLogged }) => isUserLogged};
     min-height: 25px;
     min-width: 25px;
     position: relative;
