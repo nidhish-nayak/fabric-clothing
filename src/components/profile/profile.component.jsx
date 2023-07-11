@@ -28,7 +28,11 @@ const Profile = () => {
 
     return (
         <ProfileContainer onClick={toggleUserProfile}>
-            <img src={profileImageURL} alt="Profile_Image" />
+            <img
+                src={profileImageURL ?
+                    profileImageURL : "https://i.ibb.co/D1RV7Lj/default-user.webp"}
+                alt="Profile_Image"
+            />
         </ProfileContainer>
     );
 }

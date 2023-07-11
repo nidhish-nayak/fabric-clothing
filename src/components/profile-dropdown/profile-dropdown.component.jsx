@@ -22,7 +22,7 @@ const ProfileDetailsComponent = () => {
 
     return (
         <ProfileDetails>
-            <img src={imageURL} alt="Profile_Image" />
+            <img src={imageURL ? imageURL : "https://i.ibb.co/D1RV7Lj/default-user.webp"} alt="Profile_Image" />
             <ProfileName>{userName}</ProfileName>
             <ProfileEmail>Email: {userEmail}</ProfileEmail>
         </ProfileDetails>

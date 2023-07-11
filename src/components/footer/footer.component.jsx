@@ -51,9 +51,9 @@ const Footer = () => {
             </IconContainer>
             <SubscribeContainer>
                 <SubscribeTitle>Sign up for newsletter</SubscribeTitle>
-                <Balancer>
-                    <p>Stay updated on new releases and features, guides, and case studies.</p>
-                </Balancer>
+                <p>
+                    <Balancer>Stay updated on new releases and features, guides, and case studies.</Balancer>
+                </p>
                 <SubscribeForm />
             </SubscribeContainer>
         </FooterWrapper>

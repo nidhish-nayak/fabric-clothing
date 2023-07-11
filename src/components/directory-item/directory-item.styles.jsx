@@ -31,6 +31,12 @@ export const TitleContainer = styled.div`
         opacity: 1;
     }
 
+    @media (max-width: 768px) {
+      p {
+        font-size: 1rem;
+      }
+    }
+
     @media (max-width: 480px) {
       p {
         font-size: 0.80rem;
@@ -40,7 +46,7 @@ export const TitleContainer = styled.div`
 
 export const PrimaryContainer = styled.div`
     height: 400px;
-    padding: 0.5px;
+    padding: 1px;
     display: flex;
     flex: 1 1 auto;
     align-items: center;
@@ -80,7 +86,7 @@ export const PrimaryContainer = styled.div`
 
 export const SecondaryContainer = styled.div`
     width: 100%;
-    margin: 0.5px;
+    margin: 1px;
     height: 400px;
     display: flex;
     align-items: center;
