@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const ProductCardContainer = styled.div`
-    width: 90%;
-    margin: 1em auto;
+    width: 75%;
+    margin: 2em auto;
     display: flex;
     flex-direction: column;
     height: 350px;
+    justify-content: center;
     align-items: center;
     position: relative;
 
@@ -14,6 +15,7 @@ export const ProductCardContainer = styled.div`
         height: 95%;
         object-fit: cover;
         margin-bottom: 5px;
+        border-radius: 10px;
     }
 
     button {
@@ -39,19 +41,17 @@ export const ProductCardContainer = styled.div`
 export const Footer = styled.div`
     width: 100%;
     height: 5%;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
     font-size: 18px;
 `;
 
 export const Name = styled.span`
-    width: 90%;
     margin-bottom: 15px;
 `;
 
 export const Price = styled.span`
-    width: 10%;
-
     span {
         font-family: "Courier New";
         opacity: 0.7;
