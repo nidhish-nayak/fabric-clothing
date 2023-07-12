@@ -20,9 +20,9 @@ const gridCategories = [
   },
   {
     id: 3,
-    title: "sneakers",
+    title: "shoes",
     imageUrl: "https://i.ibb.co/sVCCkBZ/Jordan-Max-Aura-4.webp",
-    route: "shop/sneakers",
+    route: "shop/shoes",
   },
   {
     id: 4,
