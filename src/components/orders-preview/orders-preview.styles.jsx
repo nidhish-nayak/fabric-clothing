@@ -1,22 +1,26 @@
 import styled from "styled-components";
 
 export const OrdersPreviewContainer = styled.div`
-  margin-top: 6em;
+margin-top: 6em;
 `
 
 export const OrderTable = styled.table`
   margin-top: 1em;
   border-collapse: collapse;
   width: 100%;
+  overflow: hidden;
   
   td, th {
-    border: 1px solid #cecece;
     padding: 8px;
   }
 
   th:nth-child(1), td:nth-child(1), td:nth-child(3), th:nth-child(3),
   td:nth-child(4), th:nth-child(4), td:nth-child(5), th:nth-child(5) {
     text-align: center;
+  }
+
+  th:nth-child(1), th:nth-child(2), th:nth-child(3), th:nth-child(4) {
+    border-right: 1px solid #cecece;
   }
 
   td:nth-child(2), th:nth-child(2) {
