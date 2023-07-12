@@ -19,8 +19,13 @@ export const OrderTable = styled.table`
     text-align: center;
   }
 
-  th:nth-child(1), th:nth-child(2), th:nth-child(3), th:nth-child(4) {
+  th:nth-child(1), th:nth-child(2), th:nth-child(3), th:nth-child(4)
+  {
     border-right: 1px solid #cecece;
+  }
+
+  td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4) {
+    border: 1px solid #cecece;
   }
 
   td:nth-child(2), th:nth-child(2) {
