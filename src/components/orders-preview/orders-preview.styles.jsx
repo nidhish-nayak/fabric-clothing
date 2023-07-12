@@ -24,7 +24,7 @@ export const OrderTable = styled.table`
     border-right: 1px solid #cecece;
   }
 
-  td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4) {
+  td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4), td:nth-child(5) {
     border: 1px solid #cecece;
   }
 
