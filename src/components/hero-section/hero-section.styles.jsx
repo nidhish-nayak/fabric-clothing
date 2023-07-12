@@ -1,5 +1,16 @@
 import styled from "styled-components"
 
+export const Glass = styled.div`
+
+@media (max-width: 480px) {
+  margin: 10px;
+  border-radius: 10px;
+  background-image: url("https://i.ibb.co/zmVNPp5/mobile-image.webp");
+  background-size: cover;
+  background-position: center;
+}
+`
+
 export const HeroSectionContainer = styled.section`
   border-radius: 10px;
   line-height: 1;
@@ -16,10 +27,12 @@ export const HeroSectionContainer = styled.section`
   }
 
   @media (max-width: 480px) {
-    margin: 10px;
-    background-image: url("https://i.ibb.co/zmVNPp5/mobile-image.webp");
-    background-size: cover;
-    background-position: center;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 2px 2px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 `
 
