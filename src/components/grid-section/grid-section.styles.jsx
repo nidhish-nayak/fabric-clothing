@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const GridContainer = styled.section`
-    margin: 8em 0 0 0;
+    margin: 10em 0 0 0;
     padding: 0em;
 
     h2 {
@@ -14,11 +14,11 @@ export const GridContainer = styled.section`
     }
 
     @media (max-width: 1980px) {
-      padding: 0 15em;
+      padding: 0;
     }
 
     @media (max-width: 1366px) {
-      padding: 0 10em;
+      padding: 0;
     }
 
     @media (max-width: 1024px) {

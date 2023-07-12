@@ -45,14 +45,22 @@ export const TitleContainer = styled.div`
 `;
 
 export const PrimaryContainer = styled.div`
-    height: 400px;
-    margin: 2px;
+    height: 700px;
+    margin: 2em 2px 2px 2px;
     border-radius: 2px;
     display: flex;
     flex: 1 1 auto;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+
+    @media (max-width: 1980px) {
+      height: 500px;
+    }
+
+    @media (max-width: 1500px) {
+      height: 400px;
+    }
 
     @media (max-width: 1024px) {
       height: 300px;
@@ -70,6 +78,8 @@ export const PrimaryContainer = styled.div`
 
     ${BackgroundImage} {
       filter: brightness(50%);
+      background-size: 100%;
+      background-position: top;
     }
 
     &:hover {
@@ -91,16 +101,25 @@ export const SecondaryContainer = styled.div`
     width: 100%;
     margin: 2px;
     border-radius: 2px;
-    height: 400px;
+    height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     position: relative;
 
+    @media (max-width: 1980px) {
+      height: 500px;
+    }
+
+    @media (max-width: 1500px) {
+      height: 400px;
+    }
+
     @media (max-width: 1024px) {
       height: 300px;
     }
+
     
     @media (max-width: 768px) {
       height: 200px;

@@ -1,0 +1,142 @@
+.wrapper {
+  background-color: #ececec;
+  border-radius: 10px;
+  margin-top: 12em;
+  padding-top: 2em;
+
+  h1 {
+    margin-top: 2em;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+
+    @media (max-width: 1024px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    border-radius: 0;
+  }
+}
+
+.test {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4em 2em 6em 2em;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+figure.snip1157 {
+  font-family: "Open Sans Condensed", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 200px;
+  max-width: 400px;
+  width: 100%;
+  color: black;
+  text-align: left;
+  box-shadow: none !important;
+
+  @media (max-width: 1024px) {
+
+    &:nth-child(2),
+    &:nth-child(1) {
+      display: none;
+    }
+  }
+}
+
+figure.snip1157 img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin: 40px 0 0 10px;
+
+  @media(max-width: 480px) {
+    height: 50px;
+    width: 50px;
+    margin: 20px 0 0 0px;
+  }
+}
+
+figure.snip1157 blockquote {
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: white;
+  padding: 25px 50px 30px 50px;
+  width: 100%;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.6em;
+  font-style: italic;
+
+  @media(max-width: 480px) {
+    font-size: 0.7rem;
+  }
+}
+
+figure.snip1157 blockquote:before,
+figure.snip1157 blockquote:after {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  font-style: normal;
+}
+
+figure.snip1157 blockquote:before {
+  top: 25px;
+  left: 20px;
+}
+
+figure.snip1157 blockquote:after {
+  content: "\201D";
+  right: 20px;
+  bottom: 0;
+}
+
+figure.snip1157 .author {
+  position: absolute;
+  bottom: 45px;
+  padding: 0 10px 0 120px;
+  margin: 0;
+  text-transform: uppercase;
+  color: black;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 480px) {
+    padding: 40px 10px 0 60px;
+  }
+}
+
+figure.snip1157 .author h5 {
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+}
+
+figure.snip1157 .author span {
+  font-size: 0.75rem;
+  color: #333;
+  text-transform: lowercase;
+}

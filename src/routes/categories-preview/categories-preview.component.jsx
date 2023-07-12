@@ -14,6 +14,7 @@ import { CategoriesPreviewContainer } from "./categories-preview.styles";
 
 const CategoriesPreview = () => {
     const categoriesMap = useSelector(selectCategoriesMap);
+    console.log(categoriesMap)
     const isLoading = useSelector(selectCategoriesIsLoading);
 
     return (

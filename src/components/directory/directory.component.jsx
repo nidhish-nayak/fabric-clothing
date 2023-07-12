@@ -1,5 +1,7 @@
 import GridSection from "../grid-section/grid-section.component";
 import HeroSection from '../hero-section/hero-section.component';
+import Testimonials from "../testimonials/testimonials.component";
+import Trending from "../trending/trending.component";
 
 import {
     DirectoryContainer
@@ -10,6 +12,8 @@ const Directory = () => {
         <DirectoryContainer>
             <HeroSection />
             <GridSection />
+            <Testimonials />
+            <Trending />
         </DirectoryContainer>
     );
 };
