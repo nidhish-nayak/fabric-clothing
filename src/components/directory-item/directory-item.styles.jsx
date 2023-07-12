@@ -46,7 +46,8 @@ export const TitleContainer = styled.div`
 
 export const PrimaryContainer = styled.div`
     height: 400px;
-    padding: 1px;
+    margin: 2px;
+    border-radius: 2px;
     display: flex;
     flex: 1 1 auto;
     align-items: center;
@@ -63,6 +64,8 @@ export const PrimaryContainer = styled.div`
 
     @media (max-width: 480px) {
       height: 150px;
+      margin: 1px;
+      border-radius: 0;
     }
 
     ${BackgroundImage} {
@@ -86,7 +89,8 @@ export const PrimaryContainer = styled.div`
 
 export const SecondaryContainer = styled.div`
     width: 100%;
-    margin: 1px;
+    margin: 2px;
+    border-radius: 2px;
     height: 400px;
     display: flex;
     align-items: center;
@@ -104,6 +108,8 @@ export const SecondaryContainer = styled.div`
 
     @media (max-width: 480px) {
       height: 150px;
+      margin: 1px;
+      border-radius: 0;
     }
    
     ${BackgroundImage} {
