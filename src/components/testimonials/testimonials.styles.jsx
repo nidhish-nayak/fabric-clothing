@@ -1,27 +1,35 @@
-.wrapper {
+import styled from "styled-components";
+
+export const TestimonialsWrapper = styled.div`
   background-color: #ececec;
   border-radius: 10px;
   margin-top: 12em;
   padding-top: 2em;
 
-  h1 {
-    margin-top: 2em;
-    text-align: center;
-    color: #333;
-    text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
-
-    @media (max-width: 1024px) {
-      font-size: 1.5rem;
-    }
+  @media (max-width: 768px) {
+    margin-top: 6em;
   }
 
   @media (max-width: 480px) {
     border-radius: 0;
+    margin-top: 4em;
   }
-}
+`;
 
-.test {
+export const TestimonialsTitle = styled.h1`
+  margin-top: 2em;
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+
+  @media (max-width: 1024px) {
+    font-size: 1.5rem;
+    margin-top: 1em;
+  }
+`;
+
+export const TestimonialsContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -29,10 +37,11 @@
 
   @media (max-width: 768px) {
     justify-content: center;
+    padding: 1em 1em 1em 1em;
   }
-}
+`;
 
-figure.snip1157 {
+export const BlockFigure = styled.figure`
   font-family: "Open Sans Condensed", Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   position: relative;
@@ -46,15 +55,14 @@ figure.snip1157 {
   box-shadow: none !important;
 
   @media (max-width: 1024px) {
-
-    &:nth-child(2),
-    &:nth-child(1) {
+    &:nth-child(1),
+    &:nth-child(3) {
       display: none;
     }
   }
-}
+`;
 
-figure.snip1157 img {
+export const BlockImage = styled.img`
   max-width: 100%;
   vertical-align: middle;
   height: 90px;
@@ -67,9 +75,9 @@ figure.snip1157 img {
     width: 50px;
     margin: 20px 0 0 0px;
   }
-}
+`;
 
-figure.snip1157 blockquote {
+export const BlockQuote = styled.blockquote`
   display: block;
   border-radius: 8px;
   position: relative;
@@ -83,32 +91,43 @@ figure.snip1157 blockquote {
   font-style: italic;
 
   @media(max-width: 480px) {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
   }
-}
+`;
 
-figure.snip1157 blockquote:before,
-figure.snip1157 blockquote:after {
-  font-family: 'FontAwesome';
-  content: "\201C";
+export const BlockOne = styled.span`
+  font-size: 3rem;
+  font-weight: 700;
+  top: 18px;
+  left: 10px;
+  padding: 0.25em;
   position: absolute;
-  font-size: 50px;
-  opacity: 0.3;
-  font-style: normal;
-}
+  color: #cecece;
 
-figure.snip1157 blockquote:before {
-  top: 25px;
-  left: 20px;
-}
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    top: 10px;
+    left: 15px;
+  }
+`;
 
-figure.snip1157 blockquote:after {
-  content: "\201D";
-  right: 20px;
-  bottom: 0;
-}
+export const BlockTwo = styled.span`
+  font-size: 3rem;
+  font-weight: 700;
+  bottom: 2px;
+  right: 30px;
+  padding: 0.25em;
+  position: absolute;
+  color: #cecece;
 
-figure.snip1157 .author {
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    bottom: 10px;
+    right: 30px;
+  }
+`;
+
+export const Author = styled.div`
   position: absolute;
   bottom: 45px;
   padding: 0 10px 0 120px;
@@ -123,9 +142,9 @@ figure.snip1157 .author {
   @media (max-width: 480px) {
     padding: 40px 10px 0 60px;
   }
-}
+`;
 
-figure.snip1157 .author h5 {
+export const AuthorName = styled.h5`
   opacity: 0.8;
   margin: 0;
   font-weight: 800;
@@ -133,10 +152,10 @@ figure.snip1157 .author h5 {
   @media (max-width: 480px) {
     font-size: 1rem;
   }
-}
+`;
 
-figure.snip1157 .author span {
+export const AuthorWebsite = styled.span`
   font-size: 0.75rem;
   color: #333;
   text-transform: lowercase;
-}
+`;

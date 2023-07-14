@@ -48,6 +48,8 @@ export const PrimaryContainer = styled.div`
     height: 700px;
     margin: 2em 2px 2px 2px;
     border-radius: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     display: flex;
     flex: 1 1 auto;
     align-items: center;
@@ -101,6 +103,8 @@ export const SecondaryContainer = styled.div`
     width: 100%;
     margin: 2px;
     border-radius: 2px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     height: 700px;
     display: flex;
     align-items: center;

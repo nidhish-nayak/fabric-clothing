@@ -31,11 +31,18 @@ export const GridContainer = styled.section`
     }
 
     @media (max-width: 768px) {
+      margin: 6em 0 0 0;
+
+      h2 {
+        margin-bottom: 1em;
+      }
+    }
+
+    @media (max-width: 480px) {
       margin: 4em 0 0 0;
 
       h2 {
-        text-align: center;
-        font-size: 1rem;
+        margin-bottom: 1em;
       }
     }
 `;
