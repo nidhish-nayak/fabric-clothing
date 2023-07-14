@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { FaGithub, FaReact } from 'react-icons/fa';
 import { Balancer } from 'react-wrap-balancer';
@@ -25,21 +26,21 @@ const Footer = () => {
             </LogoWrapper>
             <List>
                 <li>Resources</li>
-                <li>Docs</li>
-                <li>Learn</li>
-                <li>Previews</li>
+                <li><Link to="/policy">Docs</Link></li>
+                <li><Link to="/policy">Learn</Link></li>
+                <li><Link to="/policy">Previews</Link></li>
             </List>
             <List>
                 <li>Explore</li>
-                <li>Commerce</li>
-                <li>Github</li>
-                <li>Releases</li>
-                <li>Contact Sales</li>
+                <li><Link to="/policy">Commerce</Link></li>
+                <li><Link to="/policy">Github</Link></li>
+                <li><Link to="/policy">Releases</Link></li>
+                <li><Link to="/policy">Contact Sales</Link></li>
             </List>
             <List>
                 <li>Legal</li>
-                <li>Privacy Policy</li>
-                <li>Cookie Preferences</li>
+                <li><Link to="/policy">Privacy Policy</Link></li>
+                <li><Link to="/policy">Cookie Preferences</Link></li>
             </List>
             <IconContainer>
                 <p>© 2023 Fabric, Inc.</p>
