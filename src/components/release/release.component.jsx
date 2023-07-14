@@ -55,7 +55,12 @@ const Release = () => {
             </a>
           </li>
           <li>
-
+            UI Overhaul by @Nidhish-D-Nayak in <a
+              href="https://github.com/Nidhish-D-Nayak/fabric-clothing/pull/12"
+              target="_blank"
+              rel="noreferrer noopener">
+              https://github.com/Nidhish-D-Nayak/fabric-clothing/pull/12
+            </a>
           </li>
         </ReleaseDesc>
       </ ReleaseContainer>
