@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaReact } from 'react-icons/fa';
 import { Balancer } from 'react-wrap-balancer';
 
 import Logo from "../logo/logo.component";
@@ -44,9 +44,19 @@ const Footer = () => {
             <IconContainer>
                 <p>© 2023 Fabric, Inc.</p>
                 <IconWrapper>
-                    <FaGithub />
+                    <a
+                        href='https://github.com/Nidhish-D-Nayak/fabric-clothing'
+                        target="_blank"
+                        rel="noreferrer noopener">
+                        <FaGithub />
+                    </a>
                     <Divider>|</Divider>
-                    <FaLinkedin />
+                    <a
+                        href='https://react.dev'
+                        target="_blank"
+                        rel="noreferrer noopener">
+                        <FaReact />
+                    </a>
                 </IconWrapper>
             </IconContainer>
             <SubscribeContainer>

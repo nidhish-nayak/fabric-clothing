@@ -48,7 +48,6 @@ export const IconContainer = styled.div`
     padding: 1em;
 
     p {
-        // font-size: 0.5rem;
         text-align: center;
     }
 `;
@@ -58,6 +57,10 @@ export const IconWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    a {
+        padding-top: 0.25em;
+    }
 `;
 
 export const Divider = styled.span`

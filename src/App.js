@@ -14,6 +14,7 @@ import {
 	onAuthStateChangedListener,
 } from "./utils/firebase/firebase.utils.js";
 
+import Policies from "./routes/policies/policies.component.jsx";
 import { setCurrentUser } from "./store/user/user.reducer.js";
 
 const App = () => {
@@ -56,6 +57,7 @@ const App = () => {
 					<Route path="shop/*" element={<Shop />} />
 					<Route path="auth" element={<Authentication />} />
 					<Route path="checkout" element={<Checkout />} />
+					<Route path="policy" element={<Policies />} />
 				</Route>
 			</Routes>
 		</>

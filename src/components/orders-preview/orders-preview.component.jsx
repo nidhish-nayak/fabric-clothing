@@ -9,7 +9,7 @@ const OrdersPreview = () => {
 
   return (
     <OrdersPreviewContainer>
-      <h2>RECENT ORDERS:</h2>
+      <h2>RECENT ORDERS</h2>
       <div>
         <OrderTable>
           <thead>
