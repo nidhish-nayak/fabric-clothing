@@ -58,3 +58,10 @@ export const OrderTable = styled.table`
   }
 
 `
+
+export const Note = styled.p`
+  padding: 1em;
+  background: #ececec;
+  max-width: 480px;
+  border-radius: 10px;
+`
