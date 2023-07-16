@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { selectOrderList, selectPaymentDetails } from "../../store/orders/orders.selector";
 import OrderRow from "../orders-row/orders-row.component";
-import { OrderTable, OrdersPreviewContainer } from "./orders-preview.styles";
+import { Note, OrderTable, OrdersPreviewContainer } from "./orders-preview.styles";
 
 const OrdersPreview = () => {
   const orderList = useSelector(selectOrderList);
@@ -9,6 +9,14 @@ const OrdersPreview = () => {
 
   return (
     <OrdersPreviewContainer>
+      <Note>
+        <b>Test Card: </b>4111 1111 1111 1111 (any expiry and cv)
+        <br />
+        <b>Test UPI: </b>&lt;phone.no&gt;@ybl
+        <br />
+        <br />
+        <b>Note: </b>Payment method is in Test mode and no amount will be deducted from the user.
+      </Note>
       <h2>RECENT ORDERS</h2>
       <div>
         <OrderTable>

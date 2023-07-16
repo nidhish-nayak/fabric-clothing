@@ -1,7 +1,7 @@
 const OrderRow = ({ order, index, method, status }) => {
 
   const calculateTotalPrice = (order) => {
-    const totalPrice = order.reduce((accumulator, item) => accumulator + item.price, 0);
+    const totalPrice = order.reduce((accumulator, item) => accumulator + (item.price * item.quantity), 0);
     return totalPrice;
   };
 
