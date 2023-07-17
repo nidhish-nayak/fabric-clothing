@@ -60,7 +60,6 @@ const PaymentForm = () => {
           } else {
             console.log('PAYMENT FAILED');
           }
-          console.log(payment);
 
           const { method, status } = payment.data.items[0];
           setPayment(method, status === 'captured' ? 'successful' : 'failed');
