@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -8,12 +7,12 @@ import CartItem from "../cart-item/cart-item.component";
 import { setIsCartOpen } from "../../store/cart/cart.reducer";
 import { selectCartItems } from "../../store/cart/cart.selector";
 
+import "./cart-dropdown.styles";
 import {
     CartDropDownContainer,
     CartItemContainer,
     EmptyMessage,
 } from "./cart-dropdown.styles";
-import "./cart-dropdown.styles.jsx";
 
 const CartDropdown = () => {
 

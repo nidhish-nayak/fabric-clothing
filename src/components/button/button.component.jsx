@@ -1,6 +1,5 @@
-import React from "react";
 
-import "./button.styles.jsx";
+import "./button.styles";
 
 import {
     BaseButton,

@@ -1,17 +1,16 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 
 import { addItemToCart } from "../../store/cart/cart.reducer";
 
 import { default as BUTTON_TYPE_CLASSES, default as Button } from "../button/button.component";
 
-import "./product-card.styles.jsx";
+import "./product-card.styles";
 import {
     Footer,
     Name,
     Price,
     ProductCardContainer,
-} from "./product-card.styles.jsx";
+} from "./product-card.styles";
 
 const ProductCard = ({ product }) => {
 

@@ -26,7 +26,7 @@ const PaymentForm = () => {
     setPaymentInProgress(true);
 
     try {
-      const API_URL = 'https://healthy-crab-uniform.cyclic.app/';
+      const API_URL = process.env.NODE_API_URL;
       const orderUrl = `${API_URL}orders`;
 
       const response = await axios.get(orderUrl, {

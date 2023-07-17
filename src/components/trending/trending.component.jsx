@@ -1,10 +1,9 @@
-import React from 'react';
-import ProductCard from '../product-card/product-card.component.jsx';
+import ProductCard from '../product-card/product-card.component';
 import {
     TrendingContainer,
     TrendingItems,
     TrendingTitle
-} from './trending.styles.jsx';
+} from './trending.styles';
 
 const trendingItems = [
     {

@@ -1,9 +1,8 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 
 import { addItemToCart, clearItemFromCart, removeItemFromCart } from "../../store/cart/cart.reducer";
 
-import "./checkout-items.styles.jsx";
+import "./checkout-items.styles";
 import {
     Arrow,
     CheckoutItemContainer,
@@ -13,7 +12,7 @@ import {
     Quantity,
     RemoveButton,
     Value,
-} from "./checkout-items.styles.jsx";
+} from "./checkout-items.styles";
 
 const CheckoutItems = ({ cartItem }) => {
 

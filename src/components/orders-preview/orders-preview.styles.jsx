@@ -48,7 +48,7 @@ export const OrderTable = styled.table`
     } 
   }
 
-  // styles for orders-row.component.jsx
+  // styles for orders-row.component
   tr .successful {
     color:green;
   }
