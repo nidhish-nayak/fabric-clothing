@@ -1,9 +1,8 @@
 import { createSelector } from "reselect";
-import { RootState } from "../store";
 import { CartState } from "./cart.reducer";
 
 type CartSelector = {
-	state: RootState;
+	// state: RootState; since root state is imported in utils/hooks/hooks.ts
 	cart: CartState;
 };
 
