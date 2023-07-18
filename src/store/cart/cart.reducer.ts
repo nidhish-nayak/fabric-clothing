@@ -3,7 +3,6 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 type CartItem = {
 	id: string;
 	quantity: number;
-	// Add other properties of the cart item here
 };
 
 type CartState = {
