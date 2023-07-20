@@ -1,25 +1,21 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { Dispatch } from "redux";
 import { getCategoriesAndDocuments } from "../../utils/firebase/firebase.utils";
+import { Error } from "../../utils/redux/reduxUtils";
 
-type Items = {
+export type Items = {
 	id: number;
 	imageUrl: string;
 	name: string;
 	price: number;
 };
 
-type Categories = {
+export type Categories = {
 	items?: Items[];
 	title?: string;
 };
 
-type Error = {
-	message: string;
-	errorCode: number;
-};
-
-type CategoriesState = {
+export type CategoriesState = {
 	readonly categories: Categories[];
 	readonly isLoading: boolean;
 	readonly error?: Error | null | unknown;
@@ -43,7 +39,7 @@ export const categoriesSlice = createSlice({
 			state.isLoading = false;
 			state.error = null;
 		},
-		fetchCategoriesFailed: (state, action: PayloadAction<unknown>) => {
+		fetchCategoriesFailed: (state, action: PayloadAction<string>) => {
 			state.error = action.payload;
 			state.isLoading = false;
 		},
