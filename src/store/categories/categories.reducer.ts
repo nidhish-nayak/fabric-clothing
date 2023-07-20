@@ -1,3 +1,4 @@
+import { Dispatch } from "redux";
 import { getCategoriesAndDocuments } from "../../utils/firebase/firebase.utils";
 
 import { createSlice } from "@reduxjs/toolkit";
@@ -27,7 +28,7 @@ export const categoriesSlice = createSlice({
 	},
 });
 
-export const fetchCategoriesAsync = () => async (dispatch) => {
+export const fetchCategoriesAsync = () => async (dispatch: Dispatch) => {
 	dispatch(fetchCategoriesStart());
 	try {
 		const categoriesArray = await getCategoriesAndDocuments("categories");
