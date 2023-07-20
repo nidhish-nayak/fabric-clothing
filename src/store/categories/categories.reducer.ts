@@ -14,10 +14,15 @@ type Categories = {
 	title?: string;
 };
 
+type Error = {
+	message: string;
+	errorCode: number;
+};
+
 type CategoriesState = {
-	categories: Categories[];
-	isLoading: boolean;
-	error?: null | unknown;
+	readonly categories: Categories[];
+	readonly isLoading: boolean;
+	readonly error?: Error | null | unknown;
 };
 
 export const CATEGORIES_INITIAL_STATE: CategoriesState = {
