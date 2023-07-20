@@ -1,25 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { Dispatch } from "redux";
 import { getCategoriesAndDocuments } from "../../utils/firebase/firebase.utils";
-import { Error } from "../../utils/redux/reduxUtils";
-
-export type Items = {
-	id: number;
-	imageUrl: string;
-	name: string;
-	price: number;
-};
-
-export type Categories = {
-	items?: Items[];
-	title?: string;
-};
-
-export type CategoriesState = {
-	readonly categories: Categories[];
-	readonly isLoading: boolean;
-	readonly error?: Error | null | unknown;
-};
+import { Categories, CategoriesState } from "./categories.types";
 
 export const CATEGORIES_INITIAL_STATE: CategoriesState = {
 	categories: [],

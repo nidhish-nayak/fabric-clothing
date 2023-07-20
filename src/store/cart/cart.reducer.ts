@@ -1,15 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { CartItem, CartState } from "./cart.types";
 
-export type CartItem = {
-	id: string;
-	quantity: number;
-	price: number;
-};
-
-export type CartState = {
-	isCartOpen: boolean;
-	cartItems: CartItem[];
-};
+// Helper functions
 
 const addCartItem = (
 	cartItems: CartItem[],
@@ -54,6 +46,8 @@ const clearCartItem = (
 	cartItemToClear: CartItem
 ): CartItem[] =>
 	cartItems.filter((cartItem) => cartItem.id !== cartItemToClear.id);
+
+// Reducer Code
 
 export const CART_INITIAL_STATE: CartState = {
 	isCartOpen: false,
