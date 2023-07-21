@@ -1,6 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { Orders, OrdersState, PaymentDetails } from "./orders.types";
 
-const ORDERS_INITIAL_STATE = {
+const ORDERS_INITIAL_STATE: OrdersState = {
 	order: [],
 	paymentDetails: [],
 };
@@ -9,10 +10,10 @@ export const ordersSlice = createSlice({
 	name: "orders",
 	initialState: ORDERS_INITIAL_STATE,
 	reducers: {
-		setOrder: (state, action) => {
+		setOrder: (state, action: PayloadAction<Orders>) => {
 			state.order.push(action.payload);
 		},
-		setPaymentDetails: (state, action) => {
+		setPaymentDetails: (state, action: PayloadAction<PaymentDetails>) => {
 			state.paymentDetails.push(action.payload);
 		},
 	},

@@ -26,7 +26,8 @@ const PaymentForm = () => {
     setPaymentInProgress(true);
 
     try {
-      const API_URL = process.env.NODE_API_URL;
+      const API_URL = process.env.NODE_ENV === "production" ? process.env.NODE_API_URL : "http://localhost:4000/";
+      console.log(API_URL)
       const orderUrl = `${API_URL}orders`;
 
       const response = await axios.get(orderUrl, {
