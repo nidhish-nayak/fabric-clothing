@@ -15,7 +15,7 @@ import {
 } from "./utils/firebase/firebase.utils.js";
 
 import Policies from "./routes/policies/policies.component";
-import { setCurrentUser } from "./store/user/user.reducer.js";
+import { setCurrentUser } from "./store/user/user.reducer";
 
 const App = () => {
 	const dispatch = useDispatch();
