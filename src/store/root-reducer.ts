@@ -10,3 +10,5 @@ export const rootReducer = combineReducers({
 	cart: cartReducer,
 	orders: ordersReducer,
 });
+
+export type RootReducer = ReturnType<typeof rootReducer>;

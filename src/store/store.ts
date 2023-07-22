@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // Choose your storage engine
 import thunk from "redux-thunk";
-import { rootReducer } from "./root-reducer";
+import { RootReducer, rootReducer } from "./root-reducer";
 
 // Create the persist config
 const persistConfig = {
@@ -12,7 +12,10 @@ const persistConfig = {
 };
 
 // Create the persisted reducers
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+const persistedReducer = persistReducer<RootReducer>(
+	persistConfig,
+	rootReducer
+);
 
 export const store = configureStore({
 	reducer: persistedReducer,
