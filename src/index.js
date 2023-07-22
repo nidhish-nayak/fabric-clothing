@@ -14,7 +14,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
 		<Provider store={store}>
-			{/* loading={null} = loads nothing until persisted data is loaded */}
 			<PersistGate loading={null} persistor={persistor}>
 				<BrowserRouter>
 					<App />
