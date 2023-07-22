@@ -8,7 +8,3 @@ export type CartState = {
 	isCartOpen: boolean;
 	cartItems: CartItem[];
 };
-
-export type CartSelector = {
-	cart: CartState;
-};

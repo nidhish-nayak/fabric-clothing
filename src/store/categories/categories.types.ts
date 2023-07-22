@@ -15,7 +15,3 @@ export type CategoriesState = {
 	readonly isLoading: boolean;
 	readonly error?: Error | null | unknown;
 };
-
-export type CategoriesSelector = {
-	categories: CategoriesState;
-};

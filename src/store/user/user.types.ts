@@ -11,7 +11,3 @@ export type UserState = {
 	currentUser: CurrentUser | null;
 	isUserProfileOpen: boolean;
 };
-
-export type UserSelector = {
-	user: UserState;
-};

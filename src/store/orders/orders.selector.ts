@@ -1,7 +1,8 @@
 import { createSelector } from "reselect";
-import { OrdersSelector, OrdersState } from "./orders.types";
+import { RootState } from "../store";
+import { OrdersState } from "./orders.types";
 
-export const selectOrders = (state: OrdersSelector) => state.orders;
+export const selectOrders = (state: RootState) => state.orders;
 
 export const selectOrderList = createSelector(
 	[selectOrders],

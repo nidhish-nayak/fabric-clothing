@@ -1,14 +1,14 @@
-import { UserSelector } from "./user.types";
+import { RootState } from "../store";
 
-export const userSelector = (state: UserSelector) => {
+export const userSelector = (state: RootState) => {
 	return state.user.currentUser;
 };
 
-export const selectIsUserProfileOpen = (state: UserSelector) => {
+export const selectIsUserProfileOpen = (state: RootState) => {
 	return state.user.isUserProfileOpen;
 };
 
-export const selectUserProfileImage = (state: UserSelector) => {
+export const selectUserProfileImage = (state: RootState) => {
 	if (state.user.currentUser) {
 		return state.user.currentUser.photoURL;
 	} else {
@@ -16,7 +16,7 @@ export const selectUserProfileImage = (state: UserSelector) => {
 	}
 };
 
-export const selectProfileUserName = (state: UserSelector) => {
+export const selectProfileUserName = (state: RootState) => {
 	if (state.user.currentUser) {
 		return state.user.currentUser.displayName;
 	} else {
@@ -24,7 +24,7 @@ export const selectProfileUserName = (state: UserSelector) => {
 	}
 };
 
-export const selectProfileUserEmail = (state: UserSelector) => {
+export const selectProfileUserEmail = (state: RootState) => {
 	if (state.user.currentUser) {
 		return state.user.currentUser.email;
 	} else {

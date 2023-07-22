@@ -18,7 +18,3 @@ export type OrdersState = {
 	order: Orders[];
 	paymentDetails: PaymentDetails[];
 };
-
-export type OrdersSelector = {
-	orders: OrdersState;
-};
