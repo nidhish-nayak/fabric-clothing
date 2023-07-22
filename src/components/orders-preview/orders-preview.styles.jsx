@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const OrdersPreviewContainer = styled.div`
-margin-top: 6em;
+  margin-top: 6em;
 `
 
 export const OrderTable = styled.table`
@@ -62,6 +62,7 @@ export const OrderTable = styled.table`
 export const Note = styled.p`
   padding: 1em;
   background: #ececec;
-  max-width: 480px;
+  max-width: 560px;
   border-radius: 10px;
+  text-transform: uppercase;
 `
