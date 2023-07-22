@@ -14,7 +14,6 @@ const OrdersPreview = () => {
         <br />
         <b>Test UPI: </b>&lt;phone.no&gt;@ybl
         <br />
-        <br />
         <b>Note: </b>Payment method is in Test mode and no amount will be deducted from the user.
       </Note>
       <h2>RECENT ORDERS</h2>

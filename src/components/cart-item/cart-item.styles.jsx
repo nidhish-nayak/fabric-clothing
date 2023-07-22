@@ -27,4 +27,5 @@ export const Name = styled.span`
 
 export const ItemImage = styled.img`
     width: 4em;
+    object-fit: cover;
 `;
