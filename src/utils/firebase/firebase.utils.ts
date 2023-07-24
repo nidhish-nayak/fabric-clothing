@@ -8,6 +8,7 @@ import {
 	signInWithEmailAndPassword,
 	signInWithPopup,
 	signOut,
+	User,
 } from "firebase/auth";
 import {
 	collection,
@@ -16,9 +17,11 @@ import {
 	getDocs,
 	getFirestore,
 	query,
+	QueryDocumentSnapshot,
 	setDoc,
 	writeBatch,
 } from "firebase/firestore";
+import { Categories } from "../../store/categories/categories.types";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -43,11 +46,15 @@ export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 export const db = getFirestore();
 
+export type ObjectsToAdd = {
+	title: string;
+};
+
 // Add Collections in  Firesbase DB for SHOP PAGE - Use this only to upload new categories to DB directly
-export const addCollectionAndDocuments = async (
-	collectionKey,
-	objectsToAdd
-) => {
+export const addCollectionAndDocuments = async <T extends ObjectsToAdd>(
+	collectionKey: string,
+	objectsToAdd: T[]
+): Promise<void> => {
 	const collectionRef = collection(db, collectionKey);
 	const batch = writeBatch(db);
 
@@ -61,16 +68,33 @@ export const addCollectionAndDocuments = async (
 };
 
 // Query collection data from DB to application
-export const getCategoriesAndDocuments = async (collectionName) => {
+export const getCategoriesAndDocuments = async (
+	collectionName: string
+): Promise<Categories[]> => {
 	const collectionRef = collection(db, collectionName);
 	const q = query(collectionRef);
 
 	const querySnapshot = await getDocs(q);
-	return querySnapshot.docs.map((docSnapshot) => docSnapshot.data());
+	return querySnapshot.docs.map(
+		(docSnapshot) => docSnapshot.data() as Categories
+	);
+};
+
+export type AdditionalInfo = {
+	displayName?: string;
+};
+
+export type UserData = {
+	createdAt: Date;
+	displayName: string;
+	email: string;
 };
 
 // Creating new user auth collection with uid from google login
-export const createUserDocFromAuth = async (userAuth, additionalInfo) => {
+export const createUserDocFromAuth = async (
+	userAuth: User,
+	additionalInfo = {} as AdditionalInfo
+): Promise<void | QueryDocumentSnapshot<UserData>> => {
 	if (!userAuth) return;
 
 	const userDocRef = doc(db, "users", userAuth.uid);
@@ -91,17 +115,23 @@ export const createUserDocFromAuth = async (userAuth, additionalInfo) => {
 			console.log("Error: " + error.message);
 		}
 	}
-	return userDocRef;
+	return userDocRef as QueryDocumentSnapshot<UserData>;
 };
 
 // User auth for direct email/password login
-export const createAuthUserWithEmailAndPassword = async (email, password) => {
+export const createAuthUserWithEmailAndPassword = async (
+	email: string,
+	password
+) => {
 	if (!email || !password) return;
 	return await createUserWithEmailAndPassword(auth, email, password);
 };
 
 // User signin with username and password
-export const userSignInWithEmailAndPassword = async (email, password) => {
+export const userSignInWithEmailAndPassword = async (
+	email: string,
+	password
+) => {
 	if (!email || !password) return;
 	return await signInWithEmailAndPassword(auth, email, password);
 };

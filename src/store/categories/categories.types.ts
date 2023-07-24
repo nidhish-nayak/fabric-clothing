@@ -6,8 +6,8 @@ export type Items = {
 };
 
 export type Categories = {
-	items?: Items[];
-	title?: string;
+	items: Items[];
+	title: string;
 };
 
 export type CategoriesState = {
