@@ -12,7 +12,7 @@ import Shop from "./routes/shop/shop.component";
 import {
 	createUserDocFromAuth,
 	onAuthStateChangedListener,
-} from "./utils/firebase/firebase.utils.js";
+} from "./utils/firebase/firebase.utils";
 
 import Policies from "./routes/policies/policies.component";
 import { setCurrentUser } from "./store/user/user.reducer";

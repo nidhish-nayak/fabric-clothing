@@ -4,7 +4,7 @@ import {
     createUserDocFromAuth,
     signInWithGooglePopup,
     userSignInWithEmailAndPassword,
-} from "../../utils/firebase/firebase.utils.js";
+} from "../../utils/firebase/firebase.utils";
 
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
