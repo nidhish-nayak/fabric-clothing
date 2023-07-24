@@ -28,6 +28,7 @@ export const categoriesSlice = createSlice({
 	},
 });
 
+// Thunk (Dispatch as an arguement for an async fetch function)
 export const fetchCategoriesAsync = () => async (dispatch: Dispatch) => {
 	dispatch(fetchCategoriesStart());
 	try {
