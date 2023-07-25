@@ -4,6 +4,7 @@ import {
 	createUserWithEmailAndPassword,
 	getAuth,
 	GoogleAuthProvider,
+	NextOrObserver,
 	onAuthStateChanged,
 	signInWithEmailAndPassword,
 	signInWithPopup,
@@ -112,16 +113,17 @@ export const createUserDocFromAuth = async (
 				...additionalInfo,
 			});
 		} catch (error) {
-			console.log("Error: " + error.message);
+			console.log("Error when setDoc as userDocRef: " + error);
 		}
 	}
-	return userDocRef as QueryDocumentSnapshot<UserData>;
+
+	return userSnapshot as QueryDocumentSnapshot<UserData>;
 };
 
 // User auth for direct email/password login
 export const createAuthUserWithEmailAndPassword = async (
 	email: string,
-	password
+	password: string
 ) => {
 	if (!email || !password) return;
 	return await createUserWithEmailAndPassword(auth, email, password);
@@ -130,7 +132,7 @@ export const createAuthUserWithEmailAndPassword = async (
 // User signin with username and password
 export const userSignInWithEmailAndPassword = async (
 	email: string,
-	password
+	password: string
 ) => {
 	if (!email || !password) return;
 	return await signInWithEmailAndPassword(auth, email, password);
@@ -142,6 +144,6 @@ export const signOutUser = async () => {
 };
 
 // Auth state change listener
-export const onAuthStateChangedListener = (callback) => {
+export const onAuthStateChangedListener = (callback: NextOrObserver<User>) => {
 	onAuthStateChanged(auth, callback);
 };
