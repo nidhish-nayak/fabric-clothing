@@ -4,14 +4,12 @@ import storage from "redux-persist/lib/storage"; // Choose your storage engine
 import thunk from "redux-thunk";
 import { RootReducer, rootReducer } from "./root-reducer";
 
-// Create the persist config
 const persistConfig = {
 	key: "root",
 	storage,
 	whitelist: ["cart", "orders"],
 };
 
-// Create the persisted reducers
 const persistedReducer = persistReducer<RootReducer>(
 	persistConfig,
 	rootReducer

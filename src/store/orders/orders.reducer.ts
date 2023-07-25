@@ -19,7 +19,6 @@ export const ordersSlice = createSlice({
 	},
 });
 
-// Action creators are generated for each case reducer function
 export const { setOrder, setPaymentDetails } = ordersSlice.actions;
 
 export default ordersSlice.reducer;
