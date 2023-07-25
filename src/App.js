@@ -24,7 +24,6 @@ const App = () => {
 			if (user) {
 				createUserDocFromAuth(user);
 			}
-			console.log(user);
 			// immediately invoked function expression (IIFE) => to get serialized user data
 			const serializedUser =
 				user &&
@@ -44,7 +43,6 @@ const App = () => {
 					photoURL,
 				}))(user);
 
-			console.log(serializedUser);
 			dispatch(setCurrentUser(serializedUser));
 		});
 		return unsubscribe;

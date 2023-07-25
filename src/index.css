@@ -4,8 +4,8 @@ body {
   font-family: "Open Sans Condensed", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  //   font-family: 'Bebas Neue', sans-serif;
-  // font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Bebas Neue', sans-serif;
+     font-family: 'Montserrat', sans-serif; */
 }
 
 code {
