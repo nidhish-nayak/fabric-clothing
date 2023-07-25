@@ -51,7 +51,7 @@ export type ObjectsToAdd = {
 	title: string;
 };
 
-// Add Collections in  Firesbase DB for SHOP PAGE - Use this only to upload new categories to DB directly
+// Add Collections in  Firebase DB for SHOP PAGE - Use this only to upload new categories to DB directly
 export const addCollectionAndDocuments = async <T extends ObjectsToAdd>(
 	collectionKey: string,
 	objectsToAdd: T[]
