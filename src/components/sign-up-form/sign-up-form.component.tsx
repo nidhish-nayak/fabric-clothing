@@ -8,6 +8,7 @@ import {
 import Button from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
 
+import { AuthError, AuthErrorCodes } from "firebase/auth";
 import "./sign-up-form.styles";
 import { SignUpContainer } from "./sign-up-form.styles";
 
@@ -44,8 +45,8 @@ const SignUpForm = () => {
 			);
 			await createUserDocFromAuth(user, { displayName });
 			resetFormFields();
-		} catch (error: any) {
-			if (error.code === "auth/email-already-in-use") {
+		} catch (error) {
+			if ((error as AuthError).code === AuthErrorCodes.EMAIL_EXISTS) {
 				alert("Email already in use !");
 			} else {
 				console.log("Error: " + error);
