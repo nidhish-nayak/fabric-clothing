@@ -10,6 +10,7 @@ import {
 	signInWithPopup,
 	signOut,
 	User,
+	UserCredential,
 } from "firebase/auth";
 import {
 	collection,
@@ -22,8 +23,8 @@ import {
 	setDoc,
 	writeBatch,
 } from "firebase/firestore";
-import { Categories } from "../../store/categories/categories.types";
 
+import { Categories } from "../../store/categories/categories.types";
 // Firebase configuration
 const firebaseConfig = {
 	apiKey: "AIzaSyAE2HqJ9FTxPNzt-CifhFJCkdySoaDlmg4",
@@ -124,8 +125,9 @@ export const createUserDocFromAuth = async (
 export const createAuthUserWithEmailAndPassword = async (
 	email: string,
 	password: string
-) => {
-	if (!email || !password) return;
+): Promise<UserCredential> => {
+	if (!email || !password)
+		return Promise.reject("Email and password are required");
 	return await createUserWithEmailAndPassword(auth, email, password);
 };
 
