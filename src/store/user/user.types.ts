@@ -1,11 +1,11 @@
 export type CurrentUser = {
-	accessToken: string;
-	displayName: string;
-	email: string;
-	emailVerified: boolean;
-	photoURL: string;
 	uid: string;
-};
+	accessToken?: string | null;
+	email?: string | null;
+	displayName?: string | null;
+	emailVerified?: boolean;
+	photoURL?: string | null;
+} | null;
 
 export type UserState = {
 	currentUser: CurrentUser | null;
