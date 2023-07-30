@@ -1,14 +1,10 @@
-export type Order = {
+export type Orders = {
 	price: number;
-	imageUrl: string;
-	name: string;
+	imageUrl?: string;
+	name?: string;
 	id: number;
 	quantity: number;
-};
-
-export type Orders = {
-	order: Order[];
-};
+}[];
 
 export type PaymentDetails = {
 	payment: [string, string];
