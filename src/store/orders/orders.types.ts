@@ -7,7 +7,8 @@ export type Orders = {
 }[];
 
 export type PaymentDetails = {
-	payment: [string, string];
+	method: string;
+	status: string;
 };
 
 export type OrdersState = {

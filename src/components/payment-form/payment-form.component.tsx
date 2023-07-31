@@ -21,8 +21,8 @@ const PaymentForm = () => {
 		dispatch(setOrder(cartItems));
 	};
 
-	const setPayment = (method: string, status: string) => {
-		dispatch(setPaymentDetails([method, status]));
+	const setUserPayment = (method: string, status: string) => {
+		dispatch(setPaymentDetails({ method, status }));
 	};
 
 	const paymentHandler = async (e) => {
@@ -70,7 +70,10 @@ const PaymentForm = () => {
 					}
 
 					const { method, status } = payment.data.items[0];
-					setPayment(method, status === "captured" ? "successful" : "failed");
+					setUserPayment(
+						method,
+						status === "captured" ? "successful" : "failed"
+					);
 				},
 
 				prefill: {
