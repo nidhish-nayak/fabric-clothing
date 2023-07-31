@@ -25,8 +25,8 @@ const PaymentForm = () => {
 		dispatch(setPaymentDetails({ method, status }));
 	};
 
-	const paymentHandler = async (e) => {
-		e.preventDefault();
+	const paymentHandler = async (event: React.MouseEvent<HTMLButtonElement>) => {
+		event.preventDefault();
 		setPaymentInProgress(true);
 
 		try {
@@ -34,7 +34,6 @@ const PaymentForm = () => {
 				process.env.NODE_ENV === "production"
 					? process.env.NODE_API_URL
 					: "http://localhost:4000/";
-			console.log(API_URL);
 			const orderUrl = `${API_URL}orders`;
 
 			const response = await axios.get(orderUrl, {
@@ -55,7 +54,7 @@ const PaymentForm = () => {
 				image: currentUser?.photoURL || null,
 				order_id: data.id,
 
-				handler: async function (response) {
+				handler: async function () {
 					const payment = await axios.get(paymentUrl, {
 						params: {
 							orderId: data.id,
@@ -85,7 +84,7 @@ const PaymentForm = () => {
 				},
 			};
 
-			const rzp1 = new window.Razorpay(options);
+			const rzp1 = new (window as any).Razorpay(options);
 			rzp1.open();
 		} catch (error) {
 			console.error("Payment error:", error);
