@@ -84,6 +84,7 @@ const PaymentForm = () => {
 				},
 			};
 
+			// This type is any since there is no specific type for Razorpay method in Razorpay Docs
 			const rzp1 = new (window as any).Razorpay(options);
 			rzp1.open();
 		} catch (error) {
