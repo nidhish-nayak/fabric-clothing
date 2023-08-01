@@ -10,6 +10,10 @@ export type Categories = {
 	title: string;
 };
 
+export type CategoriesMap = {
+	[key: string]: Items[];
+};
+
 export type CategoriesState = {
 	readonly categories: Categories[];
 	readonly isLoading: boolean;
