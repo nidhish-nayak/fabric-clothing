@@ -1,6 +1,10 @@
 import { createSelector } from "reselect";
 import { RootState } from "../store";
-import { Categories, CategoriesState, Items } from "./categories.types";
+import {
+	CategoriesStateType,
+	CategoriesType,
+	ItemsType,
+} from "./categories.types";
 
 const selectCategoryReducer = (state: RootState) => {
 	return state.categories;
@@ -9,15 +13,15 @@ const selectCategoryReducer = (state: RootState) => {
 // Using memoization and caching through createSelector Hook
 export const selectCategories = createSelector(
 	[selectCategoryReducer],
-	(categoriesSlice: CategoriesState) => {
+	(categoriesSlice: CategoriesStateType) => {
 		return categoriesSlice.categories;
 	}
 );
 
 export const selectCategoriesMap = createSelector(
 	[selectCategories],
-	(categories: Categories[]) =>
-		categories.reduce((acc: { [key: string]: Items[] }, category) => {
+	(categories: CategoriesType[]) =>
+		categories.reduce((acc: { [key: string]: ItemsType[] }, category) => {
 			const { title, items } = category;
 			if (title && items) {
 				acc[title.toLowerCase()] = items;
@@ -28,5 +32,5 @@ export const selectCategoriesMap = createSelector(
 
 export const selectCategoriesIsLoading = createSelector(
 	[selectCategoryReducer],
-	(categoriesSlice: CategoriesState) => categoriesSlice.isLoading
+	(categoriesSlice: CategoriesStateType) => categoriesSlice.isLoading
 );

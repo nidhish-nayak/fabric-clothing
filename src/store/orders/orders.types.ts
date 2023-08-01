@@ -1,20 +1,17 @@
-export type Order = {
+export type OrdersType = {
 	price: number;
-	imageUrl: string;
-	name: string;
+	imageUrl?: string;
+	name?: string;
 	id: number;
 	quantity: number;
+}[];
+
+export type PaymentDetailsType = {
+	method: string;
+	status: string;
 };
 
-export type Orders = {
-	order: Order[];
-};
-
-export type PaymentDetails = {
-	payment: [string, string];
-};
-
-export type OrdersState = {
-	order: Orders[];
-	paymentDetails: PaymentDetails[];
+export type OrdersStateType = {
+	order: OrdersType[];
+	paymentDetails: PaymentDetailsType[];
 };

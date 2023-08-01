@@ -12,7 +12,7 @@ import Shop from "./routes/shop/shop.component";
 import { setCurrentUser } from "./store/user/user.reducer";
 
 import { User } from "firebase/auth";
-import { CurrentUser } from "./store/user/user.types";
+import { CurrentUserType } from "./store/user/user.types";
 import {
 	createUserDocFromAuth,
 	onAuthStateChangedListener,
@@ -31,7 +31,7 @@ const App = () => {
 					createUserDocFromAuth(user);
 				}
 				// immediately invoked function expression (IIFE) => to get serialized user data
-				const serializedUser: CurrentUser =
+				const serializedUser: CurrentUserType =
 					user &&
 					(({
 						uid,
