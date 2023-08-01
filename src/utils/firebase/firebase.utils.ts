@@ -24,7 +24,7 @@ import {
 	writeBatch,
 } from "firebase/firestore";
 
-import { Categories } from "../../store/categories/categories.types";
+import { CategoriesType } from "../../store/categories/categories.types";
 // Firebase configuration
 const firebaseConfig = {
 	apiKey: "AIzaSyAE2HqJ9FTxPNzt-CifhFJCkdySoaDlmg4",
@@ -72,13 +72,13 @@ export const addCollectionAndDocuments = async <T extends ObjectsToAdd>(
 // Query collection data from DB to application
 export const getCategoriesAndDocuments = async (
 	collectionName: string
-): Promise<Categories[]> => {
+): Promise<CategoriesType[]> => {
 	const collectionRef = collection(db, collectionName);
 	const q = query(collectionRef);
 
 	const querySnapshot = await getDocs(q);
 	return querySnapshot.docs.map(
-		(docSnapshot) => docSnapshot.data() as Categories
+		(docSnapshot) => docSnapshot.data() as CategoriesType
 	);
 };
 

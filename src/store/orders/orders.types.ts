@@ -1,4 +1,4 @@
-export type Orders = {
+export type OrdersType = {
 	price: number;
 	imageUrl?: string;
 	name?: string;
@@ -6,12 +6,12 @@ export type Orders = {
 	quantity: number;
 }[];
 
-export type PaymentDetails = {
+export type PaymentDetailsType = {
 	method: string;
 	status: string;
 };
 
-export type OrdersState = {
-	order: Orders[];
-	paymentDetails: PaymentDetails[];
+export type OrdersStateType = {
+	order: OrdersType[];
+	paymentDetails: PaymentDetailsType[];
 };

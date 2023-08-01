@@ -1,21 +1,21 @@
-export type Items = {
+export type ItemsType = {
 	id: number;
 	imageUrl: string;
 	name: string;
 	price: number;
 };
 
-export type Categories = {
-	items: Items[];
+export type CategoriesType = {
+	items: ItemsType[];
 	title: string;
 };
 
-export type CategoriesMap = {
-	[key: string]: Items[];
+export type CategoriesMapType = {
+	[key: string]: ItemsType[];
 };
 
-export type CategoriesState = {
-	readonly categories: Categories[];
+export type CategoriesStateType = {
+	readonly categories: CategoriesType[];
 	readonly isLoading: boolean;
 	readonly error?: Error | null | unknown;
 };

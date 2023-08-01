@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { CurrentUser, UserState } from "./user.types";
+import { CurrentUserType, UserStateType } from "./user.types";
 
-const INITIAL_STATE: UserState = {
+const INITIAL_STATE: UserStateType = {
 	currentUser: null,
 	isUserProfileOpen: false,
 };
@@ -10,7 +10,7 @@ export const userSlice = createSlice({
 	name: "user",
 	initialState: INITIAL_STATE,
 	reducers: {
-		setCurrentUser: (state, action: PayloadAction<CurrentUser>) => {
+		setCurrentUser: (state, action: PayloadAction<CurrentUserType>) => {
 			state.currentUser = action.payload;
 		},
 		setIsProfileOpen: (state, action: PayloadAction<boolean>) => {

@@ -1,9 +1,9 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { AppThunkDispatch } from "../../routes/shop/shop.component";
 import { getCategoriesAndDocuments } from "../../utils/firebase/firebase.utils";
-import { Categories, CategoriesState } from "./categories.types";
+import { CategoriesStateType, CategoriesType } from "./categories.types";
 
-export const CATEGORIES_INITIAL_STATE: CategoriesState = {
+export const CATEGORIES_INITIAL_STATE: CategoriesStateType = {
 	categories: [],
 	isLoading: true,
 	error: null,
@@ -16,7 +16,10 @@ export const categoriesSlice = createSlice({
 		fetchCategoriesStart: (state) => {
 			state.isLoading = true;
 		},
-		fetchCategoriesSuccess: (state, action: PayloadAction<Categories[]>) => {
+		fetchCategoriesSuccess: (
+			state,
+			action: PayloadAction<CategoriesType[]>
+		) => {
 			state.categories = action.payload;
 			state.isLoading = false;
 			state.error = null;
@@ -33,7 +36,7 @@ export const fetchCategoriesAsync =
 	() => async (dispatch: AppThunkDispatch) => {
 		dispatch(fetchCategoriesStart());
 		try {
-			const categoriesArray: Categories[] = await getCategoriesAndDocuments(
+			const categoriesArray: CategoriesType[] = await getCategoriesAndDocuments(
 				"categories"
 			);
 			dispatch(fetchCategoriesSuccess(categoriesArray));

@@ -10,11 +10,11 @@ import {
 	selectCategoriesMap,
 } from "../../store/categories/categories.selector";
 
-import { CategoriesMap } from "../../store/categories/categories.types";
+import { CategoriesMapType } from "../../store/categories/categories.types";
 import { CategoriesPreviewContainer } from "./categories-preview.styles";
 
 const CategoriesPreview = () => {
-	const categoriesMap: CategoriesMap = useSelector(selectCategoriesMap);
+	const categoriesMap: CategoriesMapType = useSelector(selectCategoriesMap);
 	const isLoading: boolean = useSelector(selectCategoriesIsLoading);
 
 	return (
@@ -24,7 +24,7 @@ const CategoriesPreview = () => {
 					<Spinner />
 				) : (
 					Object.keys(categoriesMap).map((title) => {
-						const products = categoriesMap[title];
+						const products = categoriesMap[title] || [];
 						return (
 							<CategoryPreview key={title} title={title} products={products} />
 						);

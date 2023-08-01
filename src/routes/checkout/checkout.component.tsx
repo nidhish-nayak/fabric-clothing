@@ -19,10 +19,10 @@ import {
 	Total,
 } from "./checkout.styles";
 
-import { CartItem } from "../../store/cart/cart.types";
+import { CartItemType } from "../../store/cart/cart.types";
 
 const Checkout = () => {
-	const cartItems: CartItem[] = useSelector(selectCartItems);
+	const cartItems: CartItemType[] = useSelector(selectCartItems);
 	const cartTotal: number = useSelector(selectCartTotal);
 
 	return (

@@ -1,4 +1,4 @@
-export type CurrentUser = {
+export type CurrentUserType = {
 	uid: string;
 	accessToken?: string | null;
 	email?: string | null;
@@ -7,7 +7,7 @@ export type CurrentUser = {
 	photoURL?: string | null;
 } | null;
 
-export type UserState = {
-	currentUser: CurrentUser | null;
+export type UserStateType = {
+	currentUser: CurrentUserType | null;
 	isUserProfileOpen: boolean;
 };

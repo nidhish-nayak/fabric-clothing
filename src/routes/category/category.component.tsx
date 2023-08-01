@@ -11,7 +11,10 @@ import {
 	selectCategoriesMap,
 } from "../../store/categories/categories.selector";
 
-import { CategoriesMap, Items } from "../../store/categories/categories.types";
+import {
+	CategoriesMapType,
+	ItemsType,
+} from "../../store/categories/categories.types";
 import {
 	CategoryContainer,
 	CategorySection,
@@ -27,9 +30,9 @@ const Category = () => {
 	const { category } = useParams<
 		keyof CategoryRouteParams
 	>() as CategoryRouteParams;
-	const categoriesMap: CategoriesMap = useSelector(selectCategoriesMap);
+	const categoriesMap: CategoriesMapType = useSelector(selectCategoriesMap);
 	const isLoading: boolean = useSelector(selectCategoriesIsLoading);
-	const [products, setProducts] = useState<Items[]>();
+	const [products, setProducts] = useState<ItemsType[]>();
 
 	useEffect(() => {
 		setProducts(categoriesMap[category]);

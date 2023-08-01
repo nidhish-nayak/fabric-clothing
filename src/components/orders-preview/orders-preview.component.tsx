@@ -3,7 +3,10 @@ import {
 	selectOrderList,
 	selectPaymentDetails,
 } from "../../store/orders/orders.selector";
-import { Orders, PaymentDetails } from "../../store/orders/orders.types";
+import {
+	OrdersType,
+	PaymentDetailsType,
+} from "../../store/orders/orders.types";
 import OrderRow from "../orders-row/orders-row.component";
 import {
 	Note,
@@ -31,15 +34,17 @@ const OrdersPreview = () => {
 					<thead>
 						<tr>
 							<th>Order No.</th>
-							<th>Orders (Quantity)</th>
+							<th>OrdersType (Quantity)</th>
 							<th>Total</th>
 							<th>Payment Type</th>
 							<th>Status</th>
 						</tr>
 					</thead>
 					<tbody>
-						{orderList.map((order: Orders, index: number) => {
-							const paymentDetail: PaymentDetails = paymentDetails[index] || {
+						{orderList.map((order: OrdersType, index: number) => {
+							const paymentDetail: PaymentDetailsType = paymentDetails[
+								index
+							] || {
 								method: "N/A",
 								status: "N/A",
 							};
