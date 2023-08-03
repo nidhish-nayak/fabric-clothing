@@ -62,6 +62,7 @@ To run the Fabric Clothing App locally, follow these steps:
 - Styled Components: CSS-in-JS library for styling React components.
 - Firebase: Backend-as-a-Service (BaaS) platform for authentication, database, and storage.
 - Axios: Promise-based HTTP client for making API requests.
+- Typescript: TypeScript checks a program for errors before execution, ensures better developer experience.
 
 ## Folder Structure 📂
 
@@ -74,6 +75,7 @@ Here's an overview of the project's folder structure:
 │   ├── components/     # Reusable React components
 │   ├── routes/         # Top-level application pages
 │   ├── store/          # Redux store - redux actions, reducers, and store
+|   ├── types/          # Custom and global types defined
 │   └── utils/          # Utility functions and constants - Firebase & Reducer
 └── ...
 ```
