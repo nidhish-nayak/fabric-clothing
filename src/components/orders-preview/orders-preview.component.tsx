@@ -15,8 +15,9 @@ import {
 } from "./orders-preview.styles";
 
 const OrdersPreview = () => {
-	const orderList = useSelector(selectOrderList);
-	const paymentDetails = useSelector(selectPaymentDetails);
+	const orderList: OrdersType[] = useSelector(selectOrderList);
+	const paymentDetails: PaymentDetailsType[] =
+		useSelector(selectPaymentDetails);
 
 	return (
 		<OrdersPreviewContainer>
