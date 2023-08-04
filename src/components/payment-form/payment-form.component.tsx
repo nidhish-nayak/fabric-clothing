@@ -5,6 +5,7 @@ import {
 	selectCartItems,
 	selectCartTotal,
 } from "../../store/cart/cart.selector";
+import { CartItemType } from "../../store/cart/cart.types";
 import { setOrder, setPaymentDetails } from "../../store/orders/orders.reducer";
 import { userSelector } from "../../store/user/user.selector";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
@@ -14,17 +15,17 @@ const PaymentForm = () => {
 	const [paymentInProgress, setPaymentInProgress] = useState(false);
 	const cartTotal = useSelector(selectCartTotal);
 	const currentUser = useSelector(userSelector);
-	const cartItems = useSelector(selectCartItems);
+	const cartItems: CartItemType[] = useSelector(selectCartItems);
 
 	const setUserOrder = () => {
 		dispatch(setOrder(cartItems));
 	};
 
-	const setUserPayment = (method, status) => {
+	const setUserPayment = (method: string, status: string) => {
 		dispatch(setPaymentDetails({ method, status }));
 	};
 
-	const paymentHandler = async (event) => {
+	const paymentHandler = async (event: React.MouseEvent<HTMLButtonElement>) => {
 		event.preventDefault();
 		setPaymentInProgress(true);
 
@@ -45,7 +46,7 @@ const PaymentForm = () => {
 			const paymentUrl = `${API_URL}orders/${data.id}/payments`;
 
 			const options = {
-				key: process.env.RAZOR_PAY_KEY_ID,
+				key: process.env.RAZORPAY_KEY_ID,
 				amount: cartTotal,
 				currency: "INR",
 				name: "Fabric Clothing",
@@ -84,7 +85,7 @@ const PaymentForm = () => {
 			};
 
 			// This type is any since there is no specific type for Razorpay method in Razorpay Docs
-			const rzp1 = new window.Razorpay(options);
+			const rzp1 = new (window as any).Razorpay(options);
 			rzp1.open();
 		} catch (error) {
 			console.error("Payment error:", error);
