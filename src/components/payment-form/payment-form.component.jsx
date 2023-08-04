@@ -5,7 +5,6 @@ import {
 	selectCartItems,
 	selectCartTotal,
 } from "../../store/cart/cart.selector";
-import { CartItemType } from "../../store/cart/cart.types";
 import { setOrder, setPaymentDetails } from "../../store/orders/orders.reducer";
 import { userSelector } from "../../store/user/user.selector";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
@@ -15,17 +14,17 @@ const PaymentForm = () => {
 	const [paymentInProgress, setPaymentInProgress] = useState(false);
 	const cartTotal = useSelector(selectCartTotal);
 	const currentUser = useSelector(userSelector);
-	const cartItems: CartItemType[] = useSelector(selectCartItems);
+	const cartItems = useSelector(selectCartItems);
 
 	const setUserOrder = () => {
 		dispatch(setOrder(cartItems));
 	};
 
-	const setUserPayment = (method: string, status: string) => {
+	const setUserPayment = (method, status) => {
 		dispatch(setPaymentDetails({ method, status }));
 	};
 
-	const paymentHandler = async (event: React.MouseEvent<HTMLButtonElement>) => {
+	const paymentHandler = async (event) => {
 		event.preventDefault();
 		setPaymentInProgress(true);
 
