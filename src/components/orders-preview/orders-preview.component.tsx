@@ -37,7 +37,6 @@ const OrdersPreview = () => {
 							<th>Order No.</th>
 							<th>OrdersType (Quantity)</th>
 							<th>Total</th>
-							<th>Payment Type</th>
 							<th>Status</th>
 						</tr>
 					</thead>
@@ -46,7 +45,6 @@ const OrdersPreview = () => {
 							const paymentDetail: PaymentDetailsType = paymentDetails[
 								index
 							] || {
-								method: "N/A",
 								status: "N/A",
 							};
 							return (
@@ -54,7 +52,6 @@ const OrdersPreview = () => {
 									key={index}
 									order={order}
 									index={index}
-									method={paymentDetail.method}
 									status={paymentDetail.status}
 								/>
 							);

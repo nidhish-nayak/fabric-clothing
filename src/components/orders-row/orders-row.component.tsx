@@ -3,11 +3,10 @@ import { OrdersType } from "../../store/orders/orders.types";
 type OrderRowType = {
 	order: OrdersType;
 	index: number;
-	method: string;
 	status: string;
 };
 
-const OrderRow: React.FC<OrderRowType> = ({ order, index, method, status }) => {
+const OrderRow: React.FC<OrderRowType> = ({ order, index, status }) => {
 	const calculateTotalPrice = (order: OrdersType) => {
 		const totalPrice = order.reduce(
 			(accumulator, item) => accumulator + item.price * item.quantity,
