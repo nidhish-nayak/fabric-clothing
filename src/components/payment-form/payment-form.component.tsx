@@ -21,8 +21,8 @@ const PaymentForm = () => {
 		dispatch(setOrder(cartItems));
 	};
 
-	const setUserPayment = (method: string, status: string) => {
-		dispatch(setPaymentDetails({ method, status }));
+	const setUserPayment = (status: string) => {
+		dispatch(setPaymentDetails({ status }));
 	};
 
 	const paymentHandler = async (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -61,19 +61,13 @@ const PaymentForm = () => {
 						},
 					});
 
-					console.log(payment);
-					const myPaymentStatus = payment.data.items[0]?.status;
-					if (myPaymentStatus) {
+					const myPaymentStatus = payment.status;
+					if (myPaymentStatus === 200) {
 						setUserOrder();
+						setUserPayment("successful");
 					} else {
 						console.log("PAYMENT FAILED");
 					}
-
-					const { method, status } = payment.data.items[0];
-					setUserPayment(
-						method,
-						status === "captured" ? "successful" : "failed"
-					);
 				},
 
 				prefill: {

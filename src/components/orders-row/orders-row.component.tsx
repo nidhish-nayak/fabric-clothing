@@ -28,7 +28,6 @@ const OrderRow: React.FC<OrderRowType> = ({ order, index, method, status }) => {
 				))}
 			</td>
 			<td>₹ {calculateTotalPrice(order)}</td>
-			<td>{method.toUpperCase()}</td>
 			<td className={status === "successful" ? "successful" : "failed"}>
 				{status.toUpperCase()}
 			</td>
