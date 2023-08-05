@@ -46,7 +46,7 @@ const PaymentForm = () => {
 			const paymentUrl = `${API_URL}orders/${data.id}/payments`;
 
 			const options = {
-				key: "rzp_test_Sjuckvh3PaY68A",
+				key: process.env.REACT_KEY_ID,
 				amount: cartTotal,
 				currency: "INR",
 				name: "Fabric Clothing",
