@@ -38,7 +38,7 @@ const PaymentForm = () => {
 
 			const response = await axios.get(orderUrl, {
 				params: {
-					price: cartTotal,
+					price: cartTotal * 100,
 				},
 			});
 
@@ -47,7 +47,7 @@ const PaymentForm = () => {
 
 			const options = {
 				key: "rzp_test_Sjuckvh3PaY68A",
-				amount: cartTotal,
+				amount: cartTotal * 100,
 				currency: "INR",
 				name: "Fabric Clothing",
 				description: "Finest quality clothing apparel",
