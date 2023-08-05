@@ -61,6 +61,7 @@ const PaymentForm = () => {
 						},
 					});
 
+					console.log(payment);
 					const myPaymentStatus = payment.data.items[0]?.status;
 					if (myPaymentStatus) {
 						setUserOrder();
