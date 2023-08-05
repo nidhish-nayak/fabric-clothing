@@ -67,6 +67,7 @@ const PaymentForm = () => {
 						setUserPayment("successful");
 					} else {
 						console.log("PAYMENT FAILED");
+						setUserPayment("failed");
 					}
 				},
 
