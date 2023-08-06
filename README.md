@@ -66,11 +66,11 @@ To run the Fabric Clothing App locally, follow these steps:
 
 ## How razorpay backend Service works 🔌
 
-- To get more insight on how the razorpay backend service you can refer to the repository which handles this service.
+- To get more insights on razorpay backend service you can refer to the repository which handles this service.
 - Repository Link: https://github.com/Nidhish-D-Nayak/node-razorpay
 - Please do not make multiple requests. Instead, you can clone the repo, create your own razorpay account to get KEY_ID and KEY_SECRET.
 - You will be able to recreate this by running it on localhost:4000 using command `npm run dev`.
-- When both fabric-clothing & node-razorpay are run on localhost, the payment should work seamlessly as I have configured the request and response endpoints.
+- When both fabric-clothing & node-razorpay are run on localhost, the payment should work seamlessly as I have configured the endpoints.
 - If you need to make this work in production env, you can host node-razorpay on a free backend service and fabric-clothing on vercel/netlify. (Make sure to configure the endpoints & env variables on both services)
 
 ## Folder Structure 📂
