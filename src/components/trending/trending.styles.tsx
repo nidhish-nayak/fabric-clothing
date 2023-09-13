@@ -13,6 +13,7 @@ export const TrendingContainer = styled.section`
 `;
 
 export const TrendingTitle = styled.h2`
+	color: #333;
 	font-weight: 700;
 	font-size: 2rem;
 	font-family: "Montserrat", sans-serif;

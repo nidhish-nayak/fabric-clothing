@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const TestimonialsWrapper = styled.div`
 	background-color: #ececec;
 	border-radius: 10px;
-	margin-top: 12em;
+	margin-top: 10em;
 	padding-top: 2em;
 
 	@media (max-width: 768px) {
@@ -17,7 +17,7 @@ export const TestimonialsWrapper = styled.div`
 `;
 
 export const TestimonialsTitle = styled.h1`
-	margin-top: 2em;
+	margin-top: 1em;
 	text-align: center;
 	color: #333;
 	text-transform: uppercase;
@@ -33,7 +33,7 @@ export const TestimonialsContainer = styled.div`
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	padding: 4em 2em 6em 2em;
+	padding: 2em 2em 4em 2em;
 
 	@media (max-width: 768px) {
 		justify-content: center;
@@ -147,7 +147,8 @@ export const Author = styled.div`
 export const AuthorName = styled.h5`
 	opacity: 0.8;
 	margin: 0;
-	font-weight: 800;
+	font-weight: bold;
+	font-size: 1.5rem;
 
 	@media (max-width: 480px) {
 		font-size: 1rem;

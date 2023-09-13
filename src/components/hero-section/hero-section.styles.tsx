@@ -1,19 +1,9 @@
 import styled from "styled-components";
 
-export const Glass = styled.div`
-	@media (max-width: 480px) {
-		margin: 10px;
-		border-radius: 10px;
-		background-image: url("https://i.ibb.co/zmVNPp5/mobile-image.webp");
-		background-size: cover;
-		background-position: center;
-	}
-`;
-
 export const HeroSectionContainer = styled.section`
 	border-radius: 10px;
 	line-height: 1;
-	background-color: #ececec;
+	background-color: #f5f5f5;
 	padding: 3em;
 	margin-top: 1em;
 
@@ -26,10 +16,9 @@ export const HeroSectionContainer = styled.section`
 	}
 
 	@media (max-width: 480px) {
-		background: rgba(255, 255, 255, 0.25);
-		backdrop-filter: blur(4px);
-		-webkit-backdrop-filter: blur(4px);
-		border-radius: 10px;
+		background: #f5f5f5;
+		margin-top: 0em;
+		border-radius: 0px;
 	}
 `;
 
@@ -50,7 +39,7 @@ export const Hero = styled.div`
 	}
 
 	@media (max-width: 480px) {
-		padding-bottom: 40px;
+		padding-bottom: 10px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -97,7 +86,11 @@ export const HeroTitle = styled.h1`
 	}
 
 	@media (max-width: 480px) {
-		font-size: 2.5rem;
+		font-size: 3.15rem;
+	}
+
+	@media (max-width: 350px) {
+		font-size: 2.75rem;
 	}
 `;
 
@@ -124,6 +117,14 @@ export const HeroDescription = styled.p`
 
 	@media (max-width: 768px) {
 		font-size: 0.75rem;
+		font-weight: bold;
+		color: #333;
+		margin-bottom: 1.5rem;
+		letter-spacing: -0.5px;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1rem;
 		font-weight: bold;
 		color: #333;
 		margin-bottom: 1.5rem;
@@ -216,10 +217,6 @@ export const HeroImageContainer = styled.div`
 	}
 `;
 
-export const HeroImage = styled.img`
-	width: 100%;
-`;
-
 export const DeliveredClothes = styled.div`
 	margin-top: 2em;
 	display: flex;
@@ -237,7 +234,7 @@ export const DeliveredClothes = styled.div`
 	}
 
 	@media (max-width: 480px) {
-		width: 150px;
+		// width: 150px;
 	}
 `;
 

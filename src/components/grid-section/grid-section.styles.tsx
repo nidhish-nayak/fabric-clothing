@@ -14,11 +14,11 @@ export const GridContainer = styled.section`
 	}
 
 	@media (max-width: 1980px) {
-		padding: 0;
+		padding: 5em;
 	}
 
 	@media (max-width: 1366px) {
-		padding: 0;
+		padding: 0 5em;
 	}
 
 	@media (max-width: 1024px) {

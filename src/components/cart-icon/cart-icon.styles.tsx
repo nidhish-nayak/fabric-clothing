@@ -17,7 +17,6 @@ export const CartIconContainer = styled.div<IsUserLoggedType>`
 
 	svg {
 		position: absolute;
-		margin: 0.01em;
 	}
 `;
 

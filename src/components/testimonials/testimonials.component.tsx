@@ -20,8 +20,9 @@ const Testimonials = () => {
 				<BlockFigure>
 					<BlockQuote>
 						<BlockOne>&#34;</BlockOne>I am able to effortlessly find clothes
-						tailored to my unique style and preferences. Shopping online has
-						never been this enjoyable and satisfying for a long time!
+						tailored to my unique style and preferences. Also, shopping clothes
+						online has never been this easy, enjoyable and satisfying for a very
+						long time!
 						<BlockTwo>&#34;</BlockTwo>
 					</BlockQuote>
 					<BlockImage src="https://i.ibb.co/cND0yBt/6.webp" alt="customer 1" />

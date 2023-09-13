@@ -4,7 +4,7 @@ import Release from "../../components/release/release.component";
 const Policies = () => {
 	return (
 		<>
-{/* 			<Release /> */}
+			<Release />
 			<Policy />
 		</>
 	);
