@@ -36,8 +36,9 @@ export const TestimonialsContainer = styled.div`
 	padding: 2em 2em 4em 2em;
 
 	@media (max-width: 768px) {
+		flex-direction: column;
 		justify-content: center;
-		padding: 1em 1em 1em 1em;
+		padding: 1em 1em 2em 1em;
 	}
 `;
 
@@ -55,8 +56,17 @@ export const BlockFigure = styled.figure`
 	box-shadow: none !important;
 
 	@media (max-width: 1024px) {
-		&:nth-child(1),
-		&:nth-child(3) {
+		margin-top: 2em;
+
+		&:nth-child(1) {
+			display: none;
+		}
+	}
+
+	@media (max-width: 480px) {
+		margin-top: 10px;
+
+		&:nth-child(1) {
 			display: none;
 		}
 	}
@@ -70,10 +80,14 @@ export const BlockImage = styled.img`
 	border-radius: 50%;
 	margin: 40px 0 0 10px;
 
+	@media (max-width: 1028px) {
+		margin: 20px 0 0 0;
+	}
+
 	@media (max-width: 480px) {
 		height: 50px;
 		width: 50px;
-		margin: 20px 0 0 0px;
+		margin: 20px 0 0 0;
 	}
 `;
 
@@ -105,7 +119,7 @@ export const BlockOne = styled.span`
 	color: #cecece;
 
 	@media (max-width: 480px) {
-		font-size: 2rem;
+		font-size: 1rem;
 		top: 10px;
 		left: 15px;
 	}

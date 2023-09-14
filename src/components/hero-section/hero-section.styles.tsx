@@ -117,7 +117,6 @@ export const HeroDescription = styled.p`
 
 	@media (max-width: 768px) {
 		font-size: 0.75rem;
-		font-weight: bold;
 		color: #333;
 		margin-bottom: 1.5rem;
 		letter-spacing: -0.5px;
@@ -125,7 +124,6 @@ export const HeroDescription = styled.p`
 
 	@media (max-width: 480px) {
 		font-size: 1rem;
-		font-weight: bold;
 		color: #333;
 		margin-bottom: 1.5rem;
 		letter-spacing: -0.5px;
@@ -158,7 +156,8 @@ export const HeroButtonLeft = styled.button`
 
 	@media (max-width: 480px) {
 		font-size: 0.65rem;
-		border-radius: 5px;
+		border-radius: 0px;
+		box-shadow: 0 0 0 0, 4px 4px 0 0 #ccc;
 	}
 
 	&:hover {
@@ -204,7 +203,8 @@ export const HeroButtonRight = styled.button`
 
 	@media (max-width: 480px) {
 		font-size: 0.65rem;
-		border-radius: 5px;
+		border-radius: 0px;
+		box-shadow: 0 0 0 0, 4px 4px 0 0 #ccc;
 	}
 `;
 

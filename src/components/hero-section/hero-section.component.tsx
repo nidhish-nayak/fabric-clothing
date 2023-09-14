@@ -29,7 +29,8 @@ export const HeroSection = () => {
 		<HeroSectionContainer>
 			<Hero>
 				<HeroTextBox>
-					<HeroTitle>Unleash your style with fabric clothing</HeroTitle>
+					<HeroTitle>Unleash your style</HeroTitle>
+					<HeroTitle>with fabric clothing</HeroTitle>
 					<HeroDescription>
 						<Balancer>
 							We enable you to effortlessly purchase clothes online, tailored to
