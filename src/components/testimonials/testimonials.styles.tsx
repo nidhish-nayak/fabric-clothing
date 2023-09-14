@@ -40,6 +40,10 @@ export const TestimonialsContainer = styled.div`
 		justify-content: center;
 		padding: 1em 1em 2em 1em;
 	}
+
+	@media (max-width: 480px) {
+		padding: 1em 1.5em 2em 1.5em;
+	}
 `;
 
 export const BlockFigure = styled.figure`
@@ -64,7 +68,7 @@ export const BlockFigure = styled.figure`
 	}
 
 	@media (max-width: 480px) {
-		margin-top: 10px;
+		margin: 10px 0 20px 0;
 
 		&:nth-child(1) {
 			display: none;
@@ -105,7 +109,8 @@ export const BlockQuote = styled.blockquote`
 	font-style: italic;
 
 	@media (max-width: 480px) {
-		font-size: 0.85rem;
+		font-size: 0.9rem;
+		margin-top: 10px;
 	}
 `;
 

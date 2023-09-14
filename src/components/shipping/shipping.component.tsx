@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { FaBook, FaFire, FaTruck, FaTshirt } from "react-icons/fa";
-import "./shipping.styles.css";
+import "./shipping.styles.scss";
 
 const Shipping = () => {
 	useEffect(() => {
