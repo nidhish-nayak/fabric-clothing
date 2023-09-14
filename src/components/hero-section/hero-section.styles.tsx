@@ -6,6 +6,7 @@ export const HeroSectionContainer = styled.section`
 	background-color: #f5f5f5;
 	padding: 3em;
 	margin-top: 1em;
+	position: relative;
 
 	@media (min-width: 1980px) {
 		padding: 8em;
@@ -19,6 +20,28 @@ export const HeroSectionContainer = styled.section`
 		background: #f5f5f5;
 		margin-top: 0em;
 		border-radius: 0px;
+	}
+`;
+
+export const HeroCircuit = styled.img`
+	display: none;
+	position: absolute;
+	width: 100px;
+	overflow: hidden;
+
+	@media (max-width: 480px) {
+		display: block;
+		bottom: 20px;
+		right: 0;
+		opacity: 0.2;
+	}
+
+	@media (max-width: 400px) {
+		width: 75px;
+		display: block;
+		bottom: 50px;
+		right: 0;
+		opacity: 0.2;
 	}
 `;
 
@@ -89,8 +112,8 @@ export const HeroTitle = styled.h1`
 		font-size: 3.15rem;
 	}
 
-	@media (max-width: 350px) {
-		font-size: 2.75rem;
+	@media (max-width: 380px) {
+		font-size: 2.5rem;
 	}
 `;
 
@@ -124,6 +147,13 @@ export const HeroDescription = styled.p`
 
 	@media (max-width: 480px) {
 		font-size: 1rem;
+		color: #333;
+		margin-bottom: 1.5rem;
+		letter-spacing: -0.5px;
+	}
+
+	@media (max-width: 380px) {
+		font-size: 0.85rem;
 		color: #333;
 		margin-bottom: 1.5rem;
 		letter-spacing: -0.5px;

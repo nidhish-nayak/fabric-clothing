@@ -1,23 +1,28 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
+import ProgressBar from "./routes/progress-bar/progress-bar.component";
 import { persistor, store } from "./store/store";
+
+const LazyComponent = lazy(() => import("./App"));
 
 const root = ReactDOM.createRoot(
 	document.getElementById("root") as HTMLElement
 );
+
 root.render(
 	<React.StrictMode>
 		<Provider store={store}>
 			<PersistGate loading={null} persistor={persistor}>
 				<BrowserRouter>
-					<App />
+					<Suspense fallback={<ProgressBar />}>
+						<LazyComponent />
+					</Suspense>
 				</BrowserRouter>
 			</PersistGate>
 		</Provider>

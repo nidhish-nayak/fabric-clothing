@@ -64,8 +64,16 @@
 	}
 
 	@media (max-width: 480px) {
-		grid-template-columns: 30px auto;
+		grid-template-columns: 40px auto;
 		gap: 2rem;
+	}
+
+	&:hover {
+		cursor: pointer;
+
+		.icon {
+			color: orangered;
+		}
 	}
 }
 

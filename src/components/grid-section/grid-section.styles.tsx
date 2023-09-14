@@ -5,7 +5,7 @@ export const GridContainer = styled.section`
 	padding: 0em;
 
 	h2 {
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 		text-align: center;
 		font-size: 2rem;
 		color: #333;
@@ -42,7 +42,7 @@ export const GridContainer = styled.section`
 		margin: 4em 0 0 0;
 
 		h2 {
-			margin-bottom: 1em;
+			margin-bottom: 1.5em;
 		}
 	}
 `;

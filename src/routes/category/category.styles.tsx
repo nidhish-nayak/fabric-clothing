@@ -12,21 +12,37 @@ export const CategoryContainer = styled.div`
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
 	@media (max-width: 768px) {
+		padding: 0;
+		margin: 1em 0;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		column-gap: 20px;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em;
+
+		button {
+			width: 160px;
+			height: 50px;
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		margin: 1em 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0em;
+
+		button {
+			width: 130px;
+			height: 40px;
+			font-size: 0.85rem;
+		}
 	}
 
 	@media (max-width: 400px) {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-		column-gap: 20px;
-	}
-
-	@media (max-width: 300px) {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-		column-gap: 20px;
+		button {
+			width: 100px;
+			font-size: 0.75rem;
+		}
 	}
 `;
 

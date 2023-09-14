@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const TrendingContainer = styled.section`
-	margin: 10em 0 10em 0;
+	margin: 8em 0 6em 0;
 
 	@media (max-width: 768px) {
 		margin: 6em 0 0 0;
 	}
 
 	@media (max-width: 480px) {
-		margin: 4em 0 0 0;
+		margin: 4em 0 4em 0;
 	}
 `;
 
@@ -49,5 +49,21 @@ export const TrendingItems = styled.div`
 
 	@media (max-width: 480px) {
 		margin: 1em 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0em;
+
+		button {
+			width: 130px;
+			height: 40px;
+			font-size: 0.85rem;
+		}
+	}
+
+	@media (max-width: 400px) {
+		button {
+			width: 100px;
+			font-size: 0.75rem;
+		}
 	}
 `;

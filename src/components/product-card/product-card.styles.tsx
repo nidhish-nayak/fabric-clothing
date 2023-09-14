@@ -36,6 +36,45 @@ export const ProductCardContainer = styled.div`
 			display: flex;
 		}
 	}
+
+	@media (max-width: 480px) {
+		height: 260px;
+		width: 80%;
+
+		button {
+			width: 150px;
+			opacity: 0.7;
+			position: absolute;
+			top: 180px;
+			display: none;
+		}
+	}
+
+	@media (max-width: 400px) {
+		height: 230px;
+		width: 80%;
+
+		button {
+			width: 120px;
+			opacity: 0.7;
+			position: absolute;
+			top: 150px;
+			display: none;
+		}
+	}
+
+	@media (max-width: 320px) {
+		height: 200px;
+		width: 80%;
+
+		button {
+			width: 110px;
+			opacity: 0.7;
+			position: absolute;
+			top: 130px;
+			display: none;
+		}
+	}
 `;
 
 export const Footer = styled.div`
@@ -49,11 +88,20 @@ export const Footer = styled.div`
 
 export const Name = styled.span`
 	margin-bottom: 15px;
+
+	@media (max-width: 480px) {
+		font-size: 1rem;
+		margin-right: 10px;
+	}
 `;
 
 export const Price = styled.span`
 	span {
 		font-family: "Courier New";
-		opacity: 0.7;
+		opacity: 0.5;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 1rem;
 	}
 `;

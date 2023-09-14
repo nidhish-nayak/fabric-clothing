@@ -9,6 +9,7 @@ import {
 	Hero,
 	HeroButtonLeft,
 	HeroButtonRight,
+	HeroCircuit,
 	HeroDescription,
 	HeroImageContainer,
 	HeroSectionContainer,
@@ -27,6 +28,10 @@ export const HeroSection = () => {
 
 	return (
 		<HeroSectionContainer>
+			<HeroCircuit
+				src={require("../../assets/hero-circuit.webp")}
+				alt="hero circuit"
+			/>
 			<Hero>
 				<HeroTextBox>
 					<HeroTitle>Unleash your style</HeroTitle>

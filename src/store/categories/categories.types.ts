@@ -3,6 +3,7 @@ export type ItemsType = {
 	imageUrl: string;
 	name: string;
 	price: number;
+	quantity?: number;
 };
 
 export type CategoriesType = {
