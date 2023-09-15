@@ -16,7 +16,7 @@ export const TitleContainer = styled.div`
 	}
 
 	@media (min-width: 1980px) and (max-width: 3840px) {
-		font-size: 3rem;
+		font-size: 4rem;
 	}
 `;
 

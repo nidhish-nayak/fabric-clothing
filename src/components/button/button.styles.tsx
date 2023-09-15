@@ -25,6 +25,11 @@ export const BaseButton = styled.button`
 		border: 1px solid black;
 	}
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 3rem;
+		height: 100px;
+	}
+
 	@media (max-width: 480px) {
 		padding: 0 10px 0 10px;
 	}

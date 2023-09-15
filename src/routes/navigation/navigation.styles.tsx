@@ -19,7 +19,7 @@ export const NavigationContainer = styled.div<TransparentType>`
 	opacity: ${(props) => (props.transparent ? "0.9" : "1")};
 
 	@media (min-width: 1980px) and (max-width: 3840px) {
-		height: 140px;
+		height: 200px;
 	}
 
 	@media (max-width: 480px) {
@@ -57,7 +57,7 @@ export const NavLink = styled(Link)`
 	}
 
 	@media (min-width: 1980px) and (max-width: 3840px) {
-		font-size: 2.5rem;
+		font-size: 3rem;
 		padding: 20px 50px;
 	}
 

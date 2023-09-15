@@ -11,6 +11,10 @@ export const CheckoutItemContainer = styled.div`
 	// To avoid annoying selections on clicks
 	user-select: none;
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 3rem;
+	}
+
 	@media (max-width: 768px) {
 		font-size: 0.8rem;
 	}

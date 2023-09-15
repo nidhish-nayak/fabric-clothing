@@ -3,7 +3,7 @@ export type OrdersType = {
 	imageUrl?: string;
 	name?: string;
 	id: number;
-	quantity: number;
+	quantity?: number;
 }[];
 
 export type PaymentDetailsType = {

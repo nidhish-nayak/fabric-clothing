@@ -23,6 +23,10 @@ export const FormInputLabel = styled.label<FormInputLabelProps>`
 	top: 10px;
 	transition: 300ms ease all;
 	${({ ifShrink }) => ifShrink && ShrinkLabel}
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 3rem;
+	}
 `;
 
 export const FormInputValue = styled.input`
@@ -44,6 +48,15 @@ export const FormInputValue = styled.input`
 
 	&:focus ~ ${FormInputLabel} {
 		${ShrinkLabel}
+	}
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 3rem;
+
+		&:focus ~ ${FormInputLabel} {
+			top: -14px;
+			font-size: 1rem;
+		}
 	}
 `;
 

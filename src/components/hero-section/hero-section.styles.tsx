@@ -53,9 +53,13 @@ export const Hero = styled.div`
 	justify-content: center;
 	gap: 0 9.6rem;
 
+	@media (min-width: 3840px) {
+		margin: 0 auto;
+	}
+
 	@media (min-width: 1980px) and (max-width: 3840px) {
 		margin: 0 auto;
-		max-width: 100%;
+		max-width: 150em;
 	}
 
 	@media (max-width: 1300px) {
@@ -305,7 +309,7 @@ export const HeroImageContainer = styled.div`
 
 	@media (min-width: 1980px) and (max-width: 3840px) {
 		img {
-			width: 100%;
+			max-width: 1000px;
 		}
 	}
 

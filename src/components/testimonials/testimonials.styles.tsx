@@ -6,6 +6,10 @@ export const TestimonialsWrapper = styled.div`
 	margin-top: 10em;
 	padding-top: 2em;
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		padding-bottom: 3em;
+	}
+
 	@media (max-width: 768px) {
 		margin-top: 6em;
 	}
@@ -23,6 +27,12 @@ export const TestimonialsTitle = styled.h1`
 	text-transform: uppercase;
 	font-family: "Montserrat", sans-serif;
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 5rem;
+		margin-top: 2em;
+		margin-bottom: 1em;
+	}
+
 	@media (max-width: 1024px) {
 		font-size: 1.5rem;
 		margin-top: 1em;
@@ -34,6 +44,11 @@ export const TestimonialsContainer = styled.div`
 	justify-content: space-around;
 	align-items: center;
 	padding: 2em 2em 4em 2em;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		margin: 0 auto;
+		max-width: 160em;
+	}
 
 	@media (max-width: 768px) {
 		flex-direction: column;
@@ -58,6 +73,12 @@ export const BlockFigure = styled.figure`
 	color: black;
 	text-align: left;
 	box-shadow: none !important;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 3rem;
+		max-width: 800px;
+		margin: 20px;
+	}
 
 	@media (max-width: 1024px) {
 		margin-top: 2em;
@@ -84,6 +105,11 @@ export const BlockImage = styled.img`
 	border-radius: 50%;
 	margin: 40px 0 0 10px;
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		height: 140px;
+		width: 140px;
+	}
+
 	@media (max-width: 1028px) {
 		margin: 20px 0 0 0;
 	}
@@ -107,6 +133,11 @@ export const BlockQuote = styled.blockquote`
 	margin: 0;
 	line-height: 1.6em;
 	font-style: italic;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		padding: 60px 80px;
+		margin-bottom: 0.5em;
+	}
 
 	@media (max-width: 480px) {
 		font-size: 0.9rem;
@@ -159,6 +190,11 @@ export const Author = styled.div`
 	display: flex;
 	flex-direction: column;
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		margin-left: 60px;
+		margin-bottom: 20px;
+	}
+
 	@media (max-width: 480px) {
 		padding: 40px 10px 0 60px;
 	}
@@ -170,6 +206,10 @@ export const AuthorName = styled.h5`
 	font-weight: bold;
 	font-size: 1.5rem;
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 3rem;
+	}
+
 	@media (max-width: 480px) {
 		font-size: 1rem;
 	}
@@ -179,4 +219,8 @@ export const AuthorWebsite = styled.span`
 	font-size: 0.75rem;
 	color: #333;
 	text-transform: lowercase;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 2rem;
+	}
 `;

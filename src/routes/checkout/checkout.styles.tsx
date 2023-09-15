@@ -6,6 +6,10 @@ export const CheckoutContainer = styled.div`
 	flex-direction: column;
 	margin: 2em auto 4em;
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 3rem;
+	}
+
 	@media (max-width: 768px) {
 		width: 90%;
 		font-size: 0.9rem;
@@ -71,6 +75,11 @@ export const Total = styled.span`
 	span {
 		font-family: "Courier New";
 		opacity: 0.7;
+	}
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 4rem;
+		margin-right: 2em;
 	}
 
 	@media (max-width: 480px) {

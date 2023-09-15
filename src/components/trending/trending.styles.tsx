@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const TrendingContainer = styled.section`
 	margin: 8em 0 6em 0;
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		margin: 8em 0 12em 0;
+	}
+
 	@media (max-width: 768px) {
 		margin: 6em 0 0 0;
 	}
@@ -19,6 +23,12 @@ export const TrendingTitle = styled.h2`
 	font-family: "Montserrat", sans-serif;
 	text-align: center;
 	text-transform: uppercase;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 5rem;
+		margin-top: 4em;
+		margin-bottom: 1em;
+	}
 
 	@media (max-width: 1024px) {
 		font-size: 1.5rem;

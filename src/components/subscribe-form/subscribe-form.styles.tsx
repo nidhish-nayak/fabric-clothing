@@ -13,6 +13,10 @@ export const FormInput = styled.input`
 	padding: 0.75em 6.5em 0.75em 0.75em;
 	width: 16em;
 	border-radius: 6px;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 2rem;
+	}
 `;
 
 export const FormButton = styled.button`
@@ -27,5 +31,9 @@ export const FormButton = styled.button`
 	&:hover {
 		background-color: rgb(30, 30, 30);
 		color: white;
+	}
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 2rem;
 	}
 `;

@@ -8,10 +8,13 @@ type OrderRowType = {
 
 const OrderRow: React.FC<OrderRowType> = ({ order, index, status }) => {
 	const calculateTotalPrice = (order: OrdersType) => {
-		const totalPrice = order.reduce(
-			(accumulator, item) => accumulator + item.price * item.quantity,
-			0
-		);
+		const totalPrice = order.reduce((accumulator, item) => {
+			if (item.quantity !== undefined) {
+				return accumulator + item.price * item.quantity;
+			} else {
+				return accumulator + item.price * 0;
+			}
+		}, 0);
 		return totalPrice;
 	};
 

@@ -29,6 +29,9 @@ export const CartDropDownContainer = styled.div`
 	@media (min-width: 1980px) and (max-width: 3840px) {
 		width: 700px;
 		height: 800px;
+		top: 200px;
+		font-size: 3rem;
+		padding: 1em;
 	}
 `;
 

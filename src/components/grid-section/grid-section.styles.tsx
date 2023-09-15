@@ -86,10 +86,6 @@ export const SecondaryGrid = styled.section`
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-
-		@media (max-width: 480px) {
-			
-		}
   }
 
 `;

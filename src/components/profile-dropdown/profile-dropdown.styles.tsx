@@ -23,6 +23,14 @@ export const ProfileDropDownContainer = styled.div`
     ${InvertedButton} {
 		margin-top: auto;
 	}
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		top: 200px;
+		right: 80px;
+		font-size: 3rem;
+		max-width: 1000px;
+		padding: 1em;
+	}
 `;
 
 export const ProfileDetails = styled.div`

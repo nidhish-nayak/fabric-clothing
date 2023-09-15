@@ -10,6 +10,12 @@ export const FooterWrapper = styled.footer`
 	font-family: sans-serif;
 	grid-template-columns: repeat(4, 1fr);
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 2rem;
+		width: 100%;
+		margin-top: auto;
+	}
+
 	@media (max-width: 768px) {
 		display: flex;
 		flex-direction: column;
@@ -19,6 +25,10 @@ export const FooterWrapper = styled.footer`
 export const LogoWrapper = styled.div`
 	align-self: center;
 	justify-self: center;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		margin-top: 5em;
+	}
 
 	@media (max-width: 768px) {
 		margin-top: 2em;
@@ -38,6 +48,21 @@ export const List = styled.ul`
 		font-size: 1rem;
 		margin-bottom: 0.5em;
 	}
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 2rem;
+		margin-top: 4em;
+
+		li:nth-child(1) {
+			font-weight: bold;
+			font-size: 3rem;
+			margin-bottom: 1em;
+		}
+
+		li {
+			margin-bottom: 1em;
+		}
+	}
 `;
 
 export const IconContainer = styled.div`
@@ -49,6 +74,10 @@ export const IconContainer = styled.div`
 
 	p {
 		text-align: center;
+	}
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 3rem;
 	}
 `;
 
@@ -81,6 +110,13 @@ export const SubscribeContainer = styled.div`
 		margin: 0 0 0.5em 0;
 	}
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		p {
+			font-size: 2rem;
+			line-height: 2.5rem;
+		}
+	}
+
 	@media (max-width: 768px) {
 		margin-top: 0;
 	}
@@ -88,4 +124,8 @@ export const SubscribeContainer = styled.div`
 
 export const SubscribeTitle = styled.h4`
 	margin: 2em 0 1em 0;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 3rem;
+	}
 `;

@@ -7,6 +7,10 @@ export const CategoryPreviewContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		margin: 4em 2em 10em 2em;
+	}
+
 	@media (max-width: 768px) {
 		align-items: space-around;
 
@@ -30,6 +34,10 @@ export const Title = styled(Link)`
 		background-color: lightgrey;
 	}
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 5rem;
+	}
+
 	@media (max-width: 768px) {
 		margin: 0;
 		text-align: center;
@@ -41,6 +49,10 @@ export const Preview = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	column-gap: 20px;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		grid-template-columns: repeat(4, minmax(600px, 1fr));
+	}
 
 	@media (max-width: 768px) {
 		margin: 1em 0;

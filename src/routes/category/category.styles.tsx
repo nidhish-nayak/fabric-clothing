@@ -11,6 +11,11 @@ export const CategoryContainer = styled.div`
 	row-gap: 50px;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		margin: 4em 2em 10em 2em;
+		grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+	}
+
 	@media (max-width: 768px) {
 		padding: 0;
 		margin: 1em 0;
@@ -52,4 +57,8 @@ export const CategoryTitle = styled.h2`
 	text-decoration: underline dashed 2px #cecece;
 	text-underline-offset: 0.35rem;
 	text-align: center;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 5rem;
+	}
 `;

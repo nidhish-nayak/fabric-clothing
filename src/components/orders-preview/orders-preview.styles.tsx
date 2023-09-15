@@ -74,4 +74,8 @@ export const Note = styled.p`
 	max-width: 560px;
 	border-radius: 10px;
 	text-transform: uppercase;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		max-width: 70%;
+	}
 `;

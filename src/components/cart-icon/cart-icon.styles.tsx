@@ -20,8 +20,8 @@ export const CartIconContainer = styled.div<IsUserLoggedType>`
 	}
 
 	@media (min-width: 1980px) and (max-width: 3840px) {
-		height: 60px;
-		width: 60px;
+		height: 70px;
+		width: 70px;
 	}
 `;
 

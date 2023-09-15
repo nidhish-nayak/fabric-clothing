@@ -12,6 +12,14 @@ export const ProfileContainer = styled.div`
 		cursor: pointer;
 	}
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		img {
+			margin: 0px 40px 0px 3em;
+			width: 80px;
+			height: 80px;
+		}
+	}
+
 	@media (max-width: 786px) {
 		img {
 			margin: 0px 0px 0px 0.5em;

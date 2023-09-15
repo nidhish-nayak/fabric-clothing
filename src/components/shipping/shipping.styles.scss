@@ -3,6 +3,11 @@
 	padding: 1.5em 1em 4em 1em;
 	border-radius: 10px;
 	position: relative;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		margin-bottom: 4em;
+		padding: 2em 4em 12em 4em;
+	}
 }
 
 .circuit-img {
@@ -12,6 +17,10 @@
 	max-width: 100px;
 	opacity: 0.1;
 	overflow: hidden;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		max-width: 400px;
+	}
 }
 
 .title {
@@ -19,6 +28,10 @@
 	margin: 1.5em;
 	font-family: "Montserrat", sans-serif;
 	color: #333;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 5rem;
+	}
 
 	@media (max-width: 1024px) {
 		font-size: 1.5rem;
@@ -33,6 +46,11 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 4rem;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		gap: 6rem;
+		max-width: 140em;
+	}
 
 	@media (max-width: 1028px) {
 		gap: 2rem;
@@ -92,6 +110,10 @@
 	align-self: center;
 	font-size: 3.5rem;
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 8rem;
+	}
+
 	@media (max-width: 1028px) {
 		font-size: 2.5rem;
 	}
@@ -108,7 +130,16 @@
 }
 
 .desc {
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		padding: 2em;
+	}
+
 	h2 {
+		@media (min-width: 1980px) and (max-width: 3840px) {
+			font-size: 4rem;
+		}
+
 		@media (max-width:480px) {
 			margin: 0;
 			margin-bottom: 5px;
@@ -116,6 +147,11 @@
 	}
 
 	p {
+
+		@media (min-width: 1980px) and (max-width: 3840px) {
+			font-size: 3rem;
+		}
+
 		@media (max-width:480px) {
 			margin: 0;
 		}

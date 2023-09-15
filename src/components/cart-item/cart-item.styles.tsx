@@ -23,6 +23,9 @@ export const ItemDetails = styled.div`
 
 export const Name = styled.span`
 	font-size: 16px;
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 3rem;
+	}
 `;
 
 export const ItemImage = styled.img`
