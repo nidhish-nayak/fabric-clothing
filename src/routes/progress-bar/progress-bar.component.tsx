@@ -7,11 +7,11 @@ const ProgressBar = () => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			if (progress < 100) {
-				setProgress((prevProgress) => prevProgress + 1);
+				setProgress((prevProgress) => prevProgress + 3);
 			} else {
 				clearInterval(interval);
 			}
-		}, 30);
+		}, 0.5);
 
 		return () => {
 			clearInterval(interval);

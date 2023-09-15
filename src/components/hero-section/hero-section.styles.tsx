@@ -5,7 +5,7 @@ export const HeroSectionContainer = styled.section`
 	line-height: 1;
 	background-color: #f5f5f5;
 	padding: 3em;
-	margin-top: 1em;
+	margin-top: 0.25em;
 	position: relative;
 
 	@media (min-width: 1980px) {
