@@ -12,7 +12,7 @@ export const ProgressBarContainer = styled.div`
 	background-color: black;
 	height: 100%;
 	width: 100%;
-	animation: slideUp 450ms cubic-bezier(0.42, 0, 0.58, 1) 1s forwards;
+	animation: slideUp 450ms cubic-bezier(0.42, 0, 0.58, 1) 3s forwards;
 
 	@keyframes slideUp {
 		0% {
@@ -38,7 +38,7 @@ export const Loader = styled.div`
 	width: 0;
 	background-color: white;
 	position: relative;
-	animation: expandWidth 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+	animation: expandWidth 3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
 
 	&::after {
 		content: attr(data-text);

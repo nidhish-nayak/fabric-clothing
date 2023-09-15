@@ -103,7 +103,7 @@ export const BlockQuote = styled.blockquote`
 	padding: 25px 50px 30px 50px;
 	width: 100%;
 	font-size: 0.8em;
-	font-weight: 500;
+	font-weight: 400;
 	margin: 0;
 	line-height: 1.6em;
 	font-style: italic;
@@ -111,6 +111,7 @@ export const BlockQuote = styled.blockquote`
 	@media (max-width: 480px) {
 		font-size: 0.9rem;
 		margin-top: 10px;
+		padding: 40px 20px 30px 30px;
 	}
 `;
 
@@ -124,9 +125,9 @@ export const BlockOne = styled.span`
 	color: #cecece;
 
 	@media (max-width: 480px) {
-		font-size: 1rem;
+		font-size: 2rem;
 		top: 10px;
-		left: 15px;
+		left: 10px;
 	}
 `;
 
@@ -141,8 +142,8 @@ export const BlockTwo = styled.span`
 
 	@media (max-width: 480px) {
 		font-size: 2rem;
-		bottom: 10px;
-		right: 30px;
+		bottom: 0px;
+		right: 20px;
 	}
 `;
 

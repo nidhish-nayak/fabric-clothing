@@ -29,7 +29,7 @@ export const HeroCircuit = styled.img`
 	width: 100px;
 	overflow: hidden;
 
-	@media (max-width: 480px) {
+	@media (max-width: 600px) {
 		display: block;
 		bottom: 20px;
 		right: 0;
@@ -53,6 +53,11 @@ export const Hero = styled.div`
 	justify-content: center;
 	gap: 0 9.6rem;
 
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		margin: 0 auto;
+		max-width: 100%;
+	}
+
 	@media (max-width: 1300px) {
 		gap: 0 6rem;
 	}
@@ -61,7 +66,7 @@ export const Hero = styled.div`
 		gap: 0 4rem;
 	}
 
-	@media (max-width: 480px) {
+	@media (max-width: 600px) {
 		padding-bottom: 10px;
 		display: flex;
 		flex-direction: column;
@@ -73,6 +78,34 @@ export const Hero = styled.div`
 export const HeroTextBox = styled.div`
 	margin: 0;
 	padding: 0;
+
+	@media (min-width: 2700px) and (max-width: 3840px) {
+		h1 {
+			font-size: 10rem;
+		}
+
+		p {
+			font-size: 3rem;
+		}
+
+		button {
+			font-size: 2rem;
+		}
+	}
+
+	@media (min-width: 1980px) and (max-width: 2700px) {
+		h1 {
+			font-size: 8rem;
+		}
+
+		p {
+			font-size: 2.5rem;
+		}
+
+		button {
+			font-size: 1.5rem;
+		}
+	}
 
 	@media (max-width: 480px) {
 		padding: 40px 0 10px 0;
@@ -93,7 +126,7 @@ export const HeroTitle = styled.h1`
 	}
 
 	@media (max-width: 1500px) {
-		font-size: 4rem;
+		font-size: 4.5rem;
 	}
 
 	@media (max-width: 1200px) {
@@ -108,12 +141,20 @@ export const HeroTitle = styled.h1`
 		font-size: 2rem;
 	}
 
+	@media (max-width: 600px) {
+		font-size: 3.25rem;
+	}
+
 	@media (max-width: 480px) {
 		font-size: 3.15rem;
 	}
 
 	@media (max-width: 380px) {
 		font-size: 2.5rem;
+	}
+
+	@media (max-width: 300px) {
+		font-size: 2.25rem;
 	}
 `;
 
@@ -123,7 +164,7 @@ export const HeroDescription = styled.p`
 	font-family: "Montserrat", sans-serif;
 	letter-spacing: -1px;
 	line-height: 1.5;
-	margin-bottom: 4.8rem;
+	margin-bottom: 3em;
 
 	@media (min-width: 1980px) {
 		font-size: 2rem;
@@ -145,18 +186,26 @@ export const HeroDescription = styled.p`
 		letter-spacing: -0.5px;
 	}
 
+	@media (max-width: 600px) {
+		font-size: 0.9rem;
+	}
+
 	@media (max-width: 480px) {
 		font-size: 1rem;
 		color: #333;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2em;
 		letter-spacing: -0.5px;
 	}
 
 	@media (max-width: 380px) {
 		font-size: 0.85rem;
 		color: #333;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2em;
 		letter-spacing: -0.5px;
+	}
+
+	@media (max-width: 300px) {
+		font-size: 0.75rem;
 	}
 `;
 
@@ -184,8 +233,14 @@ export const HeroButtonLeft = styled.button`
 		font-size: 0.45rem;
 	}
 
+	@media (max-width: 600px) {
+		font-size: 0.7rem;
+		border-radius: 0px;
+		box-shadow: 0 0 0 0, 4px 4px 0 0 #ccc;
+	}
+
 	@media (max-width: 480px) {
-		font-size: 0.65rem;
+		font-size: 0.7rem;
 		border-radius: 0px;
 		box-shadow: 0 0 0 0, 4px 4px 0 0 #ccc;
 	}
@@ -231,8 +286,14 @@ export const HeroButtonRight = styled.button`
 		}
 	}
 
+	@media (max-width: 600px) {
+		font-size: 0.7rem;
+		border-radius: 0px;
+		box-shadow: 0 0 0 0, 4px 4px 0 0 #ccc;
+	}
+
 	@media (max-width: 480px) {
-		font-size: 0.65rem;
+		font-size: 0.7rem;
 		border-radius: 0px;
 		box-shadow: 0 0 0 0, 4px 4px 0 0 #ccc;
 	}
@@ -242,7 +303,13 @@ export const HeroImageContainer = styled.div`
 	grid-column: 2 / 3;
 	grid-row: 1 / 3;
 
-	@media (max-width: 480px) {
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		img {
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 600px) {
 		display: none;
 	}
 `;
@@ -251,69 +318,106 @@ export const DeliveredClothes = styled.div`
 	margin-top: 2em;
 	display: flex;
 	align-items: center;
-	gap: 3.2rem;
+	gap: 3.2em;
+
+	@media (min-width: 2700px) and (max-width: 3840px) {
+		div {
+			img {
+				width: 4em;
+				height: 4em;
+			}
+		}
+		p {
+			font-size: 2rem;
+		}
+	}
+
+	@media (min-width: 1980px) and (max-width: 2700px) {
+		div {
+			img {
+				width: 3em;
+				height: 3em;
+			}
+		}
+		p {
+			font-size: 1.5rem;
+		}
+	}
 
 	@media (max-width: 1024px) {
-		gap: 2rem;
+		gap: 2em;
 		margin-top: 1em;
 	}
 
 	@media (max-width: 768px) {
-		gap: 1rem;
+		gap: 1em;
 		margin-top: 1em;
 	}
 
+	@media (max-width: 600px) {
+		gap: 1em;
+		margin-top: 2em;
+	}
+
 	@media (max-width: 480px) {
-		// width: 150px;
+		gap: 1em;
+		margin-top: 1em;
 	}
 `;
 
 export const DeliveredImages = styled.div`
 	img {
-		width: 2rem;
-		height: 2rem;
+		width: 2em;
+		height: 2em;
 		border-radius: 50%;
-		margin-right: -0.5rem;
+		margin-right: -0.5em;
 		outline: white solid 3px;
 	}
 
 	@media (min-width: 1700px) {
 		img {
-			width: 3rem;
-			height: 3rem;
+			width: 3em;
+			height: 3em;
 		}
 	}
 
 	@media (max-width: 1024px) {
 		img {
-			width: 1rem;
-			height: 1rem;
-			margin-right: -0.25rem;
+			width: 1em;
+			height: 1em;
+			margin-right: -0.25em;
 		}
 	}
 
 	@media (max-width: 768px) {
 		img {
-			width: 0.65rem;
-			height: 0.65rem;
-			margin-right: -0.05rem;
+			width: 0.65em;
+			height: 0.65em;
+			margin-right: -0.05em;
+		}
+	}
+
+	@media (max-width: 600px) {
+		img {
+			width: 1.25em;
+			height: 1.25em;
+			margin-right: -0.2em;
+			outline: white solid 1px;
 		}
 	}
 
 	@media (max-width: 480px) {
 		img {
-			width: 1rem;
-			height: 1rem;
-			margin-right: -0.05rem;
+			width: 1.15em;
+			height: 1.15em;
+			margin-right: -0.2em;
 			outline: white solid 1px;
 		}
 	}
 
 	@media (max-width: 340px) {
 		img {
-			width: 0.8rem;
-			height: 0.8rem;
-			margin-right: -0.15rem;
+			margin-right: -0.25em;
 		}
 	}
 `;
@@ -340,9 +444,17 @@ export const DeliveredText = styled.p`
 		font-size: 0.45rem;
 	}
 
+	@media (max-width: 600px) {
+		font-size: 0.7rem;
+	}
+
 	@media (max-width: 480px) {
-		font-size: 0.55rem;
+		font-size: 0.65rem;
 		font-weight: bold;
 		line-height: 12px;
+	}
+
+	@media (max-width: 340px) {
+		font-size: 0.55rem;
 	}
 `;

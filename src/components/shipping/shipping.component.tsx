@@ -60,8 +60,7 @@ const Shipping = () => {
 						<h2>Fast Shipping</h2>
 						<p>
 							We offer fast and reliable shipping, so you can enjoy your new
-							clothing as soon as possible. Free returns available if you're not
-							satisfied.
+							clothing as soon as possible. Free returns.
 						</p>
 					</div>
 				</div>
@@ -73,7 +72,7 @@ const Shipping = () => {
 						<h2>Quality Assurance</h2>
 						<p>
 							We meticulously inspect every garment to ensure it meets our high
-							quality standards. Your satisfaction is our top priority.
+							quality standards as top priority.
 						</p>
 					</div>
 				</div>

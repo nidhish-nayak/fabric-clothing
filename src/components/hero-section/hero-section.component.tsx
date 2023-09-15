@@ -38,8 +38,12 @@ export const HeroSection = () => {
 					<HeroTitle>with fabric clothing</HeroTitle>
 					<HeroDescription>
 						<Balancer>
-							We enable you to effortlessly purchase clothes online, tailored to
-							your style and preferences.
+							We enable you to effortlessly purchase
+							<br />
+							clothes online, tailored to your
+							<br />
+							style and preferences.
+							<br />
 						</Balancer>
 					</HeroDescription>
 					<HeroButtonLeft onClick={handleShopNow}>SHOP NOW</HeroButtonLeft>

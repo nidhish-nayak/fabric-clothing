@@ -28,7 +28,13 @@ export const HeaderBlock = styled.div`
 	width: 23%;
 
 	&:nth-child(4) {
-		margin-left: -10px;
+		margin-left: 12px;
+		margin-right: -2px;
+	}
+
+	&:nth-child(3) {
+		margin-left: 8px;
+		margin-right: -8px;
 	}
 
 	&:last-child {
@@ -36,13 +42,25 @@ export const HeaderBlock = styled.div`
 	}
 
 	@media (max-width: 400px) {
-		&:nth-child(4) {
+		&:nth-child(3) {
 			margin-left: 0px;
+			margin-right: 0px;
+		}
+
+		&:nth-child(4) {
+			margin-left: 2px;
+			margin-right: -2px;
+		}
+
+		&:nth-child(2) {
+			margin-left: -3px;
+			margin-right: 3px;
 		}
 
 		&:last-child {
 			width: 10%;
-			margin-left: -2px;
+			margin-left: -4px;
+			margin-right: 2px;
 		}
 	}
 `;

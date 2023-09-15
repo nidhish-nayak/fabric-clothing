@@ -35,6 +35,24 @@ export const TitleContainer = styled.div`
 		opacity: 1;
 	}
 
+	@media (max-width: 3840px) {
+		p {
+			font-size: 4rem;
+		}
+	}
+
+	@media (max-width: 3000px) {
+		p {
+			font-size: 3rem;
+		}
+	}
+
+	@media (max-width: 2560px) {
+		p {
+			font-size: 2rem;
+		}
+	}
+
 	@media (max-width: 768px) {
 		p {
 			font-size: 1rem;
@@ -57,6 +75,18 @@ export const PrimaryContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
+
+	@media (max-width: 3840px) {
+		height: 1000px;
+	}
+
+	@media (max-width: 3000px) {
+		height: 900px;
+	}
+
+	@media (max-width: 2560px) {
+		height: 600px;
+	}
 
 	@media (max-width: 1980px) {
 		height: 500px;
@@ -111,6 +141,18 @@ export const SecondaryContainer = styled.div`
 	justify-content: center;
 	overflow: hidden;
 	position: relative;
+
+	@media (max-width: 3840px) {
+		height: 1000px;
+	}
+
+	@media (max-width: 3000px) {
+		height: 900px;
+	}
+
+	@media (max-width: 2560px) {
+		height: 600px;
+	}
 
 	@media (max-width: 1980px) {
 		height: 500px;

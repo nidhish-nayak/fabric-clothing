@@ -18,6 +18,11 @@ export const CartIconContainer = styled.div<IsUserLoggedType>`
 	svg {
 		position: absolute;
 	}
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		height: 60px;
+		width: 60px;
+	}
 `;
 
 export const ItemCount = styled.span`
@@ -27,4 +32,8 @@ export const ItemCount = styled.span`
 	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 2rem;
+	}
 `;

@@ -14,6 +14,10 @@ export const TitleContainer = styled.div`
 	&:hover {
 		cursor: pointer;
 	}
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 3rem;
+	}
 `;
 
 export const TitleOne = styled.span`

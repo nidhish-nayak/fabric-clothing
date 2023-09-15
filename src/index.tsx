@@ -1,11 +1,11 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import reportWebVitals from "./reportWebVitals";
-
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
+
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 import ProgressBar from "./routes/progress-bar/progress-bar.component";
 import { persistor, store } from "./store/store";
 

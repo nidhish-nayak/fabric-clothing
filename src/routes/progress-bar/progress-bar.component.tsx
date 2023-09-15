@@ -11,7 +11,7 @@ const ProgressBar = () => {
 			} else {
 				clearInterval(interval);
 			}
-		}, 4);
+		}, 30);
 
 		return () => {
 			clearInterval(interval);

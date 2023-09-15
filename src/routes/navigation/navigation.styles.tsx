@@ -17,6 +17,11 @@ export const NavigationContainer = styled.div<TransparentType>`
 	position: sticky;
 	user-select: none;
 	opacity: ${(props) => (props.transparent ? "0.9" : "1")};
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		height: 140px;
+	}
+
 	@media (max-width: 480px) {
 		padding: 0 10px;
 	}
@@ -49,6 +54,11 @@ export const NavLink = styled(Link)`
 
 	&:hover {
 		background-color: #efefef;
+	}
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 2.5rem;
+		padding: 20px 50px;
 	}
 
 	@media (max-width: 768px) {

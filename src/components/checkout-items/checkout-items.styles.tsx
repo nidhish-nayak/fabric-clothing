@@ -28,15 +28,33 @@ export const ImageContainer = styled.div`
 		width: 80%;
 		height: 80%;
 	}
+
+	@media (max-width: 768px) {
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
 `;
 
 export const Name = styled.span`
 	width: 23%;
+
+	@media (max-width: 400px) {
+		width: 20%;
+		margin-left: -4px;
+		margin-right: 13px;
+	}
 `;
 
 export const Quantity = styled.span`
 	width: 23%;
 	display: flex;
+
+	@media (max-width: 400px) {
+		margin-left: -4px;
+		margin-right: 4px;
+	}
 `;
 
 export const Price = styled.span`
@@ -48,7 +66,8 @@ export const Price = styled.span`
 	}
 
 	@media (max-width: 400px) {
-		margin-right: -20px;
+		margin-right: -12px;
+		margin-left: -4px;
 	}
 `;
 
@@ -64,7 +83,7 @@ export const Arrow = styled.div`
 	}
 
 	@media (max-width: 400px) {
-		padding: 0 2px 0 2px;
+		padding: 0px 2px 2px 2px;
 	}
 `;
 

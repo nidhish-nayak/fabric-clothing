@@ -25,6 +25,11 @@ export const CartDropDownContainer = styled.div`
     ${InvertedButton} {
 		margin-top: auto;
 	}
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		width: 700px;
+		height: 800px;
+	}
 `;
 
 export const CartItemContainer = styled.div`
@@ -33,8 +38,16 @@ export const CartItemContainer = styled.div`
 	flex-direction: column;
 	overflow-y: scroll;
 	margin: 0 0 0.75em 0;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		height: 600px;
+	}
 `;
 export const EmptyMessage = styled.span`
 	font-size: 18px;
 	margin: 50px auto;
+
+	@media (min-width: 1980px) and (max-width: 3840px) {
+		font-size: 2rem;
+	}
 `;
