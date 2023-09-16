@@ -1,4 +1,3 @@
-import { FaLink } from "react-icons/fa";
 import { ReleaseContainer, ReleaseDesc, ReleaseTitle } from "./release.styles";
 
 const Release = () => {
@@ -12,7 +11,7 @@ const Release = () => {
 						target="_blank"
 						rel="noreferrer noopener"
 					>
-						<FaLink />
+						&#128206;
 					</a>
 				</ReleaseTitle>
 				<ReleaseDesc>
