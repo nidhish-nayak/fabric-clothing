@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { FaBook, FaFire, FaTruck, FaTshirt } from "react-icons/fa";
 import "./shipping.styles.scss";
 
 const Shipping = () => {
@@ -30,7 +29,10 @@ const Shipping = () => {
 			<section id="features">
 				<div className="grid hidden">
 					<div className="icon">
-						<FaFire />
+						<img
+							src="https://ik.imagekit.io/fabric01/svg-icons/fire.svg"
+							alt="Fire"
+						/>
 					</div>
 					<div className="desc">
 						<h2>Premium Materials</h2>
@@ -42,7 +44,10 @@ const Shipping = () => {
 				</div>
 				<div className="grid hidden">
 					<div className="icon">
-						<FaTshirt />
+						<img
+							src="https://ik.imagekit.io/fabric01/svg-icons/shirt.svg"
+							alt="Shirt"
+						/>
 					</div>
 					<div className="desc">
 						<h2>Unique Style</h2>
@@ -54,7 +59,10 @@ const Shipping = () => {
 				</div>
 				<div className="grid hidden">
 					<div className="icon">
-						<FaTruck />
+						<img
+							src="https://ik.imagekit.io/fabric01/svg-icons/truck.svg"
+							alt="Truck"
+						/>
 					</div>
 					<div className="desc">
 						<h2>Fast Shipping</h2>
@@ -66,7 +74,10 @@ const Shipping = () => {
 				</div>
 				<div className="grid hidden">
 					<div className="icon">
-						<FaBook />
+						<img
+							src="https://ik.imagekit.io/fabric01/svg-icons/book2.svg"
+							alt="Book"
+						/>
 					</div>
 					<div className="desc">
 						<h2>Quality Assurance</h2>

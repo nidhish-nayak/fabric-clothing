@@ -67,6 +67,8 @@
 	align-items: center;
 	justify-content: center;
 	gap: 2rem;
+	padding-bottom: 0.5em;
+	border-radius: 10px;
 
 	@media (max-width: 1028px) {
 		grid-template-columns: 60px auto;
@@ -85,10 +87,7 @@
 
 	&:hover {
 		cursor: pointer;
-
-		.icon {
-			color: orangered;
-		}
+		background-color: #cecece;
 	}
 }
 
@@ -109,6 +108,10 @@
 	justify-self: center;
 	align-self: center;
 	font-size: 3.5rem;
+
+	img {
+		width: 1em;
+	}
 
 	@media (min-width: 1980px) and (max-width: 3840px) {
 		font-size: 8rem;

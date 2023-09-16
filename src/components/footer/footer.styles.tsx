@@ -89,6 +89,10 @@ export const IconWrapper = styled.div`
 
 	a {
 		padding-top: 0.25em;
+
+		img {
+			width: 1em;
+		}
 	}
 `;
 

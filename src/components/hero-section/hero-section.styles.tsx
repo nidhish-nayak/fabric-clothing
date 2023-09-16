@@ -266,12 +266,15 @@ export const HeroButtonRight = styled.button`
 	border-radius: 10px;
 
 	&:hover {
-		background: black;
-		color: white;
+		background: orange;
 	}
 
 	span {
 		margin-left: 0.25em;
+
+		img {
+			width: 1em;
+		}
 	}
 
 	@media (min-width: 1700px) {

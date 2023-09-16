@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { FaGithub, FaReact } from "react-icons/fa";
 import { Balancer } from "react-wrap-balancer";
 
 import Logo from "../logo/logo.component";
@@ -73,7 +72,10 @@ const Footer = () => {
 						rel="noreferrer noopener"
 						aria-label="Github link"
 					>
-						<FaGithub />
+						<img
+							src="https://ik.imagekit.io/fabric01/svg-icons/github.svg"
+							alt="Github"
+						/>
 					</a>
 					<Divider>|</Divider>
 					<a
@@ -82,7 +84,10 @@ const Footer = () => {
 						rel="noreferrer noopener"
 						aria-label="React Docs"
 					>
-						<FaReact />
+						<img
+							src="https://ik.imagekit.io/fabric01/svg-icons/react.svg"
+							alt="React"
+						/>
 					</a>
 				</IconWrapper>
 			</IconContainer>

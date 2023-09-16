@@ -1,4 +1,3 @@
-import { FaFingerprint } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { Balancer } from "react-wrap-balancer";
 
@@ -50,7 +49,10 @@ export const HeroSection = () => {
 					<HeroButtonRight onClick={handleSignUp}>
 						SIGN UP
 						<span>
-							<FaFingerprint />
+							<img
+								src="https://ik.imagekit.io/fabric01/svg-icons/fingerprint.svg"
+								alt="Fingerprint"
+							/>
 						</span>
 					</HeroButtonRight>
 				</HeroTextBox>
