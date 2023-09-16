@@ -23,7 +23,7 @@ const Shipping = () => {
 		<div className="offer">
 			<img
 				className="circuit-img"
-				src={require("../../assets/circuit.webp")}
+				src="https://ik.imagekit.io/fabric01/circuit.webp"
 				alt="circuit"
 			/>
 			<h1 className="title">WE OFFER</h1>

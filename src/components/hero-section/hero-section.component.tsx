@@ -29,7 +29,7 @@ export const HeroSection = () => {
 	return (
 		<HeroSectionContainer>
 			<HeroCircuit
-				src={require("../../assets/hero-circuit.webp")}
+				src="https://ik.imagekit.io/fabric01/hero-circuit.webp"
 				alt="hero circuit"
 			/>
 			<Hero>
@@ -56,19 +56,38 @@ export const HeroSection = () => {
 				</HeroTextBox>
 				<HeroImageContainer>
 					<img
-						src={require("../../assets/frame.webp")}
+						// src={require("../../assets/frame.webp")}
+						src="https://ik.imagekit.io/fabric01/frame01.webp"
 						alt="Hero"
 						style={{ width: "100%" }}
 					/>
 				</HeroImageContainer>
 				<DeliveredClothes>
 					<DeliveredImages>
-						<img src="https://i.ibb.co/M5MbYKK/1.webp" alt="Customerphoto" />
-						<img src="https://i.ibb.co/yqc3Cgs/2.webp" alt="Customerphoto" />
-						<img src="https://i.ibb.co/jWWPHWq/3.webp" alt="Customerphoto" />
-						<img src="https://i.ibb.co/7RvYSBp/4.webp" alt="Customerphoto" />
-						<img src="https://i.ibb.co/wC3Cbcg/5.webp" alt="Customerphoto" />
-						<img src="https://i.ibb.co/cND0yBt/6.webp" alt="Customerphoto" />
+						<img
+							src="https://ik.imagekit.io/fabric01/1.webp"
+							alt="Customerphoto"
+						/>
+						<img
+							src="https://ik.imagekit.io/fabric01/2.webp"
+							alt="Customerphoto"
+						/>
+						<img
+							src="https://ik.imagekit.io/fabric01/3.webp"
+							alt="Customerphoto"
+						/>
+						<img
+							src="https://ik.imagekit.io/fabric01/4.webp"
+							alt="Customerphoto"
+						/>
+						<img
+							src="https://ik.imagekit.io/fabric01/5.webp"
+							alt="Customerphoto"
+						/>
+						<img
+							src="https://ik.imagekit.io/fabric01/6.webp"
+							alt="Customerphoto"
+						/>
 					</DeliveredImages>
 					<DeliveredText>
 						<span>250,000+ </span>
