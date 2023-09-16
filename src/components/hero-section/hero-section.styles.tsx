@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeroSectionContainer = styled.section`
 	border-radius: 10px;
 	line-height: 1;
-	background-color: #f5f5f5;
+	background-color: #f6f5f4;
 	padding: 3em;
 	margin-top: 0.25em;
 	position: relative;
@@ -17,7 +17,7 @@ export const HeroSectionContainer = styled.section`
 	}
 
 	@media (max-width: 480px) {
-		background: #f5f5f5;
+		background: #f6f5f4;
 		margin-top: 0em;
 		border-radius: 0px;
 	}
@@ -220,7 +220,7 @@ export const HeroButtonLeft = styled.button`
 	color: white;
 	font-size: 1rem;
 	font-weight: bold;
-	background: #333;
+	background: #191919;
 	margin-right: 2em;
 	cursor: pointer;
 	border-radius: 10px;
@@ -427,7 +427,7 @@ export const DeliveredImages = styled.div`
 `;
 
 export const DeliveredText = styled.p`
-	color: #333;
+	color: #191919;
 	font-size: 1rem;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 600;

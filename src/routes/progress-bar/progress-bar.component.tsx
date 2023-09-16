@@ -23,13 +23,9 @@ const ProgressBar = () => {
 
 	return (
 		<>
-			{progress <= 200 ? (
-				<ProgressBarContainer>
-					<Loader data-text={text} />
-				</ProgressBarContainer>
-			) : (
-				<></>
-			)}
+			<ProgressBarContainer>
+				<Loader data-text={text} />
+			</ProgressBarContainer>
 		</>
 	);
 };

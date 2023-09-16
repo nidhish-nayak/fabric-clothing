@@ -38,7 +38,7 @@ export const Loader = styled.div`
 	width: 0;
 	background-color: white;
 	position: relative;
-	animation: expandWidth 500ms cubic-bezier(0.42, 0, 0.58, 1) forwards;
+	animation: expandWidth 400ms cubic-bezier(0.42, 0, 0.58, 1) forwards;
 
 	&::after {
 		content: attr(data-text);
