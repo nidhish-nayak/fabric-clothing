@@ -57,7 +57,7 @@ export const HeroSection = () => {
 				<HeroImageContainer>
 					<img
 						// src={require("../../assets/frame.webp")}
-						src="https://ik.imagekit.io/fabric01/frame01.webp"
+						src="https://ik.imagekit.io/fabric01/frame02.webp"
 						alt="Hero"
 						style={{ width: "100%" }}
 					/>

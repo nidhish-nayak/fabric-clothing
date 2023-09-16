@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeroSectionContainer = styled.section`
 	border-radius: 10px;
 	line-height: 1;
-	background-color: #f6f5f4;
+	background-color: #f0f0f0;
 	padding: 3em;
 	margin-top: 0.25em;
 	position: relative;
