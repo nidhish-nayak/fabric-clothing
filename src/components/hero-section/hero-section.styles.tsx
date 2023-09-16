@@ -433,7 +433,7 @@ export const DeliveredText = styled.p`
 	font-weight: 600;
 
 	span {
-		color: #cf711f;
+		color: darkred;
 	}
 
 	@media (min-width: 1980px) {

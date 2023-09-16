@@ -11,8 +11,8 @@ const Home = () => {
 		<Fragment>
 			<Suspense fallback={<Spinner />}>
 				<LazyDirectory />
+				<Footer />
 			</Suspense>
-			<Footer />
 		</Fragment>
 	);
 };

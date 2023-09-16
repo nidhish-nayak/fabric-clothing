@@ -122,8 +122,10 @@ export const SubscribeContainer = styled.div`
 	}
 `;
 
-export const SubscribeTitle = styled.h4`
+export const SubscribeTitle = styled.b`
 	margin: 2em 0 1em 0;
+	font-weight: bold;
+	font-size: 1rem;
 
 	@media (min-width: 1980px) and (max-width: 3840px) {
 		font-size: 3rem;

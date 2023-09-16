@@ -71,11 +71,17 @@ const Footer = () => {
 						href="https://github.com/Nidhish-D-Nayak/fabric-clothing"
 						target="_blank"
 						rel="noreferrer noopener"
+						aria-label="Github link"
 					>
 						<FaGithub />
 					</a>
 					<Divider>|</Divider>
-					<a href="https://react.dev" target="_blank" rel="noreferrer noopener">
+					<a
+						href="https://react.dev"
+						target="_blank"
+						rel="noreferrer noopener"
+						aria-label="React Docs"
+					>
 						<FaReact />
 					</a>
 				</IconWrapper>

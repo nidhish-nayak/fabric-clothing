@@ -200,7 +200,7 @@ export const Author = styled.div`
 	}
 `;
 
-export const AuthorName = styled.h5`
+export const AuthorName = styled.p`
 	opacity: 0.8;
 	margin: 0;
 	font-weight: bold;
@@ -215,10 +215,11 @@ export const AuthorName = styled.h5`
 	}
 `;
 
-export const AuthorWebsite = styled.span`
+export const AuthorWebsite = styled.p`
 	font-size: 0.75rem;
 	color: #333;
 	text-transform: lowercase;
+	margin: 0 0 10px 0;
 
 	@media (min-width: 1980px) and (max-width: 3840px) {
 		font-size: 2rem;
