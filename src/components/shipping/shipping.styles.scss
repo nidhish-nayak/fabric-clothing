@@ -67,8 +67,6 @@
 	align-items: center;
 	justify-content: center;
 	gap: 2rem;
-	padding-bottom: 0.5em;
-	border-radius: 10px;
 
 	@media (max-width: 1028px) {
 		grid-template-columns: 60px auto;
@@ -87,7 +85,6 @@
 
 	&:hover {
 		cursor: pointer;
-		background-color: #cecece;
 	}
 }
 
