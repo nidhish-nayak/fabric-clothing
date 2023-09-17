@@ -15,6 +15,7 @@ import {
 	EmptyMessage,
 } from "./cart-dropdown.styles";
 
+import { useCallback } from "react";
 import { CartItemType } from "../../store/cart/cart.types";
 
 const CartDropdown = () => {
@@ -22,10 +23,11 @@ const CartDropdown = () => {
 	const cartItems: CartItemType[] = useSelector(selectCartItems);
 	const navigate = useNavigate();
 
-	const goToCheckoutHandler = () => {
+	const goToCheckoutHandler = useCallback(() => {
 		dispatch(setIsCartOpen(false));
 		navigate("/checkout");
-	};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	return (
 		<CartDropDownContainer>
