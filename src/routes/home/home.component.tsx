@@ -1,12 +1,18 @@
-import { Fragment } from "react";
-import Directory from "../../components/directory/directory.component";
+import { Fragment, lazy, Suspense } from "react";
 import Footer from "../../components/footer/footer.component";
+import Spinner from "../../components/spinner/spinner.component";
+
+const LazyDirectory = lazy(() => {
+	return import("../../components/directory/directory.component");
+});
 
 const Home = () => {
 	return (
 		<Fragment>
-			<Directory />
-			<Footer />
+			<Suspense fallback={<Spinner />}>
+				<LazyDirectory />
+				<Footer />
+			</Suspense>
 		</Fragment>
 	);
 };

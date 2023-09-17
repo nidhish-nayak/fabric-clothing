@@ -2,6 +2,8 @@ import { Suspense, lazy, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 
+import Home from "./routes/home/home.component";
+import Navigation from "./routes/navigation/navigation.component";
 import { setCurrentUser } from "./store/user/user.reducer";
 
 import { User } from "firebase/auth";
@@ -12,14 +14,14 @@ import {
 	onAuthStateChangedListener,
 } from "./utils/firebase/firebase.utils";
 
+// const Home = lazy(() => import("./routes/home/home.component"));
+// const Navigation = lazy(
+// 	() => import("./routes/navigation/navigation.component")
+// );
 const Authentication = lazy(
 	() => import("./routes/authentication/authentication.component")
 );
 const Checkout = lazy(() => import("./routes/checkout/checkout.component"));
-const Home = lazy(() => import("./routes/home/home.component"));
-const Navigation = lazy(
-	() => import("./routes/navigation/navigation.component")
-);
 const Policies = lazy(() => import("./routes/policies/policies.component"));
 const Shop = lazy(() => import("./routes/shop/shop.component"));
 
