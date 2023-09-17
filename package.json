@@ -28,7 +28,6 @@
 		"redux-persist": "^6.0.0",
 		"redux-thunk": "^2.4.2",
 		"reselect": "^4.1.8",
-		"sass": "^1.67.0",
 		"styled-components": "^5.3.6",
 		"typescript": "^5.1.6",
 		"web-vitals": "^2.1.4"

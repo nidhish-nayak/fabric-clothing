@@ -13,17 +13,29 @@ const root = ReactDOM.createRoot(
 	document.getElementById("root") as HTMLElement
 );
 
-root.render(
-	<React.StrictMode>
-		<Provider store={store}>
-			<PersistGate loading={null} persistor={persistor}>
-				<BrowserRouter>
-					<App />
-				</BrowserRouter>
-			</PersistGate>
-		</Provider>
-	</React.StrictMode>
-);
+const strictMode = process.env.NODE_ENV === "development";
+
+strictMode
+	? root.render(
+			<React.StrictMode>
+				<Provider store={store}>
+					<PersistGate loading={null} persistor={persistor}>
+						<BrowserRouter>
+							<App />
+						</BrowserRouter>
+					</PersistGate>
+				</Provider>
+			</React.StrictMode>
+	  )
+	: root.render(
+			<Provider store={store}>
+				<PersistGate loading={null} persistor={persistor}>
+					<BrowserRouter>
+						<App />
+					</BrowserRouter>
+				</PersistGate>
+			</Provider>
+	  );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

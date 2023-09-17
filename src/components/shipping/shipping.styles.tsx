@@ -1,5 +1,7 @@
-.offer {
-	background-color: #F6F5F4;
+import styled from "styled-components";
+
+export const ShippingContainer = styled.div`
+	background-color: #f6f5f4;
 	padding: 1.5em 1em 4em 1em;
 	border-radius: 10px;
 	position: relative;
@@ -8,9 +10,9 @@
 		margin-bottom: 4em;
 		padding: 2em 4em 12em 4em;
 	}
-}
+`;
 
-.circuit-img {
+export const CircuitImage = styled.img`
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -21,9 +23,9 @@
 	@media (min-width: 1980px) and (max-width: 3840px) {
 		max-width: 400px;
 	}
-}
+`;
 
-.title {
+export const Title = styled.h1`
 	text-align: center;
 	margin: 1.5em;
 	font-family: "Montserrat", sans-serif;
@@ -37,9 +39,9 @@
 		font-size: 1.5rem;
 		margin: 2em;
 	}
-}
+`;
 
-#features {
+export const FeaturesSection = styled.section`
 	width: 90%;
 	max-width: 900px;
 	margin: 0 auto;
@@ -59,9 +61,9 @@
 	@media (max-width: 768px) {
 		grid-template-columns: 1fr;
 	}
-}
+`;
 
-.grid {
+export const Grid = styled.div`
 	display: grid;
 	grid-template-columns: 100px auto;
 	align-items: center;
@@ -82,25 +84,9 @@
 		grid-template-columns: 40px auto;
 		gap: 2rem;
 	}
+`;
 
-	&:hover {
-		cursor: pointer;
-	}
-}
-
-/* Animate on scroll */
-.hidden {
-	opacity: 0;
-	transform: translateX(-100%);
-	transition: all 1.5s;
-}
-
-.show {
-	opacity: 1;
-	transform: translateX(0);
-}
-
-.icon {
+export const Icon = styled.div`
 	color: #333;
 	justify-self: center;
 	align-self: center;
@@ -127,39 +113,27 @@
 		align-self: flex-start;
 		font-size: 2.5rem;
 	}
-}
+`;
 
-.desc {
-
-	@media (min-width: 1980px) and (max-width: 3840px) {
-		padding: 2em;
-	}
-
+export const Description = styled.div`
 	h2 {
 		@media (min-width: 1980px) and (max-width: 3840px) {
 			font-size: 4rem;
 		}
 
-		@media (max-width:480px) {
+		@media (max-width: 480px) {
 			margin: 0;
 			margin-bottom: 5px;
 		}
 	}
 
 	p {
-
 		@media (min-width: 1980px) and (max-width: 3840px) {
 			font-size: 3rem;
 		}
 
-		@media (max-width:480px) {
+		@media (max-width: 480px) {
 			margin: 0;
 		}
 	}
-}
-
-@media (prefers-reduced-motion) {
-	.hidden {
-		transition: none;
-	}
-}
+`;
