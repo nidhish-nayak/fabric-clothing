@@ -378,7 +378,7 @@ export const DeliveredImages = styled.div`
 		height: 2em;
 		border-radius: 50%;
 		margin-right: -0.5em;
-		outline: white solid 3px;
+		outline: #f0f0f0 solid 3px;
 	}
 
 	@media (min-width: 1700px) {
