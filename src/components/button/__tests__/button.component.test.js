@@ -17,6 +17,13 @@ describe("button tests", () => {
 		expect(buttonElement).toHaveStyle("background-color: #4285f4");
 	});
 
+	test("should render inverted button when passed inverted button type", () => {
+		render(<Button buttonType={BUTTON_TYPE_CLASSES.inverted} />);
+
+		const buttonElement = screen.getByRole("button");
+		expect(buttonElement).toHaveStyle("background-color: white");
+	});
+
 	test("should be disabled if isLoading is true", () => {
 		render(<Button isLoading={true} />);
 
