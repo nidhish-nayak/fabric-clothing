@@ -9,7 +9,7 @@ export function renderWithProviders(
 	{
 		preloadedState = {},
 		// Automatically create a store instance if no store was passed in
-		store = configureStore(rootReducer, preloadedState),
+		store = configureStore({ reducer: { rootReducer }, preloadedState }),
 		...renderOptions
 	} = {}
 ) {
