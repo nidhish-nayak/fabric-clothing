@@ -24,7 +24,7 @@ const ProductCard: React.FC<ProductCardType> = ({ product }) => {
 
 	return (
 		<ProductCardContainer>
-			<img src={imageUrl} alt={`${name}`} />
+			<img src={imageUrl} alt={`${name}`} loading="lazy" decoding="async" />
 			<Footer>
 				<Name>{name}</Name>
 				<Price>

@@ -271,10 +271,6 @@ export const HeroButtonRight = styled.button`
 
 	span {
 		margin-left: 0.25em;
-
-		img {
-			width: 1em;
-		}
 	}
 
 	@media (min-width: 1700px) {
@@ -306,19 +302,23 @@ export const HeroButtonRight = styled.button`
 	}
 `;
 
+export const HeroFingerprint = styled.img`
+	width: 1em;
+	height: 1em;
+`;
+
 export const HeroImageContainer = styled.div`
 	grid-column: 2 / 3;
 	grid-row: 1 / 3;
 
-	@media (min-width: 1980px) and (max-width: 3840px) {
-		img {
-			max-width: 1000px;
-		}
-	}
-
 	@media (max-width: 600px) {
 		display: none;
 	}
+`;
+
+export const HeroImage = styled.img`
+	max-width: 100%;
+	height: 100%;
 `;
 
 export const DeliveredClothes = styled.div`

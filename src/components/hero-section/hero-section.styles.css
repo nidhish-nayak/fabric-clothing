@@ -1,0 +1,18 @@
+.blur-load {
+	background-image: url("../../assets/frame.webp");
+	background-size: cover;
+	background-position: center;
+	background: fixed;
+}
+
+.blur-load.loaded > img {
+	opacity: 1;
+}
+
+.blur-load.loaded {
+	background: transparent;
+}
+
+.blur-load > img {
+	opacity: 0;
+}

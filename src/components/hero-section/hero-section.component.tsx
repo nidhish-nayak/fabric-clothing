@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Balancer } from "react-wrap-balancer";
+import "./hero-section.styles.css";
 
 import {
 	DeliveredClothes,
@@ -10,6 +12,8 @@ import {
 	HeroButtonRight,
 	HeroCircuit,
 	HeroDescription,
+	HeroFingerprint,
+	HeroImage,
 	HeroImageContainer,
 	HeroSectionContainer,
 	HeroTextBox,
@@ -25,10 +29,29 @@ export const HeroSection = () => {
 		navigate("/auth");
 	};
 
+	// Lazy Loading hero image
+	useEffect(() => {
+		const blurDivs = document.querySelectorAll(".blur-load");
+
+		blurDivs.forEach((div) => {
+			function loaded() {
+				// Show image
+				div.classList.add("loaded");
+			}
+
+			const img = div.querySelector("img");
+			if (img?.complete) {
+				loaded();
+			} else {
+				img?.addEventListener("load", loaded);
+			}
+		});
+	}, []);
+
 	return (
 		<HeroSectionContainer>
 			<HeroCircuit
-				src="https://ik.imagekit.io/fabric01/hero-circuit.webp"
+				src={require("../../assets/hero-circuit.webp")}
 				alt="hero circuit"
 			/>
 			<Hero>
@@ -49,46 +72,59 @@ export const HeroSection = () => {
 					<HeroButtonRight onClick={handleSignUp}>
 						SIGN UP
 						<span>
-							<img
+							<HeroFingerprint
 								src="https://ik.imagekit.io/fabric01/svg-icons/fingerprint.svg"
 								alt="Fingerprint"
+								width={15}
+								height={15}
+								decoding="async"
 							/>
 						</span>
 					</HeroButtonRight>
 				</HeroTextBox>
 				<HeroImageContainer>
-					<img
-						// src={require("../../assets/frame.webp")}
-						src="https://ik.imagekit.io/fabric01/frame02.webp"
-						alt="Hero"
-						style={{ width: "100%" }}
-					/>
+					<div className="blur-load">
+						<HeroImage
+							src="https://ik.imagekit.io/fabric01/heroImage.webp?updatedAt=1697876255923"
+							alt="Hero"
+							loading="lazy"
+							decoding="async"
+							width={509}
+							height={434}
+						/>
+					</div>
 				</HeroImageContainer>
 				<DeliveredClothes>
 					<DeliveredImages>
 						<img
-							src="https://ik.imagekit.io/fabric01/1.webp"
+							src={require("../../assets/1.webp")}
 							alt="Customerphoto"
+							decoding="async"
 						/>
 						<img
-							src="https://ik.imagekit.io/fabric01/2.webp"
+							src={require("../../assets/2.webp")}
 							alt="Customerphoto"
+							decoding="async"
 						/>
 						<img
-							src="https://ik.imagekit.io/fabric01/3.webp"
+							src={require("../../assets/3.webp")}
 							alt="Customerphoto"
+							decoding="async"
 						/>
 						<img
-							src="https://ik.imagekit.io/fabric01/4.webp"
+							src={require("../../assets/3.webp")}
 							alt="Customerphoto"
+							decoding="async"
 						/>
 						<img
-							src="https://ik.imagekit.io/fabric01/5.webp"
+							src={require("../../assets/4.webp")}
 							alt="Customerphoto"
+							decoding="async"
 						/>
 						<img
-							src="https://ik.imagekit.io/fabric01/6.webp"
+							src={require("../../assets/5.webp")}
 							alt="Customerphoto"
+							decoding="async"
 						/>
 					</DeliveredImages>
 					<DeliveredText>
