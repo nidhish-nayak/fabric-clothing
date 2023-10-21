@@ -1,7 +1,5 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Balancer } from "react-wrap-balancer";
-import "./hero-section.styles.css";
 
 import {
 	DeliveredClothes,
@@ -29,29 +27,10 @@ export const HeroSection = () => {
 		navigate("/auth");
 	};
 
-	// Lazy Loading hero image
-	useEffect(() => {
-		const blurDivs = document.querySelectorAll(".blur-load");
-
-		blurDivs.forEach((div) => {
-			function loaded() {
-				// Show image
-				div.classList.add("loaded");
-			}
-
-			const img = div.querySelector("img");
-			if (img?.complete) {
-				loaded();
-			} else {
-				img?.addEventListener("load", loaded);
-			}
-		});
-	}, []);
-
 	return (
 		<HeroSectionContainer>
 			<HeroCircuit
-				src={require("../../assets/hero-circuit.webp")}
+				src="https://ik.imagekit.io/fabric01/hero-circuit.webp?updatedAt=1694866588842"
 				alt="hero circuit"
 			/>
 			<Hero>
@@ -83,46 +62,43 @@ export const HeroSection = () => {
 					</HeroButtonRight>
 				</HeroTextBox>
 				<HeroImageContainer>
-					<div className="blur-load">
 						<HeroImage
-							src="https://ik.imagekit.io/fabric01/heroImage.webp?updatedAt=1697876255923"
+							src="https://ik.imagekit.io/fabric01/frame02.webp?updatedAt=1694888104042"
 							alt="Hero"
-							loading="lazy"
 							decoding="async"
 							width={509}
 							height={434}
 						/>
-					</div>
 				</HeroImageContainer>
 				<DeliveredClothes>
 					<DeliveredImages>
 						<img
-							src={require("../../assets/1.webp")}
+							src="https://ik.imagekit.io/fabric01/1.webp?updatedAt=1694865303778"
 							alt="Customerphoto"
 							decoding="async"
 						/>
 						<img
-							src={require("../../assets/2.webp")}
+							src="https://ik.imagekit.io/fabric01/2.webp?updatedAt=1694865303781"
 							alt="Customerphoto"
 							decoding="async"
 						/>
 						<img
-							src={require("../../assets/3.webp")}
+							src="https://ik.imagekit.io/fabric01/3.webp?updatedAt=1694865303832"
 							alt="Customerphoto"
 							decoding="async"
 						/>
 						<img
-							src={require("../../assets/3.webp")}
+							src="https://ik.imagekit.io/fabric01/4.webp?updatedAt=1694865303875"
 							alt="Customerphoto"
 							decoding="async"
 						/>
 						<img
-							src={require("../../assets/4.webp")}
+							src="https://ik.imagekit.io/fabric01/5.webp?updatedAt=1694865303822"
 							alt="Customerphoto"
 							decoding="async"
 						/>
 						<img
-							src={require("../../assets/5.webp")}
+							src="https://ik.imagekit.io/fabric01/6.webp?updatedAt=1694865303937"
 							alt="Customerphoto"
 							decoding="async"
 						/>

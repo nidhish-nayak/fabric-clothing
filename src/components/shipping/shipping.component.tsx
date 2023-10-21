@@ -11,7 +11,10 @@ import {
 const Shipping = () => {
 	return (
 		<ShippingContainer>
-			<CircuitImage src={require("../../assets/circuit.webp")} alt="circuit" />
+			<CircuitImage
+				src="https://ik.imagekit.io/fabric01/circuit.webp?updatedAt=1694866588754"
+				alt="circuit"
+			/>
 			<Title>WE OFFER</Title>
 			<FeaturesSection id="features">
 				<Grid className="hidden">
