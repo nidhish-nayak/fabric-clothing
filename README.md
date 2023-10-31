@@ -135,6 +135,8 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 ## Contact 💬
 
+<img src="https://myreadme.vercel.app/api/embed/nidhish-nayak?panels=userstatistics,toprepositories,toplanguages,commitgraph" alt="reimaginedreadme" />
+
 If you have any questions, suggestions, or feedback, please don't hesitate to reach out. You can contact the project maintainer at [nidhibelthangady@gmail.com](mailto:nidhibelthangady@gmail.com).
 
 Happy shopping with the Fabric Clothing App! 🛍️
