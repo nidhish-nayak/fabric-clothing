@@ -38,6 +38,9 @@ Welcome to Fabric Clothing! This application is built using React, Redux, Redux-
 - **Razorpay Payment Gateway Integration**: Seamlessly integrate Razorpay as the payment gateway for secure and convenient transactions.
 - **Responsive Design**: Enjoy a consistent and visually appealing experience across various devices.
 - **User Experience**: You might notice initial load on opening new pages. This is intended for caching the page data for fast loads in the future.
+- **Performance**: Better performance and accessibility.
+
+![fabric-lighthouse](https://github.com/nidhish-nayak/fabric-clothing/assets/76598208/26718db1-1ef1-4bcc-865c-a1c39e643187)
 
 ## Installation 💻
 
