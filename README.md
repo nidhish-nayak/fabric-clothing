@@ -1,10 +1,31 @@
 # Fabric Clothing
 
-`⚠️ Warning: This app is a work in progress. I'm building this in public. ⚠️`
+> **Warning**
+> This app is a work in progress. I'm building this in public. You can follow the progress on Github.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Nidhish-D-Nayak/fabric-clothing/tree/main)
 
+
+## About the Project
+
 Welcome to Fabric Clothing! This application is built using React, Redux, Redux-Thunk, Redux-Toolkit, Firebase and Styled Components. It aims to provide users with an intuitive and seamless shopping experience for clothing items made from premium fabrics.
+
+![Fabric Clothing](https://github.com/nidhish-nayak/fabric-clothing/assets/76598208/af396893-4e33-4565-a2b1-4f86b1e0cc83)
+
+<p align="center">
+  
+  <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/nidhish-nayak/fabric-clothing" />
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/nidhish-nayak/fabric-clothing" />
+  <img alt="" src="https://img.shields.io/github/repo-size/nidhish-nayak/fabric-clothing" />
+  <img alt="GitHub Issues" src="https://img.shields.io/github/issues/nidhish-nayak/fabric-clothing" />
+  <img alt="GitHub Closed Issues" src="https://img.shields.io/github/issues-closed/nidhish-nayak/fabric-clothing" />
+  <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/nidhish-nayak/fabric-clothing" />
+  <img alt="GitHub Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/nidhish-nayak/fabric-clothing" />
+  <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/nidhish-nayak/fabric-clothing" />
+  <img alt="GitHub Commit Activity (Year)" src="https://img.shields.io/github/commit-activity/y/nidhish-nayak/fabric-clothing" />
+  <img alt="Github License" src="https://img.shields.io/github/license/nidhish-nayak/fabric-clothing" />
+
+</p>
 
 ## Features ✨
 
@@ -16,6 +37,7 @@ Welcome to Fabric Clothing! This application is built using React, Redux, Redux-
 - **Order History**: Users can view their order history to track previous purchases.
 - **Razorpay Payment Gateway Integration**: Seamlessly integrate Razorpay as the payment gateway for secure and convenient transactions.
 - **Responsive Design**: Enjoy a consistent and visually appealing experience across various devices.
+- **User Experience**: You might notice initial load on opening new pages. This is intended for caching the page data for fast loads in the future.
 
 ## Installation 💻
 
@@ -53,26 +75,6 @@ To run the Fabric Clothing App locally, follow these steps:
 
 6. Open your browser and visit `http://localhost:3000` to access the Fabric Clothing App.
 
-## Technologies Used 🔧
-
-- React: JavaScript library for building user interfaces.
-- Redux: State management tool for predictable state updates.
-- Thunks: Middleware libraries for managing asynchronous actions in Redux.
-- Redux Toolkit: A more opinionated state management tool for better developer experience.
-- Styled Components: CSS-in-JS library for styling React components.
-- Firebase: Backend-as-a-Service (BaaS) platform for authentication, database, and storage.
-- Axios: Promise-based HTTP client for making API requests.
-- Typescript: TypeScript checks a program for errors before execution, ensures better developer experience.
-
-## How razorpay backend Service works 🔌
-
-- To get more insights on razorpay backend service you can refer to the repository which handles this service.
-- Repository Link: https://github.com/Nidhish-D-Nayak/node-razorpay
-- Please do not make multiple requests. Instead, you can clone the repo, create your own razorpay account to get KEY_ID and KEY_SECRET.
-- You will be able to recreate this by running it on localhost:4000 using command `npm run dev`.
-- When both fabric-clothing & node-razorpay are run on localhost, the payment should work seamlessly as I have configured the endpoints.
-- If you need to make this work in production env, you can host node-razorpay on a free backend service and fabric-clothing on vercel/netlify. (Make sure to configure the endpoints & env variables on both services)
-
 ## Folder Structure 📂
 
 Here's an overview of the project's folder structure:
@@ -89,6 +91,28 @@ Here's an overview of the project's folder structure:
 └── ...
 ```
 
+## Technologies Used 🔧
+
+- React: JavaScript library for building user interfaces.
+- Redux: State management tool for predictable state updates.
+- Thunks: Middleware libraries for managing asynchronous actions in Redux.
+- Redux Toolkit: A more opinionated state management tool for better developer experience.
+- Styled Components: CSS-in-JS library for styling React components.
+- Firebase: Backend-as-a-Service (BaaS) platform for authentication, database, and storage.
+- Axios: Promise-based HTTP client for making API requests.
+- Typescript: TypeScript checks a program for errors before execution, ensures better developer experience.
+
+## How razorpay backend service works 🔌
+
+- To get more insights on razorpay backend service you can refer to the repository which handles this service.
+- Repository Link: https://github.com/nidhish-nayak/node-razorpay
+- Please do not make multiple requests. Instead, you can clone the repo, create your own razorpay account to get KEY_ID and KEY_SECRET.
+- You will be able to recreate this by running it on localhost:4000 using command `npm run dev`.
+- When both fabric-clothing & node-razorpay are run on localhost, the payment should work seamlessly as I have configured the endpoints.
+- If you need to make this work in production env, you can host node-razorpay on a free backend service and fabric-clothing on vercel/netlify. (Make sure to configure the endpoints & env variables on both services)
+
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=nidhish-nayak&repo=node-razorpay)](https://github.com/nidhish-nayak/node-razorpay)
+
 ## Contributing 🤝
 
 We welcome contributions to the Fabric Clothing App project! If you would like to contribute, please follow these steps:
@@ -98,6 +122,12 @@ We welcome contributions to the Fabric Clothing App project! If you would like t
 3. Make your changes and commit them: `git commit -m 'Add some feature'`.
 4. Push the changes to your forked repository: `git push origin feature-name`.
 5. Open a pull request to the main repository's `main` branch.
+
+### Contributors
+
+<a href="https://github.com/nidhish-nayak/fabric-clothing/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=nidhish-nayak/fabric-clothing" />
+</a>
 
 ## License 📝
 
