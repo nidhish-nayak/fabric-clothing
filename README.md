@@ -10,9 +10,9 @@
 
 Welcome to Fabric Clothing! This application is built using React, Redux, Redux-Thunk, Redux-Toolkit, Firebase and Styled Components. It aims to provide users with an intuitive and seamless shopping experience for clothing items made from premium fabrics.
 
-![Fabric Clothing](https://github.com/nidhish-nayak/fabric-clothing/assets/76598208/af396893-4e33-4565-a2b1-4f86b1e0cc83)
+![fabric-clothing](https://github.com/nidhish-nayak/fabric-clothing/assets/76598208/0536f18b-8922-42d6-b0f6-1a8d02c732fa)
 
-<p align="center">
+<p align="left">
   
   <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/nidhish-nayak/fabric-clothing" />
   <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/nidhish-nayak/fabric-clothing" />
@@ -138,8 +138,8 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 ## Contact 💬
 
-<img src="https://myreadme.vercel.app/api/embed/nidhish-nayak?panels=userstatistics,toprepositories,toplanguages,commitgraph" alt="reimaginedreadme" />
-
 If you have any questions, suggestions, or feedback, please don't hesitate to reach out. You can contact the project maintainer at [nidhibelthangady@gmail.com](mailto:nidhibelthangady@gmail.com).
+
+<img src="https://myreadme.vercel.app/api/embed/nidhish-nayak?panels=userstatistics,toprepositories,toplanguages,commitgraph" alt="reimaginedreadme" />
 
 Happy shopping with the Fabric Clothing App! 🛍️
