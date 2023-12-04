@@ -1,7 +1,7 @@
 # Fabric Clothing
 
 > **Warning**
-> This app is a work in progress. I'm building this in public. You can follow the progress on Github.
+> This app is completed. I've built this in public. You can follow the process on Github.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Nidhish-D-Nayak/fabric-clothing/tree/main)
 
