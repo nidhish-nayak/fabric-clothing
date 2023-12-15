@@ -119,7 +119,7 @@ Here's an overview of the project's folder structure:
 
 ## Contributing 🤝
 
-We welcome contributions to the Fabric Clothing App project! If you would like to contribute, please follow these steps:
+We welcome contributions to the Fabric Clothing App project! If you would like to try/add any new features or contribute, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your feature/fix: `git checkout -b feature-name`.
@@ -140,7 +140,5 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 ## Contact 💬
 
 If you have any questions, suggestions, or feedback, please don't hesitate to reach out. You can contact the project maintainer at [nidhibelthangady@gmail.com](mailto:nidhibelthangady@gmail.com).
-
-<img src="https://myreadme.vercel.app/api/embed/nidhish-nayak?panels=userstatistics,toprepositories,toplanguages,commitgraph" alt="reimaginedreadme" />
 
 Happy shopping with the Fabric Clothing App! 🛍️
